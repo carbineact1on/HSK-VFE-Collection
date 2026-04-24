@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK addition: warcasket weapon salvage at TableMachining.
+
+    Corpse salvage is NOT a separate recipe. Instead, the Harmony postfix
+    on GenRecipe.MakeRecipeProducts (see
+    Source/Patches/MakeRecipeProducts_Patch.cs) piggybacks on HSK's
+    existing CremateCorpse / CremateCorpseCampfire recipes — any time the
+    player cremates a corpse that happens to be wearing warcasket apparel,
+    the bill's output is augmented with ~50% of the warcasket's costList
+    (scaled by apparel HP). No new bill option needed, no filter machinery.
+
+    Weapons still get their own dedicated recipe because they aren't part
+    of the cremation flow — they drop as loot and the player can recycle
+    them into materials via this bill on TableMachining.
+-->
+<Defs>
+
+    <!-- Special filter: only warcasket weapons match, so the bill ingredient
+         picker doesn't list every gun in the colony. -->
+    <SpecialThingFilterDef>
+        <defName>AllowWarcasketWeapon</defName>
+        <label>warcasket weapons</label>
+        <workerClass>HSKVFEPiratesCompat.SpecialThingFilterWorker_WarcasketWeapon</workerClass>
+        <parentCategory>Weapons</parentCategory>
+        <allowedByDefault>true</allowedByDefault>
+        <saveKey>AllowWarcasketWeapon</saveKey>
+    </SpecialThingFilterDef>
+
+    <RecipeDef>
+        <defName>HSK_SalvageWarcasketWeapon</defName>
+        <label>salvage warcasket weapon</label>
+        <description>Dismantle a looted warcasket weapon to recover materials scaled by its remaining durability. A pristine weapon returns its full crafting cost; a half-damaged one returns half; near-broken weapons return only a token amount. Non-warcasket weapons cannot be processed.</description>
+        <jobString>Salvaging warcasket weapon.</jobString>
+        <workerClass>HSKVFEPiratesCompat.RecipeWorker_SalvageWarcasketWeapon</workerClass>
+        <workAmount>3000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Weapons</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <categories>
+                <li>Weapons</li>
+            </categories>
+            <specialFiltersToAllow>
+                <li>AllowWarcasketWeapon</li>
+            </specialFiltersToAllow>
+        </fixedIngredientFilter>
+
+        <defaultIngredientFilter>
+            <categories>
+                <li>Weapons</li>
+            </categories>
+            <specialFiltersToAllow>
+                <li>AllowWarcasketWeapon</li>
+            </specialFiltersToAllow>
+        </defaultIngredientFilter>
+
+        <skillRequirements>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+</Defs>

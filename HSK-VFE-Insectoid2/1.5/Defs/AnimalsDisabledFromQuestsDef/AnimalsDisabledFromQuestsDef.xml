@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+
+
+	<AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+		<defName>AA_DisabledAnimalToggles_VFEInsectoids</defName>
+		<disabledFromQuestsPawns>			
+			
+			<li>VFEI2_Empress</li>
+			<li>VFEI2_Titantick</li>
+			<li>VFEI2_Teramantis</li>	
+			<li>VFEI2_Gigamite</li>			
+			<li>VFEI2_Silverfish</li>			
+			<li>VFEI2_Patriarch</li>
+		
+			
+		</disabledFromQuestsPawns>							
+	</AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+
+
+
+
+
+</Defs>

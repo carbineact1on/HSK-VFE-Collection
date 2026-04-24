@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>VFEI2_ToxicBuildup</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<description>Toxins in the bloodstream. This can come from various sources, including environmental toxins, venomous bites, or poisoned weapons.
+\nAt high doses, toxic buildup is lethal. Even at low doses, it can generate cancers.
+\nContrary to base game toxic buildup, creatures who die with this toxic damage can be eaten.</description>
+		<label>toxic buildup</label>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<taleOnVisible>ToxicityRevealed</taleOnVisible>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-0.08</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+			</li>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.04</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.40</minSeverity>
+				<vomitMtbDays>5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>146</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>438</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>serious</label>
+				<minSeverity>0.60</minSeverity>
+				<vomitMtbDays>1</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>37</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>111</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>extreme</label>
+				<minSeverity>0.80</minSeverity>
+				<vomitMtbDays>0.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.10</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>13</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Carcinoma</hediff>
+						<mtbDays>39</mtbDays>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VFEI2_ArmorDegradation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<description>The armor of this insectoid has been cracked and lost part of its efficiency.</description>
+		<label>armor degradation</label>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>-0.76</ArmorRating_Blunt>
+					<ArmorRating_Sharp>-0.4</ArmorRating_Sharp>
+					<ArmorRating_Heat>-0.1</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>-1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>-0.6</ArmorRating_Sharp>
+					<ArmorRating_Heat>-0.3</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>-1.25</ArmorRating_Blunt>
+					<ArmorRating_Sharp>-0.8</ArmorRating_Sharp>
+					<ArmorRating_Heat>-0.5</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.99</minSeverity>
+				<statOffsets>
+					<ArmorRating_Blunt>-1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>-1</ArmorRating_Sharp>
+					<ArmorRating_Heat>-0.7</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VFEI2_TeramantisStun</defName>
+		<description>This creature has recently been stunned from a surprise attack.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>recently stunned</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-10</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VFEI2_AcidImmunity</defName>
+		<description>Insectoids from the Kemia geneline are immune to acid.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>acid immunity</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		
+		<stages>
+			<li>
+				<damageFactors>
+					<AcidBurn>0</AcidBurn>
+					<VEF_SecondaryAcidBurn>0</VEF_SecondaryAcidBurn>
+				
+				</damageFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef Name="VFEI_InsectTypeBase" Abstract="True">
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<description>An insectoid type.</description>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		
+	</HediffDef>
+	
+	<HediffDef ParentName="VFEI_InsectTypeBase">
+		<defName>VFEI_WorkerInsectType</defName>
+		<label>worker type</label>
+		<hediffClass>VFEInsectoids.Hediff_InsectWorker</hediffClass>
+	</HediffDef>
+	
+	<HediffDef ParentName="VFEI_InsectTypeBase">
+		<defName>VFEI_HunterInsectType</defName>
+		<label>hunter type</label>
+		<hediffClass>VFEInsectoids.Hediff_InsectHunter</hediffClass>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="VFEI_InsectTypeBase">
+		<defName>VFEI_DefenderInsectType</defName>
+		<label>defender type</label>
+		<hediffClass>VFEInsectoids.Hediff_InsectDefender</hediffClass>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VFEI_ToBeCocooned</defName>
+		<label>to be cocooned</label>
+		<description>To be cocooned.</description>
+		<hediffClass>VFEInsectoids.Hediff_ToBeCocooned</hediffClass>
+	</HediffDef>
+</Defs>

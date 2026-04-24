@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<loadFolders>
+  <v1.5>
+    <li>/</li>
+    <li>1.5</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">1.5/Mods/Biotech</li>
+    <!-- CE patches + new ammo defs. Only load when Combat Extended is active.
+         Bundled from G:/HSK CE patches/Vanilla Factions Expanded - Mechanoids/ -->
+    <li IfModActive="CETeam.CombatExtended">Patches-CE</li>
+  </v1.5>
+</loadFolders>

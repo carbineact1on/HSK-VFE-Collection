@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Gigamite -->
+	<ThingDef ParentName="VFEI2_BaseInsect">
+		<defName>VFEI2_Gigamite</defName>
+		<label>gigamite</label>
+		<description>An incredibly rare and monstrously large insectoid of the Kemia geneline, the gigamite is a towering insectoid native to the most toxic planet ever discovered, renowned for its unique adaptation to the hostile environment. This creature features a massive acid gland, prominently mounted on its back, which produces a potent corrosive acid. While the gigamite lacks prowess in close-quarters combat, it compensates with its ability to project a continuous, high-velocity stream of acid over considerable distances. This devastating attack not only burns through organic matter but also rapidly corrodes structures and vehicles. Upon death, it’s possible to extract a Kemia pherocore from its body.</description>
+		<statBases>
+			<MoveSpeed>1.6</MoveSpeed>
+			<Flammability>0.7</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>1800</MarketValue>
+			<ArmorRating_Blunt>0.23</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.44</ArmorRating_Sharp>
+			<LeatherAmount>30</LeatherAmount>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>head claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>0.9</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		
+			<li Class="AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VFEI2_LargeAcidSpew</initialAbility>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>VFEI2_AcidImmunity</hediffname>
+				<hediffseverity>1</hediffseverity>
+
+			</li>
+		
+		</comps>
+		
+		<race>
+			
+			<body>BeetleLikeWithClaw</body>
+			<baseHungerRate>0.08</baseHungerRate>
+			<baseBodySize>4</baseBodySize>
+			<baseHealthScale>3</baseHealthScale>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>0.8</wildness>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<trainability>Advanced</trainability>
+			<lifeExpectancy>16</lifeExpectancy>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.05</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+					<soundDeath>Pawn_BigInsect_Death</soundDeath>
+					<soundCall>Pawn_BigInsect_Call</soundCall>
+					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<killedLeavings>
+			<VFEI2_PherocoreKemian>1</VFEI2_PherocoreKemian>
+		</killedLeavings>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+	<defName>VFEI2_Gigamite</defName>
+		<label>gigamite</label>
+		<race>VFEI2_Gigamite</race>
+		<combatPower>700</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<defaultFactionType>Insect</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<defendPointRadius>0</defendPointRadius>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Gigamite</texPath>
+					<color>(147, 134, 93)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>2.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Dessicated_Gigamite</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Gigamite</texPath>
+					<drawSize>3.5</drawSize>
+					<color>(147, 134, 93)</color>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Dessicated_Gigamite</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Gigamite</texPath>
+					<drawSize>4.4</drawSize>
+					<color>(147, 134, 93)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.5, 0.7, 0.43)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Gigamite/Dessicated_Gigamite</texPath>
+					<drawSize>4.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

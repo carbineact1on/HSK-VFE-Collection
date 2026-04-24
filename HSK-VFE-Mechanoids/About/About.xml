@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>VFE Mechanoids (HSK/CE Patched)</name>
+	<author>Oskar Potocki, Kentington, Sarg Bjornson, erdelf, Kikohi, Chowder, Taranchuk, ISOREX — HSK/CE patch by CarbineAction</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
+	<packageId>CarbineAction.HSK.VFE.Mechanoids</packageId>
+	<description>HSK/CE-patched version of Vanilla Factions Expanded - Mechanoids, tuned for the Hardcore SK modpack.
+
+Original mod by Oskar Potocki, Kentington, Sarg Bjornson, erdelf, Kikohi, Chowder, Taranchuk, and ISOREX. This patch version rebalances player-facing content to fit HSK's spacer-tier economy and bundles the community-made CE compatibility patches.
+
+--- HSK-NATIVE TUNING ---
+
+MATERIALS — Steel → SteelBar 1:5 conversion across ~55 references (HSK's "Steel" defName is raw iron ore; SteelBar is refined steel for crafting).
+
+TURRETS — 4 auto-turrets (AutoChargeBlaster, AutoChargeLance, AutoInfernoCannon, AutoMortar) get Mechanism ingredient gating. Stats + costs use HSK spacer-tier materials (Plasteel + ComponentSpacer + VFE_ComponentMechanoid).
+
+LONG RANGE MISSILE LAUNCHER — kept at HSK-compliant spacer ingredients (already uses Plasteel + ComponentSpacer).
+
+MECHANITE ARMOR — HSK-native recipe: 70 Cloth + SteelBar 10 + Plasteel 20 + ComponentSpacer 1 (UnderArmor), equivalent for pants.
+
+WORKTOMAKE — 2x scaling on crafted buildings to match HSK's slower pace.
+
+RESEARCH — VFE research gated behind HSK's Fabrication/AdvancedFabrication progression.
+
+--- DISABLED PLAYER CONTENT ---
+
+21 player-buildable buildings removed from architect menu where they overlap with HSK's existing mods. Enemy raids + quest content preserved (the ThingDefs still exist, just hidden from player build UI).
+
+Electronics Fabrication (3):
+- Steel extractor (HSK has Electric Smelter)
+- Component assembler (HSK has Fabrication Bench)
+- Advanced assembler (HSK has spacer-tier Fabrication)
+
+Masonry + Metallics (3):
+- Automatic drill (HSK has Deep Drill)
+- Masonry saw (HSK has Stonecutter's Table)
+- Plasteel forge (HSK has Plasteel recipe at Smithy)
+
+Munitions + Armament (3):
+- Artillery foundry (HSK has shell crafting at TableMachining)
+- Chemfuel clarifier (HSK has Biofuel Refinery)
+- Mechanized weaponsmith (HSK has weapon benches)
+
+Medicinal (3):
+- Drug powderizer, Medicine granulator, Neutroamine infuser (HSK has Drug Lab)
+
+Provisions (2):
+- Conveyor oven (HSK has stoves), Meat grinder (HSK has butcher table)
+
+Wearables (2):
+- Auto loom (HSK has Tailoring Bench), Synthread synthesizer (HSK has recipe)
+
+Mech Stations (4):
+- Autocleaner, Autohauler, Autominer, Autobuilder (HSK has haplo.miscellaneous.robots.hsk)
+
+Missile Launcher (1):
+- VFE_LongRangeMissileLauncher (HSK has its own artillery/rocket systems)
+
+Production Infrastructure (3):
+- Factory Hopper, Versatile Assembler, Textile Recycler
+  (HSK has its own stockpile/hopper system, fabrication benches, and tailoring)
+
+Utility (3):
+- Autocrane, Liquid freezer, Construction lamp (HSK equivalents exist)
+
+--- PRESERVED GAMEPLAY ---
+
+- Mechanoid faction + enemy raids (full roster)
+- All combat mech charging stations (Combat, Pyro, Raider, Riot, Turret mobile, Strider)
+- Unique features: Autoharvester, Autosower, Textile recycler, Mechanite LF reinforcer, Blight auto repeller, AutoMedic, Autobroadcaster, Supercomputer (research automation), Indoctrination Pod
+- Factory system infrastructure: Factory hopper, Versatile assembler
+- Mechanite armor (under armor + pants)
+- VFE_ComponentMechanoid resource + research tree
+- Ship landing events, quest scripts, custom scenarios
+- KCSG enemy base generation (broadcasting stations, factories, structures)
+
+--- BUNDLED CE PATCHES ---
+
+Community-made HSK CE patches (originally at G:\HSK CE patches\Vanilla Factions Expanded - Mechanoids\) bundled and gated by IfModActive="CETeam.CombatExtended" in loadFolders.xml. Covers:
+- 3 new CE bullet defs (VFE_Bullet_5x35mmHyper, ChargeRailgun_CE, TeslaProjectileCE)
+- Turret CE stats (Building_TurretGunCE conversion)
+- Mech weapons CE ballistics (advanced mechanoid guns)
+- Mech race CE stats (armor, health, attack for Advanced + Ancient mechs)
+- Mechanite apparel CE stats (Bulk, WornBulk, armor ratings)
+- Pawnkind CE loadouts (mech pawnkinds)
+- Scenario CE compatibility
+- CombinationDef CE patches for factory-produced ammo/weapons
+
+--- COMPATIBILITY ---
+
+Requires: HSK (skyarkhangel.hsk), Combat Extended (CETeam.CombatExtended), Harmony, VE Framework.
+NOT compatible with original "OskarPotocki.VFE.Mechanoid" — enable this INSTEAD.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>LWM.DeepStorage</li>
+		<li>skyarkhangel.hsk</li>
+		<li>CETeam.CombatExtended</li>
+	</loadAfter>
+	<loadBefore>
+		<li>rmk.anthrorace</li>
+	</loadBefore>
+	<forceLoadBefore>
+		<li>rmk.anthrorace</li>
+	</forceLoadBefore>
+	<incompatibleWith>
+		<li>OskarPotocki.VFE.Mechanoid</li>
+	</incompatibleWith>
+</ModMetaData>

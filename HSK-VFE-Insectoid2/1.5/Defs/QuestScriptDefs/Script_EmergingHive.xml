@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<KCSG.SettlementLayoutDef Name="VFEI_LayoutInsectoidHiveBase">
+		<defName>VFEI2_InsectoidSettlementRatingOne</defName>
+		<settlementSize>80,80</settlementSize>
+		<centerBuildings>
+			<centerSize>65,65</centerSize>
+			<allowedStructures>
+				<li>
+					<count>8</count>
+					<tag>VFEI2_InsectoidFormation</tag>
+				</li>
+			</allowedStructures>
+		</centerBuildings>
+		<roadOptions>
+			<addLinkRoad>false</addLinkRoad>
+		</roadOptions>
+		<defenseOptions>
+			<addEdgeDefense>false</addEdgeDefense>
+			<addSandbags>false</addSandbags>
+			<addTurrets>false</addTurrets>
+			<addMortars>false</addMortars>
+			<pawnGroupMultiplier>1.0</pawnGroupMultiplier>
+		</defenseOptions>
+	</KCSG.SettlementLayoutDef>
+
+	<SitePartDef>
+		<defName>VFEI_InsectoidHiveRatingOne</defName>
+		<label>insectoid hive</label>
+		<description>An insectoid hive.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<workerClass>VFEInsectoids.SitePartWorker_InsectHive</workerClass>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<expandingIconTexture>UI/EmergingHive</expandingIconTexture>
+		<tags>
+			<li>VFEI_InsectoidHive</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef Name="VFEI_GenInsectoidHiveBase">
+		<defName>VFEI_InsectoidHiveRatingOne</defName>
+		<linkWithSite>VFEI_InsectoidHiveRatingOne</linkWithSite>
+		<order>460</order>
+		<genStep Class="VFEInsectoids.GenStep_InsectGen">
+			<layoutDef>VFEI2_InsectoidSettlementRatingOne</layoutDef>
+		</genStep>
+	</GenStepDef>
+
+	<KCSG.SettlementLayoutDef ParentName="VFEI_LayoutInsectoidHiveBase">
+		<defName>VFEI2_InsectoidSettlementRatingTwo</defName>
+		<centerBuildings>
+			<allowedStructures Inherit="False">
+				<li>
+					<count>12</count>
+					<tag>VFEI2_InsectoidFormation</tag>
+				</li>
+			</allowedStructures>
+		</centerBuildings>
+	</KCSG.SettlementLayoutDef>
+
+	<SitePartDef>
+		<defName>VFEI_InsectoidHiveRatingTwo</defName>
+		<label>insectoid hive</label>
+		<description>An insectoid hive.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<workerClass>VFEInsectoids.SitePartWorker_InsectHive</workerClass>
+		<expandingIconTexture>UI/EmergingHive</expandingIconTexture>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<tags>
+			<li>VFEI_InsectoidHive</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="VFEI_GenInsectoidHiveBase">
+		<defName>VFEI_InsectoidHiveRatingTwo</defName>
+		<linkWithSite>VFEI_InsectoidHiveRatingTwo</linkWithSite>
+		<genStep Class="VFEInsectoids.GenStep_InsectGen">
+			<layoutDef>VFEI2_InsectoidSettlementRatingTwo</layoutDef>
+		</genStep>
+	</GenStepDef>
+
+	<KCSG.SettlementLayoutDef ParentName="VFEI_LayoutInsectoidHiveBase">
+		<defName>VFEI2_InsectoidSettlementRatingThree</defName>
+		<centerBuildings>
+			<allowedStructures Inherit="False">
+				<li>
+					<count>16</count>
+					<tag>VFEI2_InsectoidFormation</tag>
+				</li>
+			</allowedStructures>
+		</centerBuildings>
+	</KCSG.SettlementLayoutDef>
+
+	<SitePartDef>
+		<defName>VFEI_InsectoidHiveRatingThree</defName>
+		<label>insectoid hive</label>
+		<description>An insectoid hive.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<workerClass>VFEInsectoids.SitePartWorker_InsectHive</workerClass>
+		<expandingIconTexture>UI/EmergingHive</expandingIconTexture>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<tags>
+			<li>VFEI_InsectoidHive</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="VFEI_GenInsectoidHiveBase">
+		<defName>VFEI_InsectoidHiveRatingThree</defName>
+		<linkWithSite>VFEI_InsectoidHiveRatingThree</linkWithSite>
+		<genStep Class="VFEInsectoids.GenStep_InsectGen">
+			<layoutDef>VFEI2_InsectoidSettlementRatingThree</layoutDef>
+		</genStep>
+	</GenStepDef>
+
+	<QuestScriptDef>
+		<defName>VFEI2_Util_GenerateSite</defName>
+		<root Class="QuestNode_GenerateSite">
+			<sitePartsParams>$sitePartsParams</sitePartsParams>
+			<hiddenSitePartsPossible>$hiddenSitePartsPossible</hiddenSitePartsPossible>
+			<storeAs>site</storeAs>
+			<faction>$siteFaction</faction>
+			<tile>$siteTile</tile>
+			<singleSitePartRules>
+				<rulesStrings>
+					<li>root->there are (*Threat)[count] insectoid hives(/Threat)</li>
+				</rulesStrings>
+			</singleSitePartRules>
+		</root>
+	</QuestScriptDef>
+
+	<QuestScriptDef>
+		<defName>VFEI2_OpportunitySite_InsectoidHive</defName>
+		<rootSelectionWeight>1.0</rootSelectionWeight>
+		<rootMinPoints>350</rootMinPoints>
+		<canGiveRoyalFavor>true</canGiveRoyalFavor>
+		<expireDaysRange>12</expireDaysRange>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->The [insectoid] [hive]</li>
+				<li>questName->[insectoid] [hive]</li>
+				<li>questName->[asker_nameDef] and the [hive]</li>
+				<li>hive->Hive</li>
+				<li>hive->Nest</li>
+				<li>hive->Colony</li>
+				<li>hive->Swarm</li>
+				<li>insectoid->Insectoid</li>
+				<li>insectoid->Creeping</li>
+				<li>insectoid->Chitinous</li>
+				<li>insectoid->Feral</li>
+				<li>insectoid->Voracious</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A new insectoid hive has emerged in a nearby area. If not destroyed, it will soon form a new colony, spreading infestation in the region. The hive is controlled by [siteFaction_name].
+\n[asker_nameDef] is asking us to destroy the hive, which means eliminating all insectoids and nests. [asker_label] says that [sitePart0_description].</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_SubScript">
+					<def>Util_RandomizePointsChallengeRating</def>
+					<parms>
+						<pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+						<pointsFactorThreeStar>2</pointsFactorThreeStar>
+					</parms>
+				</li>
+				<li Class="QuestNode_SubScript">
+					<def>Util_AdjustPointsForDistantFight</def>
+				</li>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_GetPawn">
+					<storeAs>asker</storeAs>
+					<mustBeFactionLeader>true</mustBeFactionLeader>
+					<allowPermanentEnemyFaction>false</allowPermanentEnemyFaction>
+					<hostileWeight>0.15</hostileWeight>
+				</li>
+
+				<li Class="QuestNode_GetSiteTile">
+					<storeAs>siteTile</storeAs>
+					<preferCloserTiles>true</preferCloserTiles>
+				</li>
+
+				<li Class="VFEInsectoids.QuestNode_GetSitePart">
+					<storeAs>sitePartDefs</storeAs>
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<ratingOne>VFEI_InsectoidHiveRatingOne</ratingOne>
+					<ratingTwo>VFEI_InsectoidHiveRatingTwo</ratingTwo>
+					<ratingThree>VFEI_InsectoidHiveRatingThree</ratingThree>
+				</li>
+
+				<li Class="QuestNode_GetDefaultSitePartsParams">
+					<tile>$siteTile</tile>
+					<faction>$siteFaction</faction>
+					<sitePartDefs>$sitePartDefs</sitePartDefs>
+					<storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+				</li>
+
+				<li Class="QuestNode_GetSiteThreatPoints">
+					<storeAs>sitePoints</storeAs>
+					<sitePartsParams>$sitePartsParams</sitePartsParams>
+				</li>
+				<li Class="QuestNode_SubScript">
+					<def>Util_GetDefaultRewardValueFromPoints</def>
+					<parms>
+						<!-- Use the actual threat points generated (some site parts define a minimum threshold) -->
+						<points>$sitePoints</points>
+					</parms>
+				</li>
+
+				<!-- Inflate reward value. Since we're basing the reward value on the threat points generated, we need to do this
+             even though the threat points was deflated from the input points already. -->
+				<li Class="QuestNode_Multiply">
+					<value1>$rewardValue</value1>
+					<value2>1.75</value2>
+					<storeAs>rewardValue</storeAs>
+				</li>
+
+				<li Class="QuestNode_SubScript">
+					<def>VFEI2_Util_GenerateSite</def>
+				</li>
+
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$site</worldObjects>
+				</li>
+
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<destroyOnCleanup>true</destroyOnCleanup>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="VFEInsectoids.QuestNode_CreateInsectSettlement"/>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestExpired">The insectoid hive has established a new colony. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+				
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllHivesAreDestroyed</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Notify_PlayerRaidedSomeone">
+								<getRaidersFromMapParent>$site</getRaidersFromMapParent>
+							</li>
+							<li Class="QuestNode_GiveRewards">
+								<parms>
+									<allowGoodwill>true</allowGoodwill>
+									<allowRoyalFavor>true</allowRoyalFavor>
+									<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+								</parms>
+								<addCampLootReward>true</addCampLootReward>
+								<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+								<customLetterText TKey="LetterTextPaymentArrived">You have destroyed the insectoid hive!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+								<nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+									<letterDef>ChoosePawn</letterDef>
+									<label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+									<text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+									<useColonistsOnMap>$site</useColonistsOnMap>
+									<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+								</nodeIfChosenPawnSignalUsed>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Success</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+</Defs>

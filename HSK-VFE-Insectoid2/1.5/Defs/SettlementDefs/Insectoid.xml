@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <KCSG.SettlementLayoutDef>
+    <defName>VFEI2_InsectoidSettlement</defName>
+    <settlementSize>80,80</settlementSize>
+    <centerBuildings>
+      <centerSize>65,65</centerSize>
+      <allowedStructures>
+        <li>
+          <count>10~20</count>
+          <tag>VFEI2_InsectoidFormation</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <roadOptions>
+      <addLinkRoad>false</addLinkRoad>
+    </roadOptions>
+    <defenseOptions>
+      <addEdgeDefense>false</addEdgeDefense>
+      <addSandbags>false</addSandbags>
+      <addTurrets>false</addTurrets>
+      <addMortars>false</addMortars>
+      <pawnGroupMultiplier>1</pawnGroupMultiplier>
+    </defenseOptions>
+  </KCSG.SettlementLayoutDef>
+
+</Defs>

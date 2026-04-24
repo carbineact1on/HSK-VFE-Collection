@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AchievementsExpanded.AchievementTabDef>
+		<defName>VFEI2_AchievementsTab</defName>
+		<label>VFE - Insectoids 2</label>
+		<order>100</order>
+	</AchievementsExpanded.AchievementTabDef>
+	
+
+</Defs>

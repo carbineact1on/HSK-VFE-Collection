@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GlowPod"]</xpath>
+      <value>
+         <costList>
+            <InsectJelly>10</InsectJelly>
+         </costList>
+         <designationCategory>VFEI2_Insectoids</designationCategory>
+         <researchPrerequisites>
+            <li>VFEI2_BasicHivetech</li>
+         </researchPrerequisites>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GlowPod"]/statBases</xpath>
+      <value>
+        <WorkToBuild>1000</WorkToBuild>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="GlowPod"]/statBases/MarketValue</xpath>
+      <value>
+        <MarketValue>20</MarketValue>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAddModExtension">
+   	<xpath>Defs/ThingDef[defName="GlowPod"]</xpath>
+      <value>
+		<li Class="VFEInsectoids.InsectBuilding"></li>
+      </value>
+	</Operation>
+
+   <Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Hive"]/comps/li[@Class="CompProperties_SpawnerPawn"]</xpath>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Hive"]/comps</xpath>
+      <value>
+      <li Class="VFEInsectoids.CompProperties_InsectSpawner">
+			<geneline>VFEI_Sorne</geneline>
+			<lordJob>LordJob_DefendAndExpandHive</lordJob>
+			<spawnSound>Hive_Spawn</spawnSound>
+			<initialPawnsPoints>200</initialPawnsPoints>
+			<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+		</li>
+      </value>
+   </Operation>
+</Patch>

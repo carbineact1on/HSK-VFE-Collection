@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef>
+		<defName>VFEI2_Proj_Acid</defName>
+		<label>acid</label>
+		<thingClass>Projectile_Liquid</thingClass>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<texPath>Things/Projectile/Acid</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>AcidBurn</damageDef>
+			<speed>25</speed>
+			<damageAmountBase>30</damageAmountBase>
+			<arcHeightFactor>0.4</arcHeightFactor>
+			<armorPenetrationBase>0.8</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<shadowSize>0</shadowSize>
+			<filth>Filth_SpentAcid</filth>
+			<filthCount>1</filthCount>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VFEI2_ChemfuelSpit</defName>
+		<label>chemfuel spit</label>
+		<graphicData>
+			<texPath>Things/Projectile/InsectBurningFuelSpit</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>25</speed>
+			<arcHeightFactor>0.8</arcHeightFactor>
+			<explosionRadius>5.9</explosionRadius>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.25</preExplosionSpawnChance>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarIncendiary_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>VFE Deserters (HSK/CE Patched)</name>
+  <author>Oskar Potocki, xrushha, legodude17 — HSK/CE patch by CarbineAction</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <packageId>CarbineAction.HSK.VFE.Deserters</packageId>
+  <description>HSK/CE-patched version of Vanilla Factions Expanded - Deserters, tuned for the Hardcore SK modpack.
+
+Original mod by Oskar Potocki, xrushha, and legodude17. This patch version rebalances the mod's player-facing content to fit HSK's spacer-tier economy and research tree, while preserving the full Deserter gameplay loop (contraband, visibility system, quests, scenarios).
+
+--- HSK-NATIVE CONVERSIONS ---
+
+WEAPONS:
+- Charge Cycler: now crafts at MechWeaponCraftingWorkTable, Charge_weapons_E research, Crafting 16, 35000 work. Ingredients: Charged_Component, Weapon_Parts, ComponentUltra, FerrosiliconAlloy, USLDBar, Plastic. Thump shot ammo swapped to AmmoSet_40x46mmGrenade (HSK-native, no VFE Empire dep).
+- Fletchling: crafts at MechWeaponCraftingWorkTable, Charge_weapons_D research, Crafting 14, 27000 work. HSK-tier spacer materials.
+
+BELTS:
+- Deserter Declassifier: HSK-hardcore recipe. TableElectronics, Charge_weapons_D research, Crafting 13, 20000 work. Electronics, ComponentSpacer, Hexcell, FerrosiliconAlloy, Plastic on StrongMetallic stuff base.
+- Bomb Pack + Invisibility Engulfer: remain quest-drop-only (not player-craftable in HSK balance). Enemies still use them in scenarios.
+
+MORTAR SHELLS (Shrapnel, AP, Cluster):
+- TableMachining, Crafting 8, 1500 work each. HSK-native materials (Steel, Mechanism, Weapon_Parts, ComponentIndustrial).
+
+FLAGSHIP CHUNK SALVAGE:
+- Deconstruct yields upgraded to HSK-thematic: Plasteel x20, ComponentSpacer x3, Steel x30. Matches Imperial flagship spacer-tech salvage.
+
+--- DISABLED PLAYER CONTENT ---
+
+Removed from player architect menu (enemy base generation still uses them):
+- 3 Deserters turrets (Kontarion, Palintone, Onager) — HSK has rich turret roster
+- 10 IED traps — HSK has its own complete IED lineup
+- 3 ammo boxes — paired with disabled turrets, no purpose
+
+Striker Turret kept as-is (quest-only, not buildable by player in vanilla either).
+
+--- KCSG SYMBOL FIXES ---
+
+KCSG missing-symbol patches for this mod's layouts (Aerodrone Stations, Safehavens, Zeus Cannon Complex, Imperial Plots, etc.) are now shipped via HSK Mod Fixes Pack as a catch-all covering every KCSG-using mod on the modlist. No per-mod SymbolDef file needed here — enable Mod Fixes Pack alongside this mod.
+
+--- PRESERVED GAMEPLAY ---
+
+ALL core Deserter mechanics unchanged: Visibility system, Contraband, Intel currency, Deserter cells, Aerodrones, quest scripts, scenarios, factions. Supply/Biosecured crates, Deserter Shuttle, Burnout Intel Scraper, Surveillance Pillars — all preserved.
+
+--- COMPATIBILITY ---
+
+Requires: HSK (skyarkhangel.hsk), Combat Extended (CETeam.CombatExtended), Harmony, VE Framework, Royalty DLC, and VFE Empire (for Imperial content).
+CE's built-in Deserters patches load automatically via its ModPatches folder.
+
+For HSK users — safe to install on any save. Not compatible with the original "Vanilla Factions Expanded - Deserters" mod; enable this INSTEAD.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Empire</packageId>
+      <displayName>Vanilla Factions Expanded - Empire</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2938820380</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Royalty</packageId>
+      <displayName>Royalty</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>OskarPotocki.VFE.Empire</li>
+    <li>skyarkhangel.hsk</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+</ModMetaData>

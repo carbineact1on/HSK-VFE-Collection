@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>VFE Insectoids 2 (HSK/CE Patched)</name>
+	<author>Oskar Potocki, xrushha, Taranchuk, Sarg Bjornson — HSK/CE patch by CarbineAction</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>CarbineAction.HSK.VFE.Insectoid2</packageId>
+	<description>HSK/CE-patched version of Vanilla Factions Expanded - Insectoids 2, tuned for the Hardcore SK modpack.
+
+Original mod by Oskar Potocki, xrushha, Taranchuk, Sarg Bjornson. This patch version rebalances ingredients to HSK's refined-metal economy and bundles the community-made CE compatibility patches.
+
+--- HSK-NATIVE TUNING ---
+
+THUMPERS (boss-summoning devices) — all 5 Thumpers upgraded from base Steel+ComponentIndustrial to HSK hardcore pricing with Mechanism + ComponentSpacer + InsectJelly ingredients. Justifies their power as endgame boss summons.
+
+SHIP DEBRIS (InfestedShipChunk/Part/Module) — Steel refs swapped to SteelBar (HSK refined metal) with 1:5 scaling since HSK "Steel" is raw iron ore, SteelBar is refined.
+
+INSECTJELLY BUILDINGS — costs adjusted where appropriate to fit HSK's gated-crafting economy.
+
+--- PRESERVED ---
+
+Full Insectoid gameplay:
+- 25 insect races (Empress, Queen, Titantick, Teramantis, Gigamite, Silverfish, etc.)
+- Custom architect tab (VFEI2_Insectoids) with all hive buildings
+- Research tree (Insectoid-specific projects)
+- Pherocore extraction + 5 species-specific hives
+- Quest scripts, scenarios, faction content
+
+--- BUNDLED CE PATCHES ---
+
+Community-made HSK CE patches (originally at G:\HSK CE patches\VFE Insectoids 2\) bundled and gated by IfModActive="CETeam.CombatExtended" in LoadFolders.xml. Covers:
+- All 25 race CE stats (armor, health, attack)
+- Building CE stats (walls, pods)
+- Insect leather CE stats
+- Ability damage defs
+
+--- COMPATIBILITY ---
+
+Requires: HSK (skyarkhangel.hsk), Combat Extended (CETeam.CombatExtended), Harmony, VE Framework.
+NOT compatible with original "OskarPotocki.VFE.Insectoid2" — enable this INSTEAD.</description>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>skyarkhangel.hsk</li>
+		<li>CETeam.CombatExtended</li>
+	</loadAfter>
+</ModMetaData>

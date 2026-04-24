@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef>
+		<defName>VFEI2_FlameSpew</defName>
+		<label>flame spew</label>
+		<description>Eject a flow of adhesive, combustible fluid from the oral cavity. This fluid, upon contact, can set ablaze any target or create burning patches upon surfaces. It is produced and held within a gland located in the throat, accompanied by a distinct sac filled with a spontaneously igniting chemical, ensuring immediate combustion upon expulsion.</description>
+		<iconPath>UI/Abilities/VFE_InsectFireSpew</iconPath>
+		<cooldownTicksRange>3000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<ai_IsIncendiary>true</ai_IsIncendiary>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<warmupStartSound>VFEI2_FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>9.9</range>
+			<warmupTime>1.6</warmupTime>
+			<soundCast>VFEI2_FireSpew_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_AbilityFireSpew">
+				<range>9.9</range>
+				<filthChance>0.5</filthChance>
+				<lineWidthEnd>3</lineWidthEnd>
+				<filthDef>VFEI2_Filth_FlammableBile</filthDef>
+				<effecterDef>VFEI2_Fire_Spew</effecterDef>
+				<canHitFilledCells>true</canHitFilledCells>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VFEI2_InsectAcidSpit</defName>
+		<label>insect acid spit</label>
+		<description>Insectoid sprays a sticky acid substance from glands in the neck up all over the target area. The acid will stick to targets and burn them.</description>
+		<iconPath>UI/Abilities/VFE_InsectAcidSpit</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>VFEI2_AcidSpray_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>11.9</range>
+			<warmupTime>1</warmupTime>
+			<soundCast>VFEI2_AcidSpray_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilitySprayLiquid">
+				<projectileDef>VFEI2_Proj_Acid</projectileDef>
+				<numCellsToHit>1</numCellsToHit>
+				<sprayEffecter>AcidSpray_Directional</sprayEffecter>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VFEI2_InsectAcidSpew</defName>
+		<label>insect acid spew</label>
+		<description>Insectoid sprays a sticky acid substance from glands in the neck up all over the target area. The acid will stick to targets and burn them.</description>
+		<iconPath>UI/Abilities/VFE_InsectAcidSpew</iconPath>
+		<cooldownTicksRange>1200</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>VFEI2_AcidSpray_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>15.9</range>
+			<warmupTime>1.5</warmupTime>
+			<soundCast>VFEI2_AcidSpray_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilitySprayLiquid">
+				<projectileDef>VFEI2_Proj_Acid</projectileDef>
+				<numCellsToHit>9</numCellsToHit>
+				<sprayEffecter>AcidSpray_Directional</sprayEffecter>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VFEI2_LargeAcidSpew</defName>
+		<label>large acid spew</label>
+		<description>Insectoid sprays a sticky acid substance from glands in the neck up through the mouth and all over the target area. The acid deals damage over time.</description>
+		<iconPath>UI/Abilities/VFE_InsectLargeAcidSpew</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>VFEI2_AcidSpray_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>16.9</range>
+			<minRange>3.9</minRange>
+			<warmupTime>1</warmupTime>
+			<soundCast>VFEI2_AcidSpray_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_AbilityAcidSpew">
+				<range>16.9</range>
+				<lineWidthEnd>3</lineWidthEnd>
+				<filthDef>Filth_SpentAcid</filthDef>
+				<effecterDef>VFEI2_LargeAcidSpew</effecterDef>
+				<canHitFilledCells>true</canHitFilledCells>
+				<damAmount>10</damAmount>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VFEI2_ChemfuelSpew</defName>
+		<label>fuel spew</label>
+		<description>Discharge a stream of liquid chemfuel from the mouth. This liquid, when released, can coat any object or individual it contacts, without igniting or causing immediate combustion. The chemfuel is synthesized and stored within a specialized organ in the neck area.</description>
+		<iconPath>UI/Abilities/VFE_InsectFuelSpew</iconPath>
+		<cooldownTicksRange>6000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<warmupStartSound>VFEI2_FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>12.9</range>
+			<warmupTime>2</warmupTime>
+			<soundCast>VFEI2_FireSpew_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_AbilityFuelSpew">
+				<range>10.9</range>
+				<lineWidthEnd>6</lineWidthEnd>
+				<damAmount>1</damAmount>
+				<effecterDef>VFEI2_ChemfuelSpew</effecterDef>
+				<filthDef>VFEI2_Filth_FlammableBile</filthDef>
+				<canHitFilledCells>true</canHitFilledCells>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VFEI2_ChemfuelSpit</defName>
+		<label>chemfuel spit</label>
+		<description>Titantick vomits a giant blob of burning chemfuel over a large distance.</description>
+		<iconPath>UI/Abilities/VFE_InsectBurningFuelSpit</iconPath>
+		<cooldownTicksRange>6000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<warmupStartSound>VFEI2_FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>500</range>
+			<warmupTime>1.8</warmupTime>
+			<soundCast>VFEI2_FireSpew_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+			</targetParams>
+			<requireLineOfSight>false</requireLineOfSight>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>VFEI2_ChemfuelSpit</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef Name="VFEI2_InsectGlide_Base" Abstract="true">
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>VFEInsectoids.Verb_CastAbilityJumpUnrestricted</verbClass>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<requireLineOfSight>false</requireLineOfSight>
+			<soundCast>VFEI2_Insect_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+		<comps>
+			<li>
+				<compClass>VFEInsectoids.CompAbilityInsectGlide</compClass>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef ParentName="VFEI2_InsectGlide_Base">
+		<defName>VFEI2_InsectGlide_Short</defName>
+		<label>insect shortglide</label>
+		<description>Insectoid does a wing-assisted jump to a close location using strong hind legs.</description>
+		<iconPath>UI/Abilities/VFE_InsectFlyShort</iconPath>
+		<cooldownTicksRange>3000</cooldownTicksRange>
+		<verbProperties>
+			<label>insect shortglide</label>
+			<warmupTime>0.5</warmupTime>
+			<range>7.9</range>
+			<minRange>3.9</minRange>
+		</verbProperties>
+	</AbilityDef>
+	<AbilityDef ParentName="VFEI2_InsectGlide_Base">
+		<defName>VFEI2_InsectGlide_Medium</defName>
+		<label>insect glide</label>
+		<description>Insectoid does a wing-assisted jump to a location using strong hind legs.</description>
+		<iconPath>UI/Abilities/VFE_InsectFlyMedium</iconPath>
+		<cooldownTicksRange>2200</cooldownTicksRange>
+		<verbProperties>
+			<label>insect glide</label>
+			<warmupTime>0.5</warmupTime>
+			<range>10.9</range>
+			<minRange>4.9</minRange>
+		</verbProperties>
+	</AbilityDef>
+	<AbilityDef ParentName="VFEI2_InsectGlide_Base">
+		<defName>VFEI2_InsectGlide_Far</defName>
+		<label>insect farglide</label>
+		<description>Insectoid does a wing-assisted jump to a very distant location using strong hind legs.</description>
+		<iconPath>UI/Abilities/VFE_InsectFlyLong</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<verbProperties>
+			<requireLineOfSight>false</requireLineOfSight>
+			<label>insect farglide</label>
+			<warmupTime>0.5</warmupTime>
+			<range>18.9</range>
+			<minRange>5.9</minRange>
+		</verbProperties>
+	</AbilityDef>
+	
+	
+
+	<AbilityDef>
+		<defName>VFEI2_WideTunnels</defName>
+		<label>breacher charge</label>
+		<aiCanUse>false</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<hostile>true</hostile>
+		<description>Insectoid charges towards the target, dealing significant damage to anything on the path. Will destroy any sort of defenses with ease.</description>
+		<iconPath>UI/Abilities/VFE_BreacherCharge</iconPath>
+		<cooldownTicksRange>14400</cooldownTicksRange>
+		<verbProperties>
+			<verbClass>VFEInsectoids.Verb_CastAbilityWideTunnels</verbClass>
+			<violent>true</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<requireLineOfSight>false</requireLineOfSight>
+			<soundCast>VFEI2_Insect_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+			<label>wide tunnels</label>
+			<warmupTime>0.1</warmupTime>
+			<range>18.9</range>
+			<minRange>1.9</minRange>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>VFEI2_CreateSmallBurrow</defName>
+		<label>create small burrow</label>
+		<description>Patriarch emits vibrations that cause the royal caste of insects to dig to the surface, creating a small burrow.</description>
+		<iconPath>UI/Abilities/CreateSmallBurrow</iconPath>
+		<cooldownTicksRange>2500</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<hostile>true</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>2</range>
+			<warmupTime>4.6</warmupTime>
+			<violent>true</violent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_CreateBurrow">
+				<tunnel>VFEI2_SmallBurrowSpawner</tunnel>
+				<building>VFEI2_SmallBurrow</building>
+				<size>Small</size>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>VFEI2_CreateMediumBurrow</defName>
+		<label>create burrow</label>
+		<description>Patriarch emits vibrations that cause the royal caste of insects to dig to the surface, creating a medium burrow.</description>
+		<iconPath>UI/Abilities/CreateMediumBurrow</iconPath>
+		<cooldownTicksRange>3700</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<hostile>true</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>2</range>
+			<warmupTime>7.2</warmupTime>
+			<violent>true</violent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_CreateBurrow">
+				<tunnel>VFEI2_MediumBurrowSpawner</tunnel>
+				<building>VFEI2_MediumBurrow</building>
+				<size>Medium</size>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	<AbilityDef>
+		<defName>VFEI2_CreateLargeBurrow</defName>
+		<label>create large burrow</label>
+		<description>Patriarch emits vibrations that cause the royal caste of insects to dig to the surface, creating a large burrow.</description>
+		<iconPath>UI/Abilities/CreateLargeBurrow</iconPath>
+		<cooldownTicksRange>3700</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<hostile>true</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>2</range>
+			<warmupTime>10</warmupTime>
+			<violent>true</violent>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_CreateBurrow">
+				<tunnel>VFEI2_LargeBurrowSpawner</tunnel>
+				<building>VFEI2_LargeBurrow</building>
+				<size>Large</size>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	
+</Defs>

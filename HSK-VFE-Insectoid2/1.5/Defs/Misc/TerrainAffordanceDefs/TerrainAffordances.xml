@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Supports hive structures -->
+  <TerrainAffordanceDef>
+    <defName>VFEI2_Creep</defName>
+    <label>creep or jellyfloors</label>
+    <order>1201</order>
+  </TerrainAffordanceDef>
+
+  <TerrainAffordanceDef>
+    <defName>VFEI2_JellyFloor</defName>
+    <label>jellyfloor</label>
+    <order>1202</order>
+  </TerrainAffordanceDef>
+
+</Defs>

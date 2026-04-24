@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HSK patch: integrate VFE Mechanoids research into HSK's fabrication progression.
+     Adds HSK prereqs to the VFE entry-level factory/drone research so players must
+     progress through HSK's tech tree before unlocking mechanoid automation.
+
+     VFE Mechanoids internal chain (preserved):
+       VFE_FactoryBasics -> (6 factory-specific projects)
+       VFE_BasicDroneAssembly -> VFE_AdvancedDroneAssembly
+       VFE_AutomatedDefensiveMeasures (turrets + missile)
+       VFE_MechanoidStructures (structure buildings)
+
+     HSK gate mapping:
+       VFE_FactoryBasics            (industrial entry) += Fabrication (HSK's industrial fabrication)
+       VFE_BasicDroneAssembly       (drone entry)       += AdvancedFabrication (HSK's spacer)
+       VFE_AutomatedDefensiveMeasures (turrets)          += FlakArmor (HSK's armor-C2)
+       VFE_MechanoidStructures      (spacer structures)  += AdvancedFabrication -->
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ResearchProjectDef[defName="VFE_FactoryBasics"]/prerequisites</xpath>
+    <value>
+      <li>Fabrication</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ResearchProjectDef[defName="VFE_BasicDroneAssembly"]/prerequisites</xpath>
+    <value>
+      <li>AdvancedFabrication</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ResearchProjectDef[defName="VFE_AutomatedDefensiveMeasures"]/prerequisites</xpath>
+    <value>
+      <li>FlakArmor</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ResearchProjectDef[defName="VFE_MechanoidStructures"]/prerequisites</xpath>
+    <value>
+      <li>AdvancedFabrication</li>
+    </value>
+  </Operation>
+
+</Patch>

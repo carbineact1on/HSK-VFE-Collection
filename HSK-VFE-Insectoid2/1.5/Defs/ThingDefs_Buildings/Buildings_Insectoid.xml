@@ -1,0 +1,2965 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase" Name="VFEI2_InsectoidWallBase" Abstract="true">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<statBases>
+			<MeditationFocusStrength>0.22</MeditationFocusStrength>
+		</statBases>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<fertility>0</fertility>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<building>
+			<paintable>false</paintable>
+			<isInert>true</isInert>
+			<isPlaceOverableWall>true</isPlaceOverableWall>
+			<ai_chillDestination>false</ai_chillDestination>
+			<supportsWallAttachments>true</supportsWallAttachments>
+			<claimable>false</claimable>
+		</building>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Minimal</li>
+				</focusTypes>
+			</li>
+			<li Class="CompProperties_SpawnEffecterOnDestroy">
+				<effect>VFEI_CocoonDestroyed</effect>
+			</li>
+		</comps>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<repairEffect>VFEI2_ConstructSlime</repairEffect>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+		</damageMultipliers>
+		<modExtensions>
+			<li Class="VFEInsectoids.InsectBuilding"/>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_InsectoidWallBase">
+		<defName>VFEI_HiveWall</defName>
+		<label>hive wall</label>
+		<description>An impassable wall made from insectoid goop. Capable of holding up a roof.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/WallHive_Atlas</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/WallHive_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/WallHive_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<uiOrder>2000</uiOrder>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_OnDestroyWall">
+				<filthSpawnAmount>2~3</filthSpawnAmount>
+				<radius>1.5</radius>
+				<filth>Filth_BloodInsect</filth>
+				<chaining>true</chaining>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_InsectoidWallBase">
+		<defName>VFEI2_InsectJellyWall</defName>
+		<label>insect jelly wall</label>
+		<description>An impassable wall made from insect jelly, constructed by the worker caste of an insectoid geneline. Capable of holding up a roof.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/WallInsectJelly_Atlas</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/WallInsectJelly_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/WallInsectJelly_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<costList>
+			<InsectJelly>4</InsectJelly>
+		</costList>
+		<killedLeavings>
+			<InsectJelly>2</InsectJelly>
+		</killedLeavings>
+		<uiOrder>2001</uiOrder>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_OnDestroyWall">
+				<filthSpawnAmount>2~3</filthSpawnAmount>
+				<radius>1.5</radius>
+				<filth>VFEI2_Filth_InsectJelly</filth>
+				<chaining>true</chaining>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_InsectoidWallBase">
+		<defName>VFEI2_RoyalJellyWall</defName>
+		<label>royal jelly wall</label>
+		<description>An impassable, hard wall made from royal jelly, constructed by the worker caste of an insectoid geneline. Capable of holding up a roof.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/WallRoyalJelly_Atlas</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/WallRoyalJelly_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>3</Beauty>
+		</statBases>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/WallInsectJelly_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<costList>
+			<VFEI2_RoyalInsectJelly>4</VFEI2_RoyalInsectJelly>
+		</costList>
+		<killedLeavings>
+			<InsectJelly>2</InsectJelly>
+		</killedLeavings>
+		<uiOrder>2002</uiOrder>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_OnDestroyWall">
+				<filthSpawnAmount>2~3</filthSpawnAmount>
+				<radius>1.5</radius>
+				<filth>VFEI2_Filth_RoyalJelly</filth>
+				<chaining>false</chaining>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_InsectoidWallBase">
+		<defName>VFEI_HivestoneWall</defName>
+		<label>hivestone wall</label>
+		<description>An impassable rock wall reinforced with thick and solidified insect goop. Much stronger than standard rock wall, but flammable. Capable of holding up a roof.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/WallHivestone_Atlas</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/WallHivestone_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.75</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/WallHive_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<tickerType>Rare</tickerType>
+		<designationCategory inherit="False"/>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_OnDestroyWall">
+				<filthSpawnAmount>2~3</filthSpawnAmount>
+				<radius>1.5</radius>
+				<filth>Filth_BloodInsect</filth>
+				<chaining>false</chaining>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>3000</ticksPerHeal>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+	<!-- ========================================================= -->
+	<ThingDef Name="VFEI2_BuildingBase" Abstract="True">
+		<category>Building</category>
+		<selectable>true</selectable>
+		<drawerType>MapMeshOnly</drawerType>
+		<filthLeaving>Filth_RubbleRock</filthLeaving>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<building>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<claimable>false</claimable>
+		</building>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<repairEffect>VFEI2_ConstructSlime</repairEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef Name="VFEI2_BuildingInsectoidBase" ParentName="VFEI2_BuildingBase" Abstract="True">
+		<modExtensions>
+			<li Class="VFEInsectoids.InsectBuilding"/>
+		</modExtensions>
+		<stealable>false</stealable>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingBase" Name="VFEI2_BuildingBaseDoor" Abstract="True">
+		<thingClass>Building_Door</thingClass>
+		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useHitPoints>true</useHitPoints>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<uiOrder>0</uiOrder>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<drawerType>RealtimeOnly</drawerType>
+		<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+			<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+			<soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+			<soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+			<blueprintClass>Blueprint_Door</blueprintClass>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Door/Door_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<comps>
+			<li Class="CompProperties_Forbiddable">
+				<allowNonPlayer>true</allowNonPlayer>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+		<modExtensions>
+			<li Class="VFEInsectoids.InsectBuilding"/>
+		</modExtensions>
+		<stealable>false</stealable>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_LargeGlowPod</defName>
+		<label>large glow pod</label>
+		<description>A large bioluminescent pod produced by giant insects. Glows under its own light and does not perish with time. Needs to be constructed on the creep.</description>
+		<graphicData>
+			<texPath>Things/Building/GlowPodLarge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>1.5</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<uiIconScale>0.6</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>40</MarketValue>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8.9</glowRadius>
+				<glowColor>(113,141,117,0)</glowColor>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>30</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_GlowPodFormation</defName>
+		<label>glow pod formation</label>
+		<description>A large cluster of bioluminescent pods produced by giant insects. Glows under its own light and does not perish with time. Needs to be constructed on the creep.</description>
+		<graphicData>
+			<texPath>Things/Building/GlowPodFormation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(1.3, 1.6, 1.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(2, 2)</drawSize>
+			<damageData>
+				<rect>(1.2,1.2,1.6,1.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.40</fillPercent>
+		<size>(2, 2)</size>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>12</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>100</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15.9</glowRadius>
+				<glowColor>(113,141,117,0)</glowColor>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>90</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_GlowPodSpire</defName>
+		<label>glow pod spire</label>
+		<description>An incredibly tall spire of bioluminescent pods produced by giant insects. Lights an area brightly enough to grow crops and does not perish with time. Needs to be constructed on the creep.</description>
+		<graphicData>
+			<texPath>Things/Building/GlowPodSpire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(2.3, 2.6, 2.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(4, 4)</drawSize>
+			<damageData>
+				<rect>(2.2,2.2,2.6,2.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.60</fillPercent>
+		<size>(3, 3)</size>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>50</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>100</MarketValue>
+			<WorkToBuild>4500</WorkToBuild>
+		</statBases>
+		<specialDisplayRadius>15.7</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>16.9</overlightRadius>
+				<glowRadius>22.9</glowRadius>
+				<glowColor>(113,141,117,0)</glowColor>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_StaticPod</defName>
+		<label>staticpod</label>
+		<description>A medium-sized hive structure capable of generating small amounts of electricity, produced by giant insects. Needs to be constructed on the creep and connected via conduits to batteries.</description>
+		<graphicData>
+			<texPath>Things/Building/Staticpod</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>VFEInsectoids.StaticPod</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<uiIconScale>0.6</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>50</MarketValue>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.9</glowRadius>
+				<glowColor>(113,141,117,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerPlant</compClass>
+				<basePowerConsumption>-50</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>60</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_FoamPod</defName>
+		<label>foampod</label>
+		<description>An organic, firefoam pod produced by giant insects. When it senses fire, the pod pops and sprays a fire-retardant foam in a circular field around itself. Can also be triggered manually. After some time has passed, it dies.</description>
+		<graphicData>
+			<texPath>Things/Building/FoamPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>50</MarketValue>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<specialDisplayRadius>9.9</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3.48</glowRadius>
+				<glowColor>(113,141,117,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>9.9</explosiveRadius>
+				<explosiveDamageType>Extinguish</explosiveDamageType>
+				<startWickHitPointsPercent>-1</startWickHitPointsPercent>
+				<startWickOnDamageTaken>
+					<li>Flame</li>
+				</startWickOnDamageTaken>
+				<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+				<postExplosionSpawnChance>1</postExplosionSpawnChance>
+				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+				<explosionEffect>ExtinguisherExplosion</explosionEffect>
+				<explosionSound>Explosion_FirefoamPopper</explosionSound>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>1200000</lifespanTicks>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Fire</target>
+				<radius>3</radius>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>35</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_TendrilFarm</defName>
+		<label>tendril farm</label>
+		<description>A pillar that slowly grows clusters of insectoid tendrilmoss. Needs to be constructed on the creep. While tendrilmoss generally acts as good and strong cover, it can be harvested and eaten.</description>
+		<graphicData>
+			<texPath>Things/Building/TendrilFarm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<uiIconScale>0.6</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<selectable>true</selectable>
+		<fillPercent>0.30</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>80</MarketValue>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_PlantFarm">
+				<radius>5.9</radius>
+				<plant>VFEI2_TendrilmossVines</plant>
+				<requiredTerrain>VFEI2_Creep</requiredTerrain>
+				<spawnTickRate>15000~25000</spawnTickRate>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>90</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_Creeper</defName>
+		<label>creeper</label>
+		<description>A hive-like structure created by giant insects. It continuously extracts minerals and nutrition from the ground around it, feeding the hive and creating creep in surrounding area that greatly hinders the movement of anything that’s not an insectoid. If all area around a creeper is turned into creep, it will begin expunging insect jelly in regular intervals.</description>
+		<graphicData>
+			<texPath>Things/Building/Creeper</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>30</InsectJelly>
+		</killedLeavings>
+		<uiIconScale>0.65</uiIconScale>
+		<selectable>true</selectable>
+		<fillPercent>0.50</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<specialDisplayRadius>12.9</specialDisplayRadius>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>100</MarketValue>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_NeverCloseToOtherCreepers</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_Terraform">
+				<radius>12.9</radius>
+				<terrainToSet>VFEI2_Creep</terrainToSet>
+				<spawnTickRate>45000</spawnTickRate>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<compClass>VFEInsectoids.CompSpawnerDisableable</compClass>
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>10</spawnCount>
+				<spawnIntervalRange>150000</spawnIntervalRange>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>150</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_JellyFarm</defName>
+		<label>jelly farm</label>
+		<description>A deep organic bioreactor constantly generating insect jelly from nearby minerals and nutrition, produced by giant insects. Needs to be constructed on the creep.</description>
+		<graphicData>
+			<texPath>Things/Building/JellyFarm</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(1.3, 1.6, 1.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<damageData>
+				<rect>(1.2,1.2,1.6,1.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<fillPercent>0.30</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<size>(2, 2)</size>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>100</MarketValue>
+			<WorkToBuild>2200</WorkToBuild>
+		</statBases>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_NeverCloseToOtherJellyFarms</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>6</spawnCount>
+				<spawnIntervalRange>45000~65000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>30000</ticksHealthy>
+				<ticksNeedsMaintenance>30000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>120</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VFEI2_InfestedShipChunk</defName>
+		<label>infested ship chunk</label>
+		<description>A chunk of a spacecraft covered in biomass and insect jelly. Bizarre insect chittering can be heard within the hull. Can be deconstructed to yield useful steel and components. If left alone, it is impossible to tell when the insects will emerge from within.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/InfestedShipChunk</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0.1,0.1,1.8,1.8)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(1.39,0.5,1.25)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.50</fillPercent>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-20</Beauty>
+			<WorkToBuild>12000</WorkToBuild>
+		</statBases>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<InsectJelly>15</InsectJelly>
+		</killedLeavings>
+		<costList>
+			<ComponentIndustrial>11</ComponentIndustrial>
+			<SteelBar>8</SteelBar>
+		</costList>
+		<building>
+			<claimable>false</claimable>
+			<alwaysDeconstructible>false</alwaysDeconstructible>
+			<deconstructible>false</deconstructible>
+		</building>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<drawerType>MapMeshOnly</drawerType>
+		<repairEffect>ConstructMetal</repairEffect>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Sorne</geneline>
+				<lordJob>LordJob_AssaultColony</lordJob>
+				<shouldJoinParentLord>True</shouldJoinParentLord>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<maxSpawnedPawnsPoints>250</maxSpawnedPawnsPoints>
+				<pawnSpawnIntervalDays>1~15</pawnSpawnIntervalDays>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VFEI2_InfestedShipPart</defName>
+		<label>infested ship part</label>
+		<description>An ancient ship part, torn off of a craft of unknown origin. It might be thousands of years old.\n\nThis one seems to be covered in biomass and insect jelly. Bizarre insect chittering can be heard within the hull. If left alone, it is impossible to tell when the insects will emerge from within.\n\nA mysterious crashed piece of a spaceship. It may contain exotic materials, computers, even AI personas. This kind of technology can be dangerous.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/CrashedInfestedShipPart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,3)</drawSize>
+			<damageData>
+				<rect>(5.8,5.8,2.1,2.1)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(5.25,0.65,2.39)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.50</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<size>(6,3)</size>
+		<statBases>
+			<MaxHitPoints>1200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-200</Beauty>
+			<WorkToBuild>12000</WorkToBuild>
+		</statBases>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<SteelBar>12</SteelBar>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<InsectJelly>60</InsectJelly>
+		</killedLeavings>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<SteelBar>12</SteelBar>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<InsectJelly>60</InsectJelly>
+		</costList>
+		<building>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<displayAttackToDestroyOnInspectPane>true</displayAttackToDestroyOnInspectPane>
+		</building>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<drawerType>MapMeshOnly</drawerType>
+		<repairEffect>ConstructMetal</repairEffect>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Sorne</geneline>
+				<lordJob>LordJob_AssaultColony</lordJob>
+				<shouldJoinParentLord>True</shouldJoinParentLord>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<maxSpawnedPawnsPoints>800</maxSpawnedPawnsPoints>
+				<pawnSpawnIntervalDays>1~15</pawnSpawnIntervalDays>
+				<pawnSpawnRadius>3</pawnSpawnRadius>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VFEI2_InfestedShipModule</defName>
+		<label>infested ship module</label>
+		<description>A mysterious segment of a long destroyed spaceship. It may contain exotic materials, computers, even AI personas. It seems to be completely covered in biomass and lumps of insectoid jelly. It is fairly certain that this old wreckage may contain great dangers. Bizarre insect chittering can be heard within the hull. If left alone, it is impossible to tell when the insects will emerge from within.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/CrashedInfestedShipPart_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(8,6)</drawSize>
+			<damageData>
+				<rect>(4.8,4.8,3.1,3.1)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(4.25,0.65,3.39)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<pathCost>42</pathCost>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.50</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<size>(5,4)</size>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-200</Beauty>
+			<WorkToBuild>12000</WorkToBuild>
+		</statBases>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+			<SteelBar>16</SteelBar>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<InsectJelly>120</InsectJelly>
+		</killedLeavings>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+			<SteelBar>16</SteelBar>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<InsectJelly>120</InsectJelly>
+		</costList>
+		<building>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<displayAttackToDestroyOnInspectPane>true</displayAttackToDestroyOnInspectPane>
+		</building>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<drawerType>MapMeshOnly</drawerType>
+		<repairEffect>ConstructMetal</repairEffect>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Sorne</geneline>
+				<lordJob>LordJob_AssaultColony</lordJob>
+				<shouldJoinParentLord>True</shouldJoinParentLord>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<maxSpawnedPawnsPoints>1600</maxSpawnedPawnsPoints>
+				<pawnSpawnIntervalDays>1~15</pawnSpawnIntervalDays>
+				<pawnSpawnRadius>5</pawnSpawnRadius>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>VFEI_InfestedMeteorIncoming</defName>
+		<label>infested meteor (incoming)</label>
+		<size>(2, 2)</size>
+		<graphicData>
+			<texPath>Things/Skyfallers/HiveMeteorite</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(10, 10)</drawSize>
+		</graphicData>
+		<skyfaller>
+			<shadowSize>(3, 3)</shadowSize>
+			<explosionRadius>4</explosionRadius>
+			<explosionDamage>Bomb</explosionDamage>
+			<rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+			<speed>1.2</speed>
+			<damageSpawnedThings>false</damageSpawnedThings>
+		</skyfaller>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_KemianHive</defName>
+		<label>kemian hive</label>
+		<description>A hive of giant insects of the Kemian geneline. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly.</description>
+		<thingClass>Hive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/KemianHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.75</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+				<canWakeUpFogged>false</canWakeUpFogged>
+			</li>
+			<li Class="CompProperties_WakeUpDormant"/>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Kemia</geneline>
+				<lordJob>LordJob_DefendAndExpandHive</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<initialPawnsPoints>200</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_SpawnerHives"/>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ChelisHive</defName>
+		<label>chelis hive</label>
+		<description>A hive of giant insects of the Chelis geneline. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly.</description>
+		<thingClass>Hive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/ChelisHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.5</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+				<canWakeUpFogged>false</canWakeUpFogged>
+			</li>
+			<li Class="CompProperties_WakeUpDormant"/>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Chelis</geneline>
+				<lordJob>LordJob_DefendAndExpandHive</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<initialPawnsPoints>200</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_SpawnerHives"/>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_XanidesHive</defName>
+		<label>xanides hive</label>
+		<description>A hive of giant insects of the Xanides geneline. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly.</description>
+		<thingClass>Hive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/XanidesHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+				<canWakeUpFogged>false</canWakeUpFogged>
+			</li>
+			<li Class="CompProperties_WakeUpDormant"/>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Xanides</geneline>
+				<lordJob>LordJob_DefendAndExpandHive</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<initialPawnsPoints>200</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_SpawnerHives"/>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_NuchadusHive</defName>
+		<label>nuchadus hive</label>
+		<description>A hive of giant insects of the Nuchadus geneline. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly. May explode if damaged.</description>
+		<thingClass>Hive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/NuchadusHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+				<canWakeUpFogged>false</canWakeUpFogged>
+			</li>
+			<li Class="CompProperties_WakeUpDormant"/>
+			<li Class="VFEInsectoids.CompProperties_InsectSpawner">
+				<geneline>VFEI_Nuchadus</geneline>
+				<lordJob>LordJob_DefendAndExpandHive</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<initialPawnsPoints>200</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>120</wickTicks>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_SpawnerHives"/>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase" Name="VFEI2_InsectoidCocoon">
+		<defName>VFEI2_InsectoidCocoon</defName>
+		<label>insectoid cocoon</label>
+		<description>These jelly cocoons keep swarmlings safe from fire, extreme temperatures, and other threats while they undergo a metamorphosis process. After some time has passed, the cocoon will burst, releasing a fully grown insectoid.</description>
+		<graphicData>
+			<texPath>Things/Building/InsectoidCocoons</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<thingClass>VFEInsectoids.Cocoon</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<receivesSignals>true</receivesSignals>
+		<building>
+			<combatPower>150</combatPower>
+			<deconstructible>false</deconstructible>
+			<isEdifice>false</isEdifice>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_InsectoidCocoon">
+		<defName>VFEI2_InsectoidCocoonHive</defName>
+		<thingClass>VFEInsectoids.CocoonHive</thingClass>
+	</ThingDef>
+	<!-- Artificial hives -->
+	<ThingDef ParentName="VFEI2_BuildingBase">
+		<defName>VFEI2_ArtificialBasicHive</defName>
+		<label>artificial basic hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning the most basic insectoids over time, as well as small amounts of valuable insect jelly. It requires no maintenance, but will still affect the maintenance of nearby hives.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/BasicHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>150</MarketValue>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+			<li>VFEInsectoids.PlaceWorker_BasicHivesNear</li>
+		</placeWorkers>
+		<building>
+			<isEdifice>true</isEdifice>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>Megascarab</insect>
+						<insectType>Worker</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>120000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>5</spawnCount>
+				<spawnIntervalRange>46000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>180</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VFEInsectoids.InsectBuilding">
+				<nonInsectCanBuildIt>true</nonInsectCanBuildIt>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ArtificialSorneHive</defName>
+		<label>artificial sorne hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning various Sorne geneline insectoids over time, as well as some amount of insect jelly. It requires regular maintenance, and constructing too many hives near each other will increase the maintenance required.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/SorneHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>250</MarketValue>
+			<WorkToBuild>2500</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>45</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>Spelopede</insect>
+						<insectType>Worker</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Megapede</insect>
+						<insectType>Defender</insectType>
+					</li>
+					<li>
+						<insect>Megaspider</insect>
+						<insectType>Hunter</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>180000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+			<VFEI2_PherocoreSorne>1</VFEI2_PherocoreSorne>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ArtificialNuchadusHive</defName>
+		<label>artificial nuchadus hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning various Nuchadus geneline insectoids over time, as well as some amount of insect jelly. It requires regular maintenance, and constructing too many hives near each other will increase the maintenance required.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/NuchadusHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>500</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>60</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>VFEI2_Fuelmite</insect>
+						<insectType>Defender</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Boomtick</insect>
+						<insectType>Defender</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Hellbeetle</insect>
+						<insectType>Hunter</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>180000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>360</wickTicks>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explodeOnKilled>true</explodeOnKilled>
+				<startWickHitPointsPercent>0.15</startWickHitPointsPercent>
+				<drawWick>false</drawWick>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>12</heatPerSecond>
+				<heatPushMaxTemperature>72</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+			<VFEI2_RoyalInsectJelly>50</VFEI2_RoyalInsectJelly>
+			<VFEI2_PherocoreNuchadus>1</VFEI2_PherocoreNuchadus>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ArtificialChelisHive</defName>
+		<label>artificial chelis hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning various Chelis geneline insectoids over time, as well as some amount of insect jelly. It requires regular maintenance, and constructing too many hives near each other will increase the maintenance required.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/ChelisHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.55</uiIconScale>
+		<uiIconOffset>(0, 0.05)</uiIconOffset>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>500</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>60</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>VFEI2_Macrofly</insect>
+						<insectType>Hunter</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Megawasp</insect>
+						<insectType>Hunter</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Gigalocust</insect>
+						<insectType>Hunter</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>180000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>36</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+			<VFEI2_RoyalInsectJelly>50</VFEI2_RoyalInsectJelly>
+			<VFEI2_PherocoreChelis>1</VFEI2_PherocoreChelis>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ArtificialKemianHive</defName>
+		<label>artificial kemian hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning various Kemian geneline insectoids over time, as well as some amount of insect jelly. It requires regular maintenance, and constructing too many hives near each other will increase the maintenance required.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/KemianHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.75</drawSize>
+		</graphicData>
+		<uiIconScale>0.55</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>500</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>60</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>VFEI2_Megathrips</insect>
+						<insectType>Worker</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Acidspitter</insect>
+						<insectType>Defender</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Venomite</insect>
+						<insectType>Hunter</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>180000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>36</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+			<VFEI2_RoyalInsectJelly>50</VFEI2_RoyalInsectJelly>
+			<VFEI2_PherocoreKemian>1</VFEI2_PherocoreKemian>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_ArtificialXanidesHive</defName>
+		<label>artificial xanides hive</label>
+		<description>An artificially constructed hive of giant insects. It is capable of spawning various Xanides geneline insectoids over time, as well as some amount of insect jelly. It requires regular maintenance, and constructing too many hives near each other will increase the maintenance required.</description>
+		<thingClass>VFEInsectoids.ArtificialHive</thingClass>
+		<graphicData>
+			<texPath>Things/Building/XanidesHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.6</drawSize>
+		</graphicData>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>500</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>60</InsectJelly>
+		</killedLeavings>
+		<placeWorkers>
+			<li>VFEInsectoids.PlaceWorker_ArtificialHivesNear</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>VFEI_ArtificialHive</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_Hive">
+				<insectTypes>
+					<li>
+						<insect>VFEI2_Durapod</insect>
+						<insectType>Worker</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Tankroach</insect>
+						<insectType>Defender</insectType>
+					</li>
+					<li>
+						<insect>VFEI2_Ironclad</insect>
+						<insectType>Defender</insectType>
+					</li>
+				</insectTypes>
+				<insectoidRespawnTime>180000</insectoidRespawnTime>
+				<spawnSound>Hive_Spawn</spawnSound>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_MindfulSpawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>36</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<compClass>VFEInsectoids.CompMaintenableHive</compClass>
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>225</InsectJelly>
+			<VFEI2_RoyalInsectJelly>50</VFEI2_RoyalInsectJelly>
+			<VFEI2_PherocoreXanides>1</VFEI2_PherocoreXanides>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_HeatPod</defName>
+		<label>heat pod</label>
+		<description>A bioluminescent pod produced by giant insects. Glows under its own light for a long time, then dies.</description>
+		<thingClass>Building</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>20</MarketValue>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>1.9</glowRadius>
+				<glowColor>(184,136,83,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>3.5</heatPerSecond>
+				<heatPushMaxTemperature>23</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>1200000</lifespanTicks>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>15</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<graphicData>
+			<texPath>Things/Building/Heatpod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_DeepHeater</defName>
+		<label>deep heater</label>
+		<description>A deep canal that connects to some underground steam caverns, dug up by giant insects. Sprays out superheated steam at random, similar to steam geysers.</description>
+		<thingClass>Building_SteamGeyser</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>50</MarketValue>
+			<WorkToBuild>3000</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3.09</glowRadius>
+				<glowColor>(255,115,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>3.5</heatPerSecond>
+				<heatPushMaxTemperature>23</heatPushMaxTemperature>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>45</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+		<graphicData>
+			<texPath>Things/Building/DeepHeater</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>1.5</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.6</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_JellyMorpher</defName>
+		<label>jelly morpher</label>
+		<description>An exotic, pulsating bioformation that forces attached insect jelly to undergo a chemical process that changes it into royal jelly. Produced by giant insects. Needs to be constructed on the creep and requires refueling with insect jelly in order to produce the royal variant.</description>
+		<graphicData>
+			<texPath>Things/Building/JellyMorpher</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(1.3, 1.6, 1.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>(2, 2)</drawSize>
+			<damageData>
+				<rect>(1.2,1.2,1.6,1.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<fillPercent>0.30</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<size>(2, 2)</size>
+		<statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<Mass>50</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>1000</MarketValue>
+			<WorkToBuild>3800</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_FueledSpawner">
+				<thingToSpawn>VFEI2_RoyalInsectJelly</thingToSpawn>
+				<spawnCount>10</spawnCount>
+				<spawnIntervalRange>19000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+				<requiresFuel>true</requiresFuel>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>6.0</fuelConsumptionRate>
+				<fuelCapacity>90.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>InsectJelly</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>90</InsectJelly>
+			<VFEI2_RoyalInsectJelly>20</VFEI2_RoyalInsectJelly>
+			<VFEI2_PherocoreSorne>1</VFEI2_PherocoreSorne>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<!-- ===================================== -->
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>VFEI2_LargeTunnelHiveSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>VFEInsectoids.LargeTunnelHiveSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+		<building>
+			<groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+			<groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+		</building>
+	</ThingDef>
+	<ThingDef>
+		<defName>VFEI_HellpodActiveDropPod</defName>
+		<label>hellpod</label>
+		<category>Item</category>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<thingClass>ActiveDropPod</thingClass>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Skyfallers/Skyfaller_Hellpod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.9</drawSize>
+			<shadowData>
+				<volume>(0.8, 0.6, 0.8)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<selectable>true</selectable>
+		<drawOffscreen>true</drawOffscreen>
+	</ThingDef>
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>VFEI_HellpodIncoming</defName>
+		<label>hellpod (incoming)</label>
+		<thingClass>VFEInsectoids.HellpodIncoming</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Things/Skyfallers/Skyfaller_Hellpod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>1.9</drawSize>
+		</graphicData>
+		<skyfaller>
+			<movementType>ConstantSpeed</movementType>
+			<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+			<shadowSize>(2, 2)</shadowSize>
+			<anticipationSound>DropPod_Fall</anticipationSound>
+			<anticipationSoundTicks>100</anticipationSoundTicks>
+			<explosionRadius>4.9</explosionRadius>
+			<explosionDamage>Bomb</explosionDamage>
+			<motesPerCell>1</motesPerCell>
+			<angleCurve>
+				<points>
+					<li>(0,0)</li>
+					<li>(0.98, 0)</li>
+				</points>
+			</angleCurve>
+		</skyfaller>
+	</ThingDef>
+	<!-- New structures -->
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_Petroglypher</defName>
+		<label>petroglypher</label>
+		<description>A hive-like structure created by giant insects. It continuously reinforces nearby rock formations with thick, resin-like insect goop, creating hivestone walls in the process. It will only turn natural rock walls into hivestone and will have no effect on any other wall types. If all walls around a petroglypher are turned into hivestone, it will begin expunging  chitin in regular intervals.</description>
+		<graphicData>
+			<texPath>Things/Building/Petroglypher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4, 4)</drawSize>
+			<shadowData>
+				<volume>(2.3, 2.6, 2.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>75</InsectJelly>
+		</killedLeavings>
+		<selectable>true</selectable>
+		<fillPercent>0.50</fillPercent>
+		<rotatable>false</rotatable>
+		<size>(3, 3)</size>
+		<tickerType>Normal</tickerType>
+		<specialDisplayRadius>24.9</specialDisplayRadius>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>40</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>1000</MarketValue>
+			<WorkToBuild>3500</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_TransformRocks">
+				<radius>24.9</radius>
+				<spawnTickRate>14000~36000</spawnTickRate>
+				<thingToSet>VFEI_HivestoneWall</thingToSet>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<compClass>VFEInsectoids.CompSpawnerDisableable</compClass>
+				<thingToSpawn>VFEI2_Chitin</thingToSpawn>
+				<spawnCount>10</spawnCount>
+				<spawnIntervalRange>150000</spawnIntervalRange>
+				<spawnForbidden>false</spawnForbidden>
+				<saveKeysPrefix>chitin</saveKeysPrefix>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>270</InsectJelly>
+			<VFEI2_PherocoreXanides>1</VFEI2_PherocoreXanides>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_Hivenode</defName>
+		<label>hivenode</label>
+		<description>A large, exotic goop spire created by giant insects. Hivenodes lie in the center of the hive, nourishing nearby insectoid structures with required sustenance and warmth, removing any maintenance need. When destroyed, it may explode in a large, fiery explosion.</description>
+		<graphicData>
+			<texPath>Things/Building/Hivenode</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4, 4)</drawSize>
+			<shadowData>
+				<volume>(2.3, 2.6, 2.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>75</InsectJelly>
+		</killedLeavings>
+		<selectable>true</selectable>
+		<fillPercent>0.3</fillPercent>
+		<rotatable>false</rotatable>
+		<size>(3, 3)</size>
+		<tickerType>Normal</tickerType>
+		<specialDisplayRadius>7.9</specialDisplayRadius>
+		<uiIconScale>0.9</uiIconScale>
+		<uiIconOffset>(0, 0.05)</uiIconOffset>
+		<statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<Mass>40</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>1000</MarketValue>
+			<WorkToBuild>3800</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12.9</glowRadius>
+				<glowColor>(184,136,83,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>4.5</heatPerSecond>
+				<heatPushMaxTemperature>36</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>6.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<chanceNeverExplodeFromDamage>0.35</chanceNeverExplodeFromDamage>
+				<wickTicks>1500~3600</wickTicks>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>220</InsectJelly>
+			<VFEI2_PherocoreNuchadus>1</VFEI2_PherocoreNuchadus>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_Thornpod</defName>
+		<label>thornpod</label>
+		<description>A volatile pod covered in sharp chitin thorns, produced by giant insects. If any target gets close to it, the pod expunges the thorns, after which it will take some time to grow them back.</description>
+		<graphicData>
+			<texPath>Things/Building/Thornpod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<thingClass>VFEInsectoids.ThornPod</thingClass>
+		<drawerType>RealtimeOnly</drawerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<uiIconScale>0.6</uiIconScale>
+		<uiIconOffset>(0, 0.1)</uiIconOffset>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>85</MarketValue>
+			<WorkToBuild>1000</WorkToBuild>
+		</statBases>
+		<specialDisplayRadius>4.9</specialDisplayRadius>
+		<comps>
+			<li Class="VFECore.CompProperties_Explosive_Shells">
+				<explosiveRadius>0.1</explosiveRadius>
+				<explosiveDamageType>Stab</explosiveDamageType>
+				<damageAmountBase>8</damageAmountBase>
+				<startWickHitPointsPercent>0</startWickHitPointsPercent>
+				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+				<wickTicks>0</wickTicks>
+				<shell>VFEI2_Bullet_Thorn</shell>
+				<shellCount>18</shellCount>
+				<shellDist>3~7</shellDist>
+				<destroyThingOnExplosionSize>9999</destroyThingOnExplosionSize>
+				<!--hack to not destroy on explosion-->
+				<explosionSound>VFEI2_InsectThornpod_Release</explosionSound>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>65</InsectJelly>
+		</costList>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+		</placeWorkers>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VFEI2_Bullet_Thorn</defName>
+		<label>thorn</label>
+		<thingClass>VFECore.Projectile_ShrapnelPiece</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Projectile_Thorn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+	<!-- Insectoid Turrets -->
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase" Name="VFEI2_TurretBase" Abstract="True">
+		<thingClass>Building_TurretGun</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/InsectoidTurrets/InsectoidTurret_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<drawOffset>(0,0,-0.1)</drawOffset>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(1.5,0.35,1.4)</volume>
+				<offset>(0,0,-0.05)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>380</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>100</Mass>
+			<Beauty>-20</Beauty>
+			<MarketValue>950</MarketValue>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.3</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<soundImpactDefault>Hive_Spawn</soundImpactDefault>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<building>
+			<turretTopDrawSize>2.7</turretTopDrawSize>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
+		<designationHotKey>Misc3</designationHotKey>
+		<uiIconScale>0.95</uiIconScale>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Insect jelly</fuelLabel>
+				<fuelGizmoLabel>Insect jelly</fuelGizmoLabel>
+				<fuelConsumptionRate>6</fuelConsumptionRate>
+				<fuelFilter>
+					<thingDefs>
+						<li>InsectJelly</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>90</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>Things/Item/Resource/AnimalProductRaw/InsectJelly/InsectJelly_c</fuelIconPath>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_DamagedWhenUnfueled">
+				<interval>120</interval>
+				<damage>1</damage>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_InsectCalls">
+				<soundDefs>
+					<li>Pawn_BigInsect_Call</li>
+				</soundDefs>
+				<interval>6~12</interval>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_TurretBase">
+		<defName>VFEI2_Vilelobber</defName>
+		<label>vilelobber</label>
+		<description>A small mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a vilelobber insectoid. This creature is adept at spitting large, corrosive acid blobs over considerable distances, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the vilelobber will retreat back into the deephive tunnels.</description>
+		<uiIconPath>Things/Building/InsectoidTurrets/InsectoidTurretKemia_MenuIcon</uiIconPath>
+		<statBases>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+			<!-- like level 8 human shooter -->
+		</statBases>
+		<costList>
+			<InsectJelly>240</InsectJelly>
+			<VFEI2_PherocoreKemian>1</VFEI2_PherocoreKemian>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<building>
+			<turretGunDef>VFEI2_Vilelobber_Gun</turretGunDef>
+			<destroySound>Hive_Spawn</destroySound>
+			<playTargetAcquiredSound>false</playTargetAcquiredSound>
+			<turretBurstCooldownTime>25</turretBurstCooldownTime>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>VFEI2_Vilelobber_Gun</defName>
+		<label>vilelobber</label>
+		<description>A small mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a vilelobber insectoid. This creature is adept at spitting large, corrosive acid blobs over considerable distances, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the vilelobber will retreat back into the deephive tunnels.</description>
+		<graphicData>
+			<texPath>Things/Building/InsectoidTurrets/TurretInsectoidKemia_Top</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<RangedWeapon_Cooldown>25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>7</warmupTime>
+				<forcedMissRadius>5</forcedMissRadius>
+				<defaultCooldownTime>25</defaultCooldownTime>
+				<forcedMissRadiusClassicMortars>13</forcedMissRadiusClassicMortars>
+				<defaultProjectile>VFEI2_Vilelobber_Projectile</defaultProjectile>
+				<requireLineOfSight>false</requireLineOfSight>
+				<minRange>10.9</minRange>
+				<range>500</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>VFEI2_AcidSpray_Resolve</soundCast>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<consumeFuelPerShot>0</consumeFuelPerShot>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VFEI2_Vilelobber_Projectile</defName>
+		<label>vilelobber projectile</label>
+		<graphicData>
+			<texPath>Things/Projectile/Projectie_VilelobberSpit</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>33</speed>
+			<explosionRadius>3.9</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>VFEI2_AcidSpit</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
+			<preExplosionSpawnChance>0.4</preExplosionSpawnChance>
+			<preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>VFEI2_AcidSpray_Resolve</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_TurretBase">
+		<defName>VFEI2_Thornworm</defName>
+		<label>thornworm</label>
+		<description>A small mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a thornworm insectoid. This creature is capable of ejecting rapidly-growing chitin thorns at enemies nearby, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the thornworm will retreat back into the deephive tunnels.</description>
+		<uiIconPath>Things/Building/InsectoidTurrets/InsectoidTurretChelis_MenuIcon</uiIconPath>
+		<statBases>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+			
+			<!-- like level 8 human shooter -->
+		</statBases>
+		<costList>
+			<InsectJelly>240</InsectJelly>
+			<VFEI2_PherocoreChelis>1</VFEI2_PherocoreChelis>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<building>
+			<turretGunDef>VFEI2_Thornworm_Gun</turretGunDef>
+			<destroySound>Hive_Spawn</destroySound>
+			<playTargetAcquiredSound>false</playTargetAcquiredSound>
+			<turretBurstCooldownTime>6.5</turretBurstCooldownTime>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>VFEI2_Thornworm_Gun</defName>
+		<label>thornworm</label>
+		<description>A small mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a thornworm insectoid. This creature is capable of ejecting rapidly-growing chitin thorns at enemies nearby, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the thornworm will retreat back into the deephive tunnels.</description>
+		<graphicData>
+			<texPath>Things/Building/InsectoidTurrets/TurretInsectoidChelis_Top</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<RangedWeapon_Cooldown>6.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>7</warmupTime>
+				<ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<defaultCooldownTime>6.5</defaultCooldownTime>
+				<defaultProjectile>VFEI2_Thornworm_Projectile</defaultProjectile>
+				<minRange>4.9</minRange>
+				<range>28.9</range>
+				<soundCast>VFEI2_InsectThornpod_Release</soundCast>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<consumeFuelPerShot>0</consumeFuelPerShot>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>DustPuffThick</fleckDef>
+				<size>0.5</size>
+				<!-- Multiplier -->
+				<velocity>2</velocity>
+				<!-- Fixed amount -->
+				<angleRange>-15~15</angleRange>
+				<!-- Negative: Counter-clockwise Positive: Clockwise -->
+				<rotationRange>-5~5</rotationRange>
+				<!-- Negative: Counter-clockwise Positive: Clockwise -->
+				<numTimesThrown>1</numTimesThrown>
+				<!-- Fixed amount -->
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>3~6</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VFEI2_Thornworm_Projectile</defName>
+		<label>thornworm projectile</label>
+		<graphicData>
+			<texPath>Things/Projectile/Projectile_Thornworm_Spike</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<speed>88</speed>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<stoppingPower>0</stoppingPower>
+			<armorPenetrationBase>0.4</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_TurretBase">
+		<defName>VFEI2_Thornspitter</defName>
+		<label>thornspitter</label>
+		<description>A tiny mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a thornspitter insectoid. This creature is capable of ejecting inaccurate chitin thorns at enemies close-by, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the thornworm will retreat back into the deephive tunnels.</description>
+		<uiIconPath>Things/Building/InsectoidTurrets/InsectoidTurretBasic_MenuIcon</uiIconPath>
+		<graphicData>
+			<texPath>Things/Building/InsectoidTurrets/InsectoidTurretSmall_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+			<drawOffset>(0,0,-0.1)</drawOffset>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(1.5,0.35,1.4)</volume>
+				<offset>(0,0,-0.05)</offset>
+			</shadowData>
+		</graphicData>
+		<size>(1,1)</size>
+		<statBases>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+			<!-- like level 8 human shooter -->
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>2000</WorkToBuild>
+			<Mass>10</Mass>
+			<Beauty>-20</Beauty>
+			<MarketValue>200</MarketValue>
+		</statBases>
+		<costList>
+			<InsectJelly>150</InsectJelly>
+		</costList>
+		<comps Inherit="false">
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+				<!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Insect jelly</fuelLabel>
+				<fuelGizmoLabel>Insect jelly</fuelGizmoLabel>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
+				<fuelFilter>
+					<thingDefs>
+						<li>InsectJelly</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>90</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>Things/Item/Resource/AnimalProductRaw/InsectJelly/InsectJelly_c</fuelIconPath>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_DamagedWhenUnfueled">
+				<interval>120</interval>
+				<damage>1</damage>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_InsectCalls">
+				<soundDefs>
+					<li>Pawn_BigInsect_Call</li>
+				</soundDefs>
+				<interval>6~12</interval>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	
+		<building>
+			<turretGunDef>VFEI2_Thornspitter_Gun</turretGunDef>
+			  <turretTopDrawSize>1.85</turretTopDrawSize>
+			<destroySound>Hive_Spawn</destroySound>
+			<playTargetAcquiredSound>false</playTargetAcquiredSound>
+			<turretBurstCooldownTime>8</turretBurstCooldownTime>
+		</building>
+		<researchPrerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>VFEI2_Thornspitter_Gun</defName>
+		<label>thornspitter</label>
+		<description>A tiny mound serving as the entrance to an expansive deephive cluster below ground, topped by the emergence of a thornspitter insectoid. This creature is capable of ejecting inaccurate chitin thorns at enemies close-by, provided it is regularly fed with insect jelly. If starved, the mound will gradually deteriorate. Once completely deteriorated, the thornworm will retreat back into the deephive tunnels.</description>
+		<graphicData>
+			<texPath>Things/Building/InsectoidTurrets/TurretInsectoidBasic_Top</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			
+		</graphicData>
+		<statBases>
+			<RangedWeapon_Cooldown>8</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>2.7</warmupTime>
+				<defaultCooldownTime>8</defaultCooldownTime>
+				<defaultProjectile>VFEI2_Thornspitter_Projectile</defaultProjectile>
+				<range>16.9</range>
+				<soundCast>VFEI2_InsectThornpod_Release</soundCast>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<consumeFuelPerShot>0</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VFEI2_Thornspitter_Projectile</defName>
+		<label>thornspitter projectile</label>
+		<graphicData>
+			<texPath>Things/Projectile/Projectile_Thornworm_Spike</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<speed>88</speed>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<stoppingPower>0</stoppingPower>
+			<armorPenetrationBase>0.4</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="VFEI2_BuildingBaseDoor">
+		<defName>VFEI2_HiveDoor</defName>
+		<label>hive door</label>
+		<thingClass>Building_MultiTileDoor</thingClass>
+		<description>A passable insect door made from insectoid goop. Capable of holding up a roof.</description>
+		<statBases>
+			<WorkToBuild>2000</WorkToBuild>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Beauty>0</Beauty>
+			<Flammability>1</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/HiveDoor/DoorInsectoid_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+			
+		</graphicData>
+		<uiIconPath>Things/Building/HiveDoor/DoorInsectoid_MenuIcon_south</uiIconPath>
+		
+		<size>(1, 1)</size>
+		<rotatable>true</rotatable>
+		<building>
+			<roamerCanOpen>true</roamerCanOpen>
+			<blueprintClass>Blueprint_Build</blueprintClass>
+			<blueprintGraphicData>
+				<texPath>Things/Building/HiveDoor/DoorInsectoid_MenuIcon</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>2</drawSize>
+			</blueprintGraphicData>
+			<doorTopGraphic>
+				<texPath>Things/Building/HiveDoor/DoorInsectoid_Top</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(2, 2)</drawSize>
+			</doorTopGraphic>
+		</building>
+		<designationHotKey>Misc3</designationHotKey>
+	</ThingDef>
+	
+	<!--==================== Update 2.1 ==================== -->
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_Jellyspreader</defName>
+		<label>jellyspreader</label>
+		<description>A hive-like formation of insectoid jelly that slowly pumps that jelly into the creep around it, nourishing it and creating a soft jelly terrain in a large radius. Jelly terrain created this way can support insectoid structures and in many ways behaves similar to creep, except it’s easier to clean and slows down non-insectoid movement even more. It needs to be fueled with insect jelly, otherwise it will stop transforming creep around itself.</description>
+		<graphicData>
+			<texPath>Things/Building/Jellyspreader</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>30</InsectJelly>
+		</killedLeavings>
+		<uiIconScale>0.65</uiIconScale>
+		<selectable>true</selectable>
+		<fillPercent>0.50</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<specialDisplayRadius>32.9</specialDisplayRadius>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>10</Mass>
+			<Flammability>1.0</Flammability>
+			<MarketValue>250</MarketValue>
+			<WorkToBuild>2700</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_Terraform">
+				<radius>32.9</radius>
+				<requiredTerrain>VFEI2_Creep</requiredTerrain>
+				<terrainToSet>VFEI2_JellyFloor</terrainToSet>
+				<spawnTickRate>30000</spawnTickRate>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Insect jelly</fuelLabel>
+				<fuelGizmoLabel>Insect jelly</fuelGizmoLabel>
+				<fuelConsumptionRate>12</fuelConsumptionRate>
+				<fuelFilter>
+					<thingDefs>
+						<li>InsectJelly</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>90</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>Things/Item/Resource/AnimalProductRaw/InsectJelly/InsectJelly_c</fuelIconPath>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>240</InsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_Creep</terrainAffordanceNeeded>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
+		<defName>VFEI2_RoyalJellyspreader</defName>
+		<label>royal jellyspreader</label>
+		<description>A hive-like formation of royal insectoid jelly that enriches nearby insectoid jellyfloors with the royal molecules. Royal jelly terrain created this way can support insectoid structures and in many ways behaves similar to creep, except it’s much easier to clean, cannot burn and slows down non-insectoid movement even more. It needs to be fueled with royal insect jelly, otherwise it will stop enriching jellyfloors around it.</description>
+		<graphicData>
+			<texPath>Things/Building/RoyalJellyspreader</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<thingClass>Building</thingClass>
+		<minifiedDef Inherit="False"/>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<InsectJelly>30</InsectJelly>
+		</killedLeavings>
+		<uiIconScale>0.65</uiIconScale>
+		<selectable>true</selectable>
+		<fillPercent>0.50</fillPercent>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<specialDisplayRadius>16.9</specialDisplayRadius>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>10</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>500</MarketValue>
+			<WorkToBuild>3500</WorkToBuild>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>
+			</li>
+			<li Class="VFEInsectoids.CompProperties_Terraform">
+				<radius>16.9</radius>
+				<requiredTerrain>VFEI2_JellyFloor</requiredTerrain>
+				<terrainToSet>VFEI2_RoyalJellyFloor</terrainToSet>
+				<spawnTickRate>7500</spawnTickRate>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Royal insect jelly</fuelLabel>
+				<fuelGizmoLabel>Royal insect jelly</fuelGizmoLabel>
+				<fuelConsumptionRate>24</fuelConsumptionRate>
+				<fuelFilter>
+					<thingDefs>
+						<li>VFEI2_RoyalInsectJelly</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>30</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>Things/Item/RoyalJelly/RoyalJelly_c</fuelIconPath>
+			</li>
+		</comps>
+		<costList>
+			<InsectJelly>150</InsectJelly>
+			<VFEI2_RoyalInsectJelly>30</VFEI2_RoyalInsectJelly>
+		</costList>
+		<designationCategory>VFEI2_Insectoids</designationCategory>
+		<researchPrerequisites>
+			<li>VFEI2_ExoticHivetech</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>VFEI2_JellyFloor</terrainAffordanceNeeded>
+	</ThingDef>
+</Defs>

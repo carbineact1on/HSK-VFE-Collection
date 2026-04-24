@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--  Royal Spelopede -->
+	<ThingDef ParentName="VFEI2_BaseInsect">
+		<defName>VFEI2_RoyalSpelopede</defName>
+		<label>royal spelopede</label>
+		<description>A naturally-evolved insectoid the size of a bear. Royal spelopedes are the middle caste of the primary hives and act as defenders and workers of the insectoid hive leaders. Their thick chitinous armor makes them very hard to kill, while the strong digging claws allow them to take care of most of the tasks at hand. Unlike their bioengineered cousins, these insectoids have been created by the hive leaders to protect the most important hives, and their genetic composition and evolution path are a mystery to scientists.</description>
+		<statBases>
+			<MoveSpeed>3.6</MoveSpeed>
+			<Flammability>0.7</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>500</MarketValue>
+			<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+			<LeatherAmount>30</LeatherAmount>
+		</statBases>
+		<tools>
+			<li>
+				<label>head claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12</power>
+				<armorPenetration>0.18</armorPenetration>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<armorPenetration>0.1</armorPenetration>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>BeetleLikeWithClaw</body>
+			<baseHungerRate>0.56</baseHungerRate>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>0.4</wildness>
+			<lifeExpectancy>6</lifeExpectancy>
+			<trainability>Advanced</trainability>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0.2</minAge>
+					<soundWounded>Pawn_Spelopede_Pain</soundWounded>
+					<soundDeath>Pawn_Spelopede_Death</soundDeath>
+					<soundCall>Pawn_Spelopede_Call</soundCall>
+					<soundAngry>Pawn_Spelopede_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<killedLeavings>
+			<VFEI2_RoyalInsectJelly>3</VFEI2_RoyalInsectJelly>
+		</killedLeavings>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VFEI2_RoyalSpelopede</defName>
+		<label>royal spelopede</label>
+		<race>VFEI2_RoyalSpelopede</race>
+		<combatPower>150</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<defaultFactionType>Insect</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<defendPointRadius>0</defendPointRadius>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/RoyalSpelopede</texPath>
+					<color>(156,148,125)</color>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/Dessicated_RoyalSpelopede</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/RoyalSpelopede</texPath>
+					<drawSize>2</drawSize>
+					<color>(156,148,125)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/Dessicated_RoyalSpelopede</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/RoyalSpelopede</texPath>
+					<drawSize>2.375</drawSize>
+					<color>(156,148,125)</color>
+					<shadowData>
+						<volume>(0.5, 0.7, 0.43)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RoyalSpelopede/Dessicated_RoyalSpelopede</texPath>
+					<drawSize>2.375</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

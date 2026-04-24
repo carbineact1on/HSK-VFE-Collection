@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="Insect"]</xpath>
+      <value>
+         <canSiege>false</canSiege>
+         <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+         <canStageAttacks>true</canStageAttacks>
+         <maxPawnCostPerTotalPointsCurve>
+            <points>
+               <li>(0,35)</li>
+               <li>(70, 50)</li>
+               <li>(700, 100)</li>
+               <li>(1300, 150)</li>
+               <li>(100000, 10000)</li>
+            </points>
+         </maxPawnCostPerTotalPointsCurve>
+         <settlementGenerationWeight>1</settlementGenerationWeight>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/raidCommonalityFromPointsCurve</xpath>
+      <value>
+         <raidCommonalityFromPointsCurve>
+            <points>
+               <li>(300,  0)</li>
+               <li>(700,  1)</li>
+               <li>(1400, 1.8)</li>
+               <li>(2800, 2.2)</li>
+               <li>(4000, 2.6)</li>
+            </points>
+         </raidCommonalityFromPointsCurve>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="Insect"]</xpath>
+      <value>
+         <pawnGroupMakers>
+            <li>
+               <kindDef>Combat</kindDef>
+               <commonality>100</commonality>
+               <options>
+                  <Megascarab>10</Megascarab>
+                  <Spelopede>7</Spelopede>
+                  <Megaspider>3</Megaspider>
+                  <VFEI2_Megapede>2</VFEI2_Megapede>
+                  <VFEI2_Queen>1</VFEI2_Queen>
+                  <VFEI2_Swarmling>1</VFEI2_Swarmling>
+               </options>
+            </li>
+            <li>
+               <kindDef>Settlement</kindDef>
+               <options>
+                  <Megascarab>10</Megascarab>
+                  <Spelopede>7</Spelopede>
+                  <Megaspider>3</Megaspider>
+                  <VFEI2_Megapede>2</VFEI2_Megapede>
+                  <VFEI2_Queen>1</VFEI2_Queen>
+                  <VFEI2_Swarmling>1</VFEI2_Swarmling>
+               </options>
+            </li>
+         </pawnGroupMakers>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/settlementTexturePath</xpath>
+      <value>
+         <settlementTexturePath>UI/InsectoidHive</settlementTexturePath>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/hidden</xpath>
+      <value>
+         <hidden>false</hidden>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/label</xpath>
+      <value>
+         <label>hive</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/description</xpath>
+      <value>
+         <description>A result of a galaxy wide experiment gone wrong, this monstrous hive-mind has made this planet their home. Divided into castes, their society relies on the giant queen.\n\nThese insectoids are not interested in diplomacy. They will try to eliminate anything that they perceive to be a threat.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/fixedName</xpath>
+      <value>
+         <fixedName>Hive</fixedName>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/factionIconPath</xpath>
+      <value>
+         <factionIconPath>UI/Hive</factionIconPath>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="Insect"]/colorSpectrum</xpath>
+      <value>
+         <colorSpectrum>
+            <li>(0.73, 0.69, 0.52)</li>
+         </colorSpectrum>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAddModExtension">
+      <xpath>/Defs/FactionDef[defName="Insect"]</xpath>
+      <value>
+         <li Class="KCSG.CustomGenOption">
+            <chooseFromSettlements>
+               <li>VFEI2_InsectoidSettlement</li>
+            </chooseFromSettlements>
+            <preventBridgeable>true</preventBridgeable>
+         </li>
+      </value>
+   </Operation>
+
+   <Operation Class="PatchOperationAddModExtension">
+      <xpath>/Defs/FactionDef[defName="Insect"]</xpath>
+      <value>
+         <li Class="VFECore.FactionDefExtension">
+			<neverConnectToRoads>true</neverConnectToRoads>
+			<excludeFromCommConsole>true</excludeFromCommConsole>
+         </li>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="Insect"]</xpath>
+      <value>
+        <settlementNameMaker>VFE_NamerFactionInsectoidHives</settlementNameMaker>
+      </value>
+   </Operation>
+   
+</Patch>
+

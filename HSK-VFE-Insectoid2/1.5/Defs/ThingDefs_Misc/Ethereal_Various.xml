@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VFEI2_Tunneler</defName>
+		<thingClass>VFEInsectoids.Tunneler</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>2</flightDurationMin>
+			<flightSpeed>2.5</flightSpeed>
+			<heightFactor>0</heightFactor>
+			<progressCurve>
+				<points>
+					<li>(0, 0)</li>
+					<li>(1, 1)</li>
+				</points>
+			</progressCurve>
+		</pawnFlyer>
+	</ThingDef>
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VFEI2_PawnFlyer_Stun</defName> 
+		<pawnFlyer>
+			<flightDurationMin>0.75</flightDurationMin>
+			<flightSpeed>8</flightSpeed>
+			<stunDurationTicksRange>60~180</stunDurationTicksRange>
+		</pawnFlyer>
+	</ThingDef> 
+</Defs>

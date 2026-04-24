@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <VFEInsectoids.WaveActivityDef>
+    <defName>Chittering</defName>
+    <label>Chittering</label>
+    <raidSizeMultiplier>0.5</raidSizeMultiplier>
+    <timeUntilWaveArrives>2.0</timeUntilWaveArrives>
+    <includeBoss>false</includeBoss>
+    <intensity>1</intensity>
+  </VFEInsectoids.WaveActivityDef>
+
+  <VFEInsectoids.WaveActivityDef>
+    <defName>Stirring</defName>
+    <label>Stirring</label>
+    <raidSizeMultiplier>0.75</raidSizeMultiplier>
+    <timeUntilWaveArrives>1.5</timeUntilWaveArrives>
+    <includeBoss>false</includeBoss>
+    <intensity>2</intensity>
+  </VFEInsectoids.WaveActivityDef>
+
+  <VFEInsectoids.WaveActivityDef>
+    <defName>Buzzing</defName>
+    <label>Buzzing</label>
+    <raidSizeMultiplier>1.0</raidSizeMultiplier>
+    <timeUntilWaveArrives>1.0</timeUntilWaveArrives>
+    <includeBoss>false</includeBoss>
+    <intensity>3</intensity>
+  </VFEInsectoids.WaveActivityDef>
+
+  <VFEInsectoids.WaveActivityDef>
+    <defName>Scuttling</defName>
+    <label>Scuttling</label>
+    <raidSizeMultiplier>1.5</raidSizeMultiplier>
+    <timeUntilWaveArrives>0.75</timeUntilWaveArrives>
+    <includeBoss>false</includeBoss>
+    <intensity>4</intensity>
+  </VFEInsectoids.WaveActivityDef>
+
+  <VFEInsectoids.WaveActivityDef>
+    <defName>Writhing</defName>
+    <label>Writhing</label>
+    <raidSizeMultiplier>2.0</raidSizeMultiplier>
+    <timeUntilWaveArrives>0.5</timeUntilWaveArrives>
+    <includeBoss>true</includeBoss>
+    <intensity>5</intensity>
+  </VFEInsectoids.WaveActivityDef>
+
+</Defs>

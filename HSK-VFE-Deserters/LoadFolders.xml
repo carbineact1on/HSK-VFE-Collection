@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<loadFolders>
+  <v1.5>
+    <li>/</li>
+    <li>1.5</li>
+    <!-- CE patches + CE-specific ammo defs. Only load when Combat Extended is active.
+         Contains modified copies of CE's Deserters ModPatches (thump ammo swapped
+         from 40x68mmDemo to 40x46mmGrenade to remove VFE-Empire dependency). -->
+    <li IfModActive="CETeam.CombatExtended">Patches-CE</li>
+  </v1.5>
+</loadFolders>

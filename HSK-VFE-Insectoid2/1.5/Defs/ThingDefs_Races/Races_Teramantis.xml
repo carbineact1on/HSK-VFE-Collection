@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Teramantis -->
+	<ThingDef ParentName="VFEI2_BaseInsect">
+		<defName>VFEI2_Teramantis</defName>
+		<label>teramantis</label>
+		<description>An incredibly rare and monstrously large insectoid of the Chelis geneline, the teramantis is the formidable leader of insectoid hives on the steppe planets of Chelis. Known as a prime male, this massive insectoid is equipped with lethal ripper claws sharp enough to cleave armored vehicles in two. Complementing its fearsome offensive capabilities, the teramantis boasts a large set of wings, granting it the ability to soar across the vast landscapes in pursuit of prey for hundreds of miles. Its aerial prowess and deadly strength make it a dreaded apex predator on Chelis, commanding respect and fear from all who dwell within its territory. Upon death, it’s possible to extract a Chelis pherocore from its body.</description>
+		<statBases>
+			<MoveSpeed>4.2</MoveSpeed>
+			<Flammability>0.7</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>1800</MarketValue>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+			<LeatherAmount>30</LeatherAmount>
+		</statBases>
+		<tools>
+			<li>
+				<label>head claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<armorPenetration>0.9</armorPenetration>
+				<power>16</power>
+				<cooldownTime>1.4</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>VFEI2_TeramantisStun</li>
+				</capacities>
+				<armorPenetration>0.5</armorPenetration>
+				<power>20</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>VFEI2_ClawAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>VFEI2_TeramantisStun</li>
+				</capacities>
+				<armorPenetration>0.5</armorPenetration>
+				<power>20</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>VFEI2_ClawAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>0.9</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_FixedGender">
+				<gender>Male</gender>
+			</li>
+			
+			<li Class="AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VFEI2_InsectGlide_Far</initialAbility>
+			</li>
+		</comps>
+		<race>
+			
+			<body>VFEI2_ClawedInsectoid</body>
+			<baseHungerRate>0.08</baseHungerRate>
+			<baseBodySize>3.8</baseBodySize>
+			<baseHealthScale>4</baseHealthScale>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>0.8</wildness>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<trainability>Advanced</trainability>
+			<lifeExpectancy>12</lifeExpectancy>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.05</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+					<soundDeath>Pawn_BigInsect_Death</soundDeath>
+					<soundCall>Pawn_BigInsect_Call</soundCall>
+					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<killedLeavings>
+			<VFEI2_PherocoreChelis>1</VFEI2_PherocoreChelis>
+		</killedLeavings>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+	<defName>VFEI2_Teramantis</defName>
+		<label>teramantis</label>
+		<race>VFEI2_Teramantis</race>
+		<combatPower>700</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<defaultFactionType>Insect</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<defendPointRadius>0</defendPointRadius>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Teramantis</texPath>
+					<color>(155, 129, 117)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>3.6</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Dessicated_Teramantis</texPath>
+					<drawSize>3.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Teramantis</texPath>
+					<drawSize>4.0</drawSize>
+					<color>(155, 129, 117)</color>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Dessicated_Teramantis</texPath>
+					<drawSize>4.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Teramantis</texPath>
+					<drawSize>4.8</drawSize>
+					<color>(155, 129, 117)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.5, 0.7, 0.43)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Teramantis/Dessicated_Teramantis</texPath>
+					<drawSize>4.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

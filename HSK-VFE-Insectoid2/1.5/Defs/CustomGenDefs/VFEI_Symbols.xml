@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_InsectJellyWall</defName>
+  <thing>VFEI2_InsectJellyWall</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI_HiveWall</defName>
+  <thing>VFEI_HiveWall</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_Creeper</defName>
+  <thing>VFEI2_Creeper</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_RoyalJellyWall</defName>
+  <thing>VFEI2_RoyalJellyWall</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_FoamPod</defName>
+  <thing>VFEI2_FoamPod</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_JellyFarm</defName>
+  <thing>VFEI2_JellyFarm</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_GlowPodFormation</defName>
+  <thing>VFEI2_GlowPodFormation</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_TendrilmossVines</defName>
+  <thing>VFEI2_TendrilmossVines</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_TendrilFarm</defName>
+  <thing>VFEI2_TendrilFarm</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_LargeGlowPod</defName>
+  <thing>VFEI2_LargeGlowPod</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEI2_GlowPodSpire</defName>
+  <thing>VFEI2_GlowPodSpire</thing>
+</KCSG.SymbolDef>
+
+</Defs>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>VFEI2_AdministerSornePherocore</defName>
+		<label>administer Sorne pherocore</label>
+		<description>Administer Sorne pherocore to convert this person into an Empress.</description>
+		<workerClass>VFEInsectoids.Recipe_AdministerSornePherocore</workerClass>
+		<jobString>Administering Sorne pherocore to convert this person into an Empress.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VFEI2_PherocoreSorne</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VFEI2_PherocoreSorne</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>VFEI2_AdministerNuchadusPherocore</defName>
+		<label>administer Nuchadus pherocore</label>
+		<description>Administer Nuchadus pherocore to convert this person into a Titantick.</description>
+		<workerClass>VFEInsectoids.Recipe_AdministerNuchadusPherocore</workerClass>
+		<jobString>Administering Nuchadus pherocore to convert this person into a Titantick.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VFEI2_PherocoreNuchadus</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VFEI2_PherocoreNuchadus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>VFEI2_AdministerChelisPherocore</defName>
+		<label>administer Chelis pherocore</label>
+		<description>Administer Chelis pherocore to convert this person into a Teramantis.</description>
+		<workerClass>VFEInsectoids.Recipe_AdministerChelisPherocore</workerClass>
+		<jobString>Administering Chelis pherocore to convert this person into a Teramantis.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VFEI2_PherocoreChelis</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VFEI2_PherocoreChelis</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>VFEI2_AdministerKemianPherocore</defName>
+		<label>administer Kemian pherocore</label>
+		<description>Administer Kemian pherocore to convert this person into a Gigamite.</description>
+		<workerClass>VFEInsectoids.Recipe_AdministerKemianPherocore</workerClass>
+		<jobString>Administering Kemian pherocore to convert this person into a Gigamite.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VFEI2_PherocoreKemian</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VFEI2_PherocoreKemian</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>VFEI2_AdministerXanidesPherocore</defName>
+		<label>administer Xanides pherocore</label>
+		<description>Administer Xanides pherocore to convert this person into a Silverfish.</description>
+		<workerClass>VFEInsectoids.Recipe_AdministerXanidesPherocore</workerClass>
+		<jobString>Administering Xanides pherocore to convert this person into a Silverfish.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VFEI2_PherocoreXanides</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VFEI2_PherocoreXanides</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+</Defs>

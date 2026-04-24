@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>VFE Pirates (HSK/CE Patched)</name>
+	<author>Oskar Potocki, Sarg Bjornson, erdelf, Roolo, Smash Phil, Taranchuk, xrushha, Kikohi, legodude17 — HSK/CE patch by CarbineAction</author>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>CarbineAction.HSK.VFE.Pirates</packageId>
+	<description>HSK/CE-patched version of Vanilla Factions Expanded - Pirates, tuned for the Hardcore SK modpack.
+
+Original mod by Oskar Potocki, Sarg Bjornson, erdelf, Roolo, Smash Phil, Taranchuk, xrushha, Kikohi, and legodude17. This patch version rebalances the mod's player-facing content to fit HSK's spacer-tier economy and bundles the community-made CE compatibility patches.
+
+--- HSK-NATIVE TUNING ---
+
+WARCASKETS — spacer-tier armor progression rebalanced to HSK crafting (spacer research, ComponentSpacer + Plasteel + StrongMetallic + Kevlar ingredients, TableMachining / MechWeaponCraftingWorkTable).
+
+WARCASKET WEAPONS — 9 warcasket-only guns (Autorifle, UraniumSlugRifle, Slugthrower, Minigun, GrenadeLauncher, HeavyFlamer, ChargeLance, HandheldCannon, ChargeBlaster) routed to MechWeaponCraftingWorkTable at Charge_weapons_D/E research with HSK spacer-tier ingredients.
+
+RUM + DRUGS — HSK-tighter pricing to match the modpack's gated crafting economy.
+
+--- DISABLED PLAYER CONTENT ---
+
+Removed from player architect menu (enemy base generation + raids still use them):
+- Cannon (VFEP_Turret_Cannon) — HSK has rich medieval-tier artillery
+- Field Gun (VFEP_Turret_FieldGun) — HSK has its own mortar/field-gun variants
+
+Projectile defs preserved (enemy artillery still works) — only player-buildable turret entries hidden.
+
+The Gauntlet Charge Cannon Ship Chunk (VFEP_ShipChunkGauntletTurret) is NOT disabled — it's an enemy-only event mechanic that pirates drop from orbit as ship debris. Not buildable by the player in vanilla; left fully intact so the pirate raid event continues to work.
+
+--- CE-GATED TWEAK ---
+
+Grappling Hook ability (VFEP_GrapplingHook) — stripped from Privateer Armor when Combat Extended is active. 20-cell teleport-through-walls interacts badly with CE's line-of-sight and movement systems. Privateer Armor remains fully craftable and functional; it just loses the grapple. Gated in Patches-CE/ so vanilla/non-CE installs are unaffected.
+
+--- PRESERVED GAMEPLAY ---
+
+Full pirate gameplay:
+- 3 factions (Pirates, Junkers, Pirate Mercenaries)
+- Hireables (mercenary contracts via comms console)
+- Warcasket system (chest/arm/head customization + abilities)
+- Ideology: Pirate meme with sea shanties + camaraderie precepts
+- Ethereal Skyfallers (raid drop-in)
+- Pirate-themed quests + scenarios
+- Custom mechanoid (Gauntlet-type)
+- Curses + pirate-specific ideology content
+
+--- BUNDLED CE PATCHES ---
+
+Community-made HSK CE patches (originally at G:\HSK CE patches\Vanilla Factions Expanded - Pirates\) bundled and gated by IfModActive="CETeam.CombatExtended" in loadFolders.xml. Covers:
+- 5 new CE ammo defs (WarBolter rockets, Slugthrower shells, Gauntlet turret ammo, Vikings + Bioferrite + Ammo Mods bridges)
+- All 9 warcasket weapons with full CE ballistics (Bulk, Ammo, ProjectileProperties_CE)
+- Warcasket apparel CE stats (Sharp/Blunt armor ratings, Bulk, WornBulk)
+- Gauntlet turret CE conversion (Building_TurretGunCE)
+- Cross-mod warcasket weapon addons (Vikings, Classical, Lightning, Quechua, Nitori, Bounty Hunters, Empire — only activate when those mods are loaded)
+- Mercenary + Junker pawnkind CE loadouts
+- Abilities, drugs, ideology precepts, scenarios — all CE-compatible
+
+--- COMPATIBILITY ---
+
+Requires: HSK (skyarkhangel.hsk), Combat Extended (CETeam.CombatExtended), Harmony, VE Framework.
+NOT compatible with the original "OskarPotocki.VFE.Pirates" — enable this INSTEAD.
+Not compatible with: n7huntsman.combatshields (inherited incompatibility from base mod).</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VWEL</li>
+		<li>skyarkhangel.hsk</li>
+		<li>CETeam.CombatExtended</li>
+	</loadAfter>
+	<incompatibleWith>
+		<li>n7huntsman.combatshields</li>
+		<li>OskarPotocki.VFE.Pirates</li>
+	</incompatibleWith>
+</ModMetaData>

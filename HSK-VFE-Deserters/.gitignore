@@ -1,0 +1,7 @@
+obj/
+bin/
+*.user
+*.suo
+*.dll.bak
+Thumbs.db
+.DS_Store

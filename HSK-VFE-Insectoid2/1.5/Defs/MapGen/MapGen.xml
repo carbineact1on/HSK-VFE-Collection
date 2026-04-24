@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFEInsectoids.InsectMapGenDef Name="HiveSpawnBase">
+    <defName>VFEI2_SorneMapGen</defName>
+	<hivesToSpawn>20~30</hivesToSpawn>
+	<hiveGenelinesToSpawn>
+		<li>VFEI_Sorne</li>
+	</hiveGenelinesToSpawn>
+	<hiveSurroundings>
+		<maxSpawnCreepRadius>100</maxSpawnCreepRadius>
+		<alwaysSpawnCreepInRadius>4</alwaysSpawnCreepInRadius>
+		<creepSpawnChancePerDistanceToHive>9</creepSpawnChancePerDistanceToHive>
+		<spawnSettings>
+			<li>
+				<insectSpawnThingsAmount>3~5</insectSpawnThingsAmount>
+				<thingCommonalities>
+					<VFEI2_LargeGlowPod>1</VFEI2_LargeGlowPod>
+					<VFEI2_GlowPodFormation>1</VFEI2_GlowPodFormation>
+					<VFEI2_GlowPodSpire>1</VFEI2_GlowPodSpire>
+					<VFEI2_StaticPod>1</VFEI2_StaticPod>
+					<VFEI2_FoamPod>1</VFEI2_FoamPod>
+					<VFEI2_TendrilFarm>1</VFEI2_TendrilFarm>
+					<VFEI2_Creeper>1</VFEI2_Creeper>
+					<VFEI2_JellyFarm>1</VFEI2_JellyFarm>
+					<VFEI2_InsectoidCocoon>1</VFEI2_InsectoidCocoon>
+				</thingCommonalities>
+				<spawnMethod>Scattered</spawnMethod>
+				<chance>1</chance>
+			</li>
+			<li>
+				<insectSpawnThingsAmount>15~25</insectSpawnThingsAmount>
+				<thingCommonalities>
+					<VFEI_HiveWall>0.8</VFEI_HiveWall>
+					<VFEI2_InsectJellyWall>0.15</VFEI2_InsectJellyWall>
+					<VFEI2_RoyalJellyWall>0.05</VFEI2_RoyalJellyWall>
+				</thingCommonalities>
+				<spawnMethod>Clumped</spawnMethod>
+				<chance>0.7</chance>
+				<loopCount>1~3</loopCount>
+			</li>
+		</spawnSettings>
+	</hiveSurroundings>
+  </VFEInsectoids.InsectMapGenDef>
+
+  <VFEInsectoids.InsectMapGenDef ParentName="HiveSpawnBase">
+    <defName>VFEI2_NuchadusMapGen</defName>
+	<hiveGenelinesToSpawn Inherit="False">
+		<li>VFEI_Nuchadus</li>
+	</hiveGenelinesToSpawn>
+  </VFEInsectoids.InsectMapGenDef>
+ 
+   <VFEInsectoids.InsectMapGenDef ParentName="HiveSpawnBase">
+    <defName>VFEI2_ChelisMapGen</defName>
+	<hiveGenelinesToSpawn Inherit="False">
+		<li>VFEI_Chelis</li>
+	</hiveGenelinesToSpawn>
+  </VFEInsectoids.InsectMapGenDef>
+
+  <VFEInsectoids.InsectMapGenDef ParentName="HiveSpawnBase">
+    <defName>VFEI_KemiaMapGen</defName>
+	<hiveGenelinesToSpawn Inherit="False">
+		<li>VFEI_Kemia</li>
+	</hiveGenelinesToSpawn>
+  </VFEInsectoids.InsectMapGenDef>
+  
+  <VFEInsectoids.InsectMapGenDef ParentName="HiveSpawnBase">
+    <defName>VFEI_XanidesMapGen</defName>
+	<hiveGenelinesToSpawn Inherit="False">
+		<li>VFEI_Xanides</li>
+	</hiveGenelinesToSpawn>
+  </VFEInsectoids.InsectMapGenDef>
+</Defs>

@@ -1,0 +1,10 @@
+Source/obj/
+Source/bin/
+obj/
+bin/
+*.user
+*.suo
+*.dll.bak
+PublishedFileId.txt
+Thumbs.db
+.DS_Store

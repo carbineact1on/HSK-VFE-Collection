@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Megascarab"]/race</xpath>
+		<value>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Spelopede"]/race</xpath>
+		<value>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Megaspider"]/race</xpath>
+		<value>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Megascarab"]/statBases/LeatherAmount</xpath>
+		<value>
+			<LeatherAmount>10</LeatherAmount>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Spelopede"]/statBases/LeatherAmount</xpath>
+		<value>
+			<LeatherAmount>23</LeatherAmount>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Megaspider"]/statBases/LeatherAmount</xpath>
+		<value>
+			<LeatherAmount>29</LeatherAmount>
+		</value>
+	</Operation>
+</Patch>

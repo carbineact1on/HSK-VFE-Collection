@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--  Acidspitter -->
+	<ThingDef ParentName="VFEI2_BaseInsect">
+		<defName>VFEI2_Acidspitter</defName>
+		<label>acidspitter</label>
+		<description>A giant, heavy insectoid with a large acid sack on the lower abdomen, that glides on a few tiny legs. While its armor is not thick, or its mandibles sharp, it is capable of utilizing its acid glands to spew gallons of corrosive acid forward. Due to being extremely slow, they are somewhat vulnerable to hit-and-run tactics.</description>
+		<statBases>
+			<MoveSpeed>2.4</MoveSpeed>
+			<Flammability>0.7</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<MarketValue>750</MarketValue>
+			<ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.44</ArmorRating_Sharp>
+			<LeatherAmount>30</LeatherAmount>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>head claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<armorPenetration>0.18</armorPenetration>
+				<power>12</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>mandibles</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<armorPenetration>0.1</armorPenetration>
+				<power>10</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VFEI2_InsectAcidSpew</initialAbility>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>VFEI2_AcidImmunity</hediffname>
+				<hediffseverity>1</hediffseverity>
+
+			</li>
+		</comps>
+		<race>
+			<body>BeetleLikeWithClaw</body>
+			<baseHungerRate>0.35</baseHungerRate>
+			<baseBodySize>1.8</baseBodySize>
+			<baseHealthScale>4.32</baseHealthScale>
+		
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>0.95</wildness>
+			<lifeExpectancy>6</lifeExpectancy>
+			<trainability>Advanced</trainability>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0.2</minAge>
+					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+					<soundDeath>Pawn_BigInsect_Death</soundDeath>
+					<soundCall>Pawn_BigInsect_Call</soundCall>
+					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VFEI2_Acidspitter</defName>
+		<label>acidspitter</label>
+		<race>VFEI2_Acidspitter</race>
+
+		<combatPower>300</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<defaultFactionType>Insect</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<defendPointRadius>0</defendPointRadius>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Acidspitter</texPath>
+					<color>(133, 137, 125)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Dessicated_Acidspitter</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Acidspitter</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(133, 137, 125)</color>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Dessicated_Acidspitter</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Acidspitter</texPath>
+					<drawSize>2.5</drawSize>
+					<color>(133, 137, 125)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.5, 0.7, 0.43)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Acidspitter/Dessicated_Acidspitter</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="DrugBase">
+		<defName>VFEI2_RoyalInsectJelly</defName>
+		<label>royal insect jelly</label>
+		<description>A golden, shining jelly used by the insect queens to create new spawn. It is smooth, rich, and brings joy to those who consume it. Because of its unique biological composition, it boosts immunity and nourishes anyone who has a taste of it. Addiction to royal jelly can compromise the immunity system of the addict. It is also known to increase the speed of gestating hive leaders in victims.</description>
+		<descriptionHyperlinks>
+			<HediffDef>VFEI2_RoyalJellyHigh</HediffDef>
+			<HediffDef>VFEI2_RoyalJellyTolerance</HediffDef>
+			<HediffDef>VFEI2_RoyalJellyAddiction</HediffDef>
+		</descriptionHyperlinks>
+		<stackLimit>150</stackLimit>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<tickerType>Rare</tickerType>
+		<graphicData>
+			<texPath>Things/Item/RoyalJelly</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.025</Mass>
+			<Nutrition>0.1</Nutrition>
+			<MaxHitPoints>50</MaxHitPoints>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<tasteThought>VFEI2_AteRoyalJelly</tasteThought>
+			<foodType>AnimalProduct</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.16</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Medical</drugCategory>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>VFEI2_RoyalJellyHigh</hediffDef>
+					<severity>0.50</severity>
+					<toleranceChemical>VFEI2_RoyalJellyChemical</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>VFEI2_RoyalJellyTolerance</hediffDef>
+					<severity>0</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+				<li Class="VFEInsectoids.IngestionOutcomeDoer_Immunity">
+					<percent>5</percent>
+				</li>
+				<li Class="VFEInsectoids.IngestionOutcomeDoer_IncreaseSpawnHediffs">
+					<increase>0.0334</increase>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>VFEI2_RoyalJellyChemical</chemical>
+				<addictiveness>0.05</addictiveness>
+				<minToleranceToAddict>0</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.2</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>100</listOrder>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+	</ThingDef>
+	<!-- Royal Jelly addiction -->
+	<HediffDef>
+		<defName>VFEI2_RoyalJellyHigh</defName>
+		<label>high on royal jelly</label>
+		<description>High on royal jelly</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<ChemicalDef>
+		<defName>VFEI2_RoyalJellyChemical</defName>
+		<label>royal jelly</label>
+		<addictionHediff>VFEI2_RoyalJellyAddiction</addictionHediff>
+		<toleranceHediff>VFEI2_RoyalJellyTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>VFEI2_Chemical_RoyalJelly</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>royal jelly</label>
+		<description>Because of a royal jelly addiction, this person needs to regularly consume the jelly to avoid withdrawal symptoms, which include complete halt of the immune system.</description>
+		<listPriority>50</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>VFEI2_RoyalJellyTolerance</defName>
+		<label>royal jelly tolerance</label>
+		<description>Royal jelly tolerance</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-10000</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>VFEI2_RoyalJellyChemical</chemical>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>VFEI2_RoyalJellyAddiction</defName>
+		<label>royal jelly addiction</label>
+		<description>A chemical addiction to royal jelly. Regular consumption of royal jelly has caused immunological adaptations at the genetic level, so the immune system can no longer function properly without the drug. Whenever an infection happen, the addicted person will not be able to overcome it without royal jelly. However, extended abstinence will force the immune system to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>VFEI2_Chemical_RoyalJelly</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0125</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>addicted</label>
+				<statFactors>
+					<ImmunityGainSpeedFactor>0.2</ImmunityGainSpeedFactor>
+				</statFactors>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+				<statFactors>
+					<ImmunityGainSpeedFactor>0</ImmunityGainSpeedFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>VFEI2_AteRoyalJelly</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>consumed royal jelly</label>
+				<description>What is the charge? Eating a meal? A succulent jelly meal?</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VFEI2_RoyalJelly_Withdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>VFEI2_RoyalJellyAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>royal jelly withdrawal</label>
+				<description>Man, I wish I had some royal jelly.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

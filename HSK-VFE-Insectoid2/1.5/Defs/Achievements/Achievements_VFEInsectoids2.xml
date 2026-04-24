@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ArmorMelting</defName>
+		<label>Armor Melting</label>
+		<description>Have a colony insectoid use Acid Spit or Acid Spew on a hostile humanoid wearing marine armor</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.AbilityUseTracker">		
+			<abilityDefs>
+				<li>VFEI2_InsectAcidSpit</li>
+				<li>VFEI2_InsectAcidSpew</li>
+				<li>VFEI2_LargeAcidSpew</li>
+			</abilityDefs>
+			<targetApparelDef>Apparel_PowerArmor</targetApparelDef>
+			<targetHostile>true</targetHostile>
+		</tracker>
+
+		<texPath>Achievements/VAE_ArmorMelting</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_CallPestControl</defName>
+		<label>Call Pest Control</label>
+		<description>Get a large infestation</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.IncidentTracker">		
+			<def>VFEI_LargeInfestation</def>
+		</tracker>
+
+		<texPath>Achievements/VAE_CallPestControl</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ChitinBaby</defName>
+		<label>Chitin Baby</label>
+		<description>Have a pawn die due to the Titantick spawn health condition, thus giving birth to a new colony Titantick</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.HediffDeathTracker">		
+			<def>VFEI2_TitantickSpawn</def>
+		</tracker>
+
+		<texPath>Achievements/VAE_ChitinBaby</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_FullPherocoreDeck</defName>
+		<label>Full Pherocore Deck</label>
+		<description>Get one of each Pherocore at the same time</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.ItemTracker">		
+			<thingList>
+				<li>
+					<key>VFEI2_PherocoreSorne</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>VFEI2_PherocoreNuchadus</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>VFEI2_PherocoreChelis</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>VFEI2_PherocoreKemian</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>VFEI2_PherocoreXanides</key>
+					<value>1</value>
+				</li>
+			</thingList>
+			<mustHaveAll>true</mustHaveAll>
+		</tracker>
+
+		<texPath>Achievements/VAE_FullPherocoreDeck</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ImDoingMyPart</defName>
+		<label>I'm Doing My Part!</label>
+		<description>Kill a total of 50 swarmlings</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.KillTracker">		
+			<raceDef>VFEI2_Swarmling</raceDef>
+			<count>50</count>
+		</tracker>
+
+		<texPath>Achievements/VAE_ImDoingMyPart</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ImTheHiveNow</defName>
+		<label>Look At Me, I'm The Hive Now</label>
+		<description>Build your first artificial basic hive</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.BuildingTracker">		
+			<def>VFEI2_ArtificialBasicHive</def>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_ImTheHiveNow</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ItsCalledFashionHoney</defName>
+		<label>It's Called Fashion, Honey</label>
+		<description>Craft a T-shirt of at least Excellent quality using insect chitin</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.ItemCraftTracker">		
+			<def>Apparel_BasicShirt</def>
+			<madeFrom>VFEI2_Chitin</madeFrom>
+			<quality>Excellent</quality>
+		</tracker>
+
+		<texPath>Achievements/VAE_ItsCalledFashionHoney</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_MightyMorphingJellyRangers</defName>
+		<label>Mighty Morphing Jelly... Rangers?</label>
+		<description>Build your first jelly morpher</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.BuildingTracker">		
+			<def>VFEI2_JellyMorpher</def>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_MightyMorphingJellyRangers</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_NoRunningAwayFromThis</defName>
+		<label>No Running Away From This</label>
+		<description>Have a colonist or colony animal get stunned by a Teramantis</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.HediffTracker">		
+			<def>VFEI2_TeramantisStun</def>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_NoRunningAwayFromThis</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_NotAWakameSalad</defName>
+		<label>Not A Wakame Salad</label>
+		<description>Eat 40 meals including tendril moss on their ingredients</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.IngestionTracker">		
+			<count>40</count>
+			<includeIngredientDef>VFEI2_Tendrilmoss</includeIngredientDef>
+		</tracker>
+
+		<texPath>Achievements/VAE_NotAWakameSalad</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_NudistBeach</defName>
+		<label>Nudist Beach</label>
+		<description>Attack a Xanides insectoid until its armor breaks</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.HediffTracker">		
+			<def>VFEI2_ArmorDegradation</def>
+			<countAllMapPawns>true</countAllMapPawns>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_NudistBeach</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_OrganicTurrets</defName>
+		<label>Organic Turrets</label>
+		<description>Build a total of 5 insectoid turrets (vilelobbers or thornworms)</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.MultipleBuildingTracker">
+			<buildingsList>
+				<li>VFEI2_Vilelobber</li>
+				<li>VFEI2_Thornworm</li>
+
+			</buildingsList>
+			<count>5</count>
+		</tracker>
+
+		<texPath>Achievements/VAE_OrganicTurrets</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_PyromaniacInsects</defName>
+		<label>Pyromaniac Insects</label>
+		<description>Have colony insectoids use Flame Spew at least 10 times</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.AbilityUseTracker">		
+			<abilityDef>VFEI2_FlameSpew</abilityDef>
+			<count>10</count>
+		</tracker>
+
+		<texPath>Achievements/VAE_PyromaniacInsects</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_SayHelloToDemocracy</defName>
+		<label>Say Hello To DEMOCRACY!</label>
+		<description>Destroy an insectoid base</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.SettlementDefeatTracker">		
+			<def>Insect</def>
+			<count>1</count>
+		</tracker>
+
+		<texPath>Achievements/VAE_SayHelloToDemocracy</texPath>
+		<points>100</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_TheOnlyGoodBugIsADeadBug</defName>
+		<label>The Only Good Bug Is A Dead Bug</label>
+		<description>Kill an insectoid boss</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.KillTrackerWithOr">		
+			<kindDefList>
+				<li>
+					<key>VFEI2_Empress</key>
+					<value>1</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Titantick</key>
+					<value>1</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Teramantis</key>
+					<value>1</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Gigamite</key>
+					<value>1</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Silverfish</key>
+					<value>1</value>
+
+				</li>
+			</kindDefList>
+		</tracker>
+
+		<texPath>Achievements/VAE_TheOnlyGoodBugIsADeadBug</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_WouldYouLikeToKnowMore</defName>
+		<label>Would You Like To Know More?</label>
+		<description>Kill a total of five insectoid bosses</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.KillTrackerWithOr">		
+			<kindDefList>
+				<li>
+					<key>VFEI2_Empress</key>
+					<value>5</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Titantick</key>
+					<value>5</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Teramantis</key>
+					<value>5</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Gigamite</key>
+					<value>5</value>
+
+				</li>
+				<li>
+					<key>VFEI2_Silverfish</key>
+					<value>5</value>
+
+				</li>
+			</kindDefList>
+		</tracker>
+
+		<texPath>Achievements/VAE_WouldYouLikeToKnowMore</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_TheRealAmbrosia</defName>
+		<label>The Real Ambrosia</label>
+		<description>Get a Royal Jelly high</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.HediffTracker">		
+			<def>VFEI2_RoyalJellyHigh</def>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_TheRealAmbrosia</texPath>
+		<points>5</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_ThereCanOnlyBeOne</defName>
+		<label>There Can Only Be One</label>
+		<description>Have a colony Megapede defeat a Centipede blaster</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.KillTracker">		
+			<kindDef>Mech_CentipedeBlaster</kindDef>
+			<instigatorThingDef>VFEI2_Megapede</instigatorThingDef>
+		
+
+		</tracker>
+
+		<texPath>Achievements/VAE_ThereCanOnlyBeOne</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_WeHaveWormsign</defName>
+		<label>We Have Wormsign</label>
+		<description>Build your first thumper</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.MultipleBuildingTracker">
+			<buildingsList>
+				<li>VFEI2_Thumper_Empress</li>
+				<li>VFEI2_Thumper_Titantick</li>
+				<li>VFEI2_Thumper_Teramantis</li>
+				<li>VFEI2_Thumper_Gigamite</li>
+				<li>VFEI2_Thumper_Silverfish</li>
+			</buildingsList>
+			<count>1</count>
+		</tracker>
+
+		<texPath>Achievements/VAE_WeHaveWormsign</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_WhatACreep</defName>
+		<label>What A Creep</label>
+		<description>Build three creepers</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.BuildingTracker">		
+			<def>VFEI2_Creeper</def>
+			<count>3</count>
+
+		</tracker>
+
+		<texPath>Achievements/VAE_WhatACreep</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+	<AchievementsExpanded.AchievementDef>
+		<defName>VAE_NiceTurretYouHaveThere</defName>
+		<label>Nice Turret You Have There</label>
+		<description>Have a colony Silverfish use its breacher charge ability on an enemy mini-turret</description>
+		<tab>VFEI2_AchievementsTab</tab>
+		<tracker Class="AchievementsExpanded.AbilityUseTracker">		
+			<abilityDef>VFEI2_WideTunnels</abilityDef>
+			<targetThingDef>Turret_MiniTurret</targetThingDef>
+			<targetHostile>true</targetHostile>
+		</tracker>
+
+		<texPath>Achievements/VAE_NiceTurretYouHaveThere</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+</Defs>

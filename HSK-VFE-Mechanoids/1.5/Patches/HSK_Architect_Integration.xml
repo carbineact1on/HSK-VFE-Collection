@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HSK patch: relocate VFE Mechanoids buildings from the custom "VFE_Factory" tab
+     into HSK's native architect tabs (Misc / Security / Production / Power) and
+     add them to the appropriate ArchitectSense.DesignationSubCategoryDef groupings
+     for a clean, HSK-integrated menu layout (matches the RH2 conversion pattern).
+
+     All 20+ kept buildings fit into existing HSK subcategories by function:
+     - Mech charging stations -> Robots
+     - Auto-turrets -> Sentry Turrets / Mortars
+     - Missile launcher -> Rocket Launchers
+     - Supercomputer -> Computers
+     - Indoctrination Pod, Mechanite LF Reinforcer, Blight Repeller -> Facilities
+     - Factory infrastructure (Hopper, Versatile Assembler) -> Hightech
+     - Textile Recycler -> Sewing
+     - Conduit Pylon -> Power Conduit -->
+<Patch>
+
+  <!-- ============================================================ -->
+  <!-- 1. Change designationCategory per building (VFE_Factory -> HSK tabs) -->
+  <!-- ============================================================ -->
+
+  <!-- Mech charging stations -> Misc tab -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_AutoMedicBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <!-- VFE_Mechanoids_AutobroadcasterBase disabled (see HSK_Disable_Overlap.xml). -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_Autoharvester"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_Autosower"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_AutostriderBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_CombatBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_PyroBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_RaiderBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_RiotBase"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <!-- VFE_Mechanoids_TurretBase disabled (see HSK_Disable_Overlap.xml).
+       HSK has its own turret roster; mobile turret platform redundant. -->
+
+  <!-- Auto-turrets -> Security tab -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Turret_AutoChargeBlaster"]/designationCategory</xpath>
+    <value><designationCategory>Security</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Turret_AutoChargeLance"]/designationCategory</xpath>
+    <value><designationCategory>Security</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Turret_AutoInfernoCannon"]/designationCategory</xpath>
+    <value><designationCategory>Security</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Turret_AutoMortar"]/designationCategory</xpath>
+    <value><designationCategory>Security</designationCategory></value>
+  </Operation>
+  <!-- VFE_LongRangeMissileLauncher disabled (see HSK_Disable_Overlap.xml). HSK has own artillery. -->
+
+
+  <!-- (Factory Hopper, Versatile Assembler, Textile Recycler disabled.
+       See HSK_Disable_Overlap.xml — HSK has own production chains + tailoring.) -->
+
+  <!-- Misc unique buildings -> Misc tab -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Supercomputer"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_IndoctrinationPod"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_MechaniteLFReinforcer"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_BlightAutoRepeller"]/designationCategory</xpath>
+    <value><designationCategory>Misc</designationCategory></value>
+  </Operation>
+
+  <!-- Conduit Pylon -> Power tab -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_ConduitPylon"]/designationCategory</xpath>
+    <value><designationCategory>Power</designationCategory></value>
+  </Operation>
+
+  <!-- ============================================================ -->
+  <!-- 2. Add buildings to HSK ArchitectSense subcategory groupings -->
+  <!-- ============================================================ -->
+
+  <!-- Robots subcategory (Misc tab) — all 10 mech charging stations -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Robots"]/defNames</xpath>
+    <value>
+      <li>VFE_Mechanoids_AutoMedicBase</li>
+      <li>VFE_Mechanoids_Autoharvester</li>
+      <li>VFE_Mechanoids_Autosower</li>
+      <li>VFE_Mechanoids_AutostriderBase</li>
+      <li>VFE_Mechanoids_CombatBase</li>
+      <li>VFE_Mechanoids_PyroBase</li>
+      <li>VFE_Mechanoids_RaiderBase</li>
+      <li>VFE_Mechanoids_RiotBase</li>
+    </value>
+  </Operation>
+
+  <!-- Sentry Turrets subcategory (Security tab) — 3 non-mortar auto-turrets -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_SentryTurrets"]/defNames</xpath>
+    <value>
+      <li>VFE_Turret_AutoChargeBlaster</li>
+      <li>VFE_Turret_AutoChargeLance</li>
+      <li>VFE_Turret_AutoInfernoCannon</li>
+    </value>
+  </Operation>
+
+  <!-- Mortars subcategory (Security tab) — AutoMortar -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Mortars"]/defNames</xpath>
+    <value>
+      <li>VFE_Turret_AutoMortar</li>
+    </value>
+  </Operation>
+
+  <!-- (Long Range Missile Launcher disabled — was SubCategory_RocketLaunchers.) -->
+
+  <!-- Computers subcategory (Misc tab) — Supercomputer -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Computers"]/defNames</xpath>
+    <value>
+      <li>VFE_Supercomputer</li>
+    </value>
+  </Operation>
+
+  <!-- Facilities subcategory (Misc tab) — Indoctrination Pod + unique utility -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Facilities"]/defNames</xpath>
+    <value>
+      <li>VFE_IndoctrinationPod</li>
+      <li>VFE_MechaniteLFReinforcer</li>
+      <li>VFE_BlightAutoRepeller</li>
+    </value>
+  </Operation>
+
+  <!-- (Factory Hopper + Versatile Assembler + Textile Recycler disabled.
+       Their SubCategory_Hightech and SubCategory_Sewing entries are no longer needed.) -->
+
+  <!-- Power Conduit subcategory (Power tab) — Conduit Pylon -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_PowerConduit"]/defNames</xpath>
+    <value>
+      <li>VFE_ConduitPylon</li>
+    </value>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TerrainDef ParentName="FloorBase">
+		<defName>VFEI2_Creep</defName>
+		<label>creep</label>
+		<description>A unique form of cracked soil, devoid of any minerals and nutrition, created around the insectoid infested areas. Supports insectoid structures and significantly hinders non-insectoid movement.</description>
+		<texturePath>Terrain/Surfaces/Creep</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>70</renderPrecedence>
+		<isPaintable>false</isPaintable>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-2</Cleanliness>
+			<FilthMultiplier>1.5</FilthMultiplier>
+			<WorkToBuild>1000</WorkToBuild>
+			<CleaningTimeFactor>0.5</CleaningTimeFactor>
+			<Flammability>0.75</Flammability>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>VFEI2_Creep</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<fertility>0.05</fertility>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<uiOrder>2020</uiOrder>
+		<designationCategory inherit="False"/>
+		<burnedDef>VFEI2_BurnedCreep</burnedDef>
+	</TerrainDef>
+	<TerrainDef ParentName="BurnedFloorBase">
+		<defName>VFEI2_BurnedCreep</defName>
+		<label>burned creep</label>
+		<statBases>
+			<Cleanliness>-2</Cleanliness>
+			<FilthMultiplier>1.5</FilthMultiplier>
+			<CleaningTimeFactor>0.5</CleaningTimeFactor>
+		</statBases>
+		<renderPrecedence>201</renderPrecedence>
+		<description>Burned-out creep.</description>
+		<texturePath>Terrain/Surfaces/BurnedCreep</texturePath>
+		<edgeType>FadeRough</edgeType>
+	</TerrainDef>
+	<TerrainDef ParentName="FloorBase">
+		<defName>VFEI2_JellyFloor</defName>
+		<label>jellyfloor</label>
+		<description>A special form of gellatinous floor, which sprouts from the creep in insectoid hives. Supports insectoid structures and significantly hinders non-insectoid movement. It’s much less flammable than the creep, and it’s significantly easier to clean.</description>
+		<texturePath>Terrain/Surfaces/JellyFloor</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>70</renderPrecedence>
+		<isPaintable>false</isPaintable>
+		<statBases>
+			<Beauty>0</Beauty>
+			<Cleanliness>-1</Cleanliness>
+			<FilthMultiplier>1.0</FilthMultiplier>
+			<WorkToBuild>1000</WorkToBuild>
+			<CleaningTimeFactor>0.5</CleaningTimeFactor>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>VFEI2_Creep</li>
+			<li>VFEI2_JellyFloor</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<fertility>0.05</fertility>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<uiOrder>2020</uiOrder>
+		<designationCategory inherit="False"/>
+		<burnedDef>VFEI2_BurnedJellyFloor</burnedDef>
+	</TerrainDef>
+	<TerrainDef ParentName="BurnedFloorBase">
+		<defName>VFEI2_BurnedJellyFloor</defName>
+		<label>burned jellyfloor</label>
+		<statBases>
+			<Cleanliness>-2</Cleanliness>
+			<FilthMultiplier>1.5</FilthMultiplier>
+			<CleaningTimeFactor>0.5</CleaningTimeFactor>
+		</statBases>
+		<renderPrecedence>201</renderPrecedence>
+		<description>Burned-out jellyfloor.</description>
+		<texturePath>Terrain/Surfaces/BurntJellyFloor</texturePath>
+		<edgeType>FadeRough</edgeType>
+	</TerrainDef>
+	<TerrainDef ParentName="FloorBase">
+		<defName>VFEI2_RoyalJellyFloor</defName>
+		<label>royal jellyfloor</label>
+		<description>A special form of gellatinous floor consisting of royal jelly, which is created as a result of enriching jellyfloors. Supports insectoid structures and significantly hinders non-insectoid movement. Unlike creep, it’s not flammable, and does not collect animal filth.</description>
+		<texturePath>Terrain/Surfaces/RoyalJellyFloor</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>70</renderPrecedence>
+		<isPaintable>false</isPaintable>
+		<statBases>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.3</Cleanliness>
+			<FilthMultiplier>0.3</FilthMultiplier>
+			<WorkToBuild>1000</WorkToBuild>
+			<CleaningTimeFactor>0.5</CleaningTimeFactor>
+			<Flammability>0</Flammability>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>VFEI2_Creep</li>
+			<li>VFEI2_JellyFloor</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<fertility>0.05</fertility>
+		<constructEffect>VFEI2_ConstructSlime</constructEffect>
+		<uiOrder>2020</uiOrder>
+		<designationCategory inherit="False"/>
+	</TerrainDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Biotech</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>Defs/ThingDef[defName="VFEI2_Filth_FlammableBile"]/graphicData/texPath</xpath>
+         <value>
+            <texPath>Things/Filth/FlammableBile</texPath>
+         </value>
+      </match>
+   </Operation>
+   
+</Patch>

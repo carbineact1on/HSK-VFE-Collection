@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_AcidSpew_A</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.8</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>GlowAnimated</shaderType>
+			<texPath>Motes/InsectAcidSpew_A</texPath>
+			<shaderParameters>
+				<_NumFrames>5</_NumFrames>
+				<_FramesPerSec>7</_FramesPerSec>
+			</shaderParameters>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_AcidSpew_Base</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.1</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Motes/InsectAcidSpew_Base</texPath>
+			<drawSize>(1.25, 2.5)</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_AcidSpew_Glow</defName>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0.105</solidTime>
+		<fadeOutTime>0.3</fadeOutTime>
+		<graphicData>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Motes/AcidGlow</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>7</drawSize>
+			<color>(1, 1, 1, 0.75)</color>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_FireSpew_A</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.4</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>GlowAnimated</shaderType>
+			<texPath>Motes/InsectFireSpew_A</texPath>
+			<shaderParameters>
+				<_NumFrames>5</_NumFrames>
+				<_FramesPerSec>7</_FramesPerSec>
+			</shaderParameters>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_FireSpew_Base</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.1</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Motes/InsectFireSpew_Base</texPath>
+			<drawSize>(1.25, 2.5)</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_FireSpew_Glow</defName>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0.105</solidTime>
+		<fadeOutTime>0.3</fadeOutTime>
+		<graphicData>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Things/Mote/FireGlow</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>7</drawSize>
+			<color>(1, 1, 1, 0.75)</color>
+		</graphicData>
+	</FleckDef>
+
+<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_ChemfuelSpew_A</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.4</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>GlowAnimated</shaderType>
+			<texPath>Motes/InsectFuelSpew_A</texPath>
+			<shaderParameters>
+				<_NumFrames>5</_NumFrames>
+				<_FramesPerSec>7</_FramesPerSec>
+			</shaderParameters>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_ChemfuelSpew_Base</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.2</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.1</fadeOutTime>
+		<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Motes/InsectFuelSpew_Base</texPath>
+			<drawSize>(1.25, 2.5)</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VFEI2_ChemfuelSpew_Glow</defName>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0.105</solidTime>
+		<fadeOutTime>0.3</fadeOutTime>
+		<graphicData>
+			<graphicClass>Graphic_Fleck</graphicClass>
+			<texPath>Motes/FuelGlow</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>7</drawSize>
+			<color>(1, 1, 1, 0.75)</color>
+		</graphicData>
+	</FleckDef>
+
+
+
+</Defs>

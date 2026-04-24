@@ -1,0 +1,43 @@
+﻿<?Yml version="1.0" encoding="utf8"?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>VFEI2_BasicHivetech</defName>
+		<label>basic hivetech</label>
+		<tab>VanillaExpanded</tab>
+		<description>The technology needed for your colony to create basic-tier hives.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>5.65</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>VFEI2_StandardHivetech</defName>
+		<label>standard hivetech</label>
+		<tab>VanillaExpanded</tab>
+		<description>The technology needed for your colony to create standard-tier hives. The construction of various thumpers will allow you to summon powerful insectoid bosses.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>VFEI2_BasicHivetech</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>5.65</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>VFEI2_ExoticHivetech</defName>
+		<label>exotic hivetech</label>
+		<tab>VanillaExpanded</tab>
+		<description>The technology needed for your colony to create exotic-tier hives.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>VFEI2_StandardHivetech</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>6.20</researchViewY> 
+	</ResearchProjectDef>
+	
+</Defs>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--===================== Misc =====================-->
+	<BodyPartDef>
+		<defName>VFEI2_Swarmling</defName>
+		<label>swarmling</label>
+		<hitPoints>10</hitPoints>
+		<frostbiteVulnerability>1</frostbiteVulnerability>
+		<tags>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>MetabolismSource</li>
+			<li>BreathingSource</li>
+			<li>MovingLimbCore</li>
+			<li>ManipulationLimbCore</li>
+			<li>SightSource</li>
+			<li>ConsciousnessSource</li>
+		</tags>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>VFEI2_LeftClaw</defName>
+		<label>left claw</label>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>VFEI2_RightClaw</defName>
+		<label>right claw</label>
+		<hitPoints>20</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+</Defs>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HSK patch: explicitly hide the 3 VFE-Deserters Imperial turrets from the
+     player architect menu. Enemy raids + quest generation still use them.
+
+     VFED_ImperialTurretBase abstract parent already has
+     <designationCategory IsNull="True" /> but RimWorld's inheritance resolution
+     for IsNull on abstract parents apparently doesn't propagate reliably —
+     these turrets were showing up in Security architect tab despite the
+     parent being nulled. Force explicit null on each child def. -->
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Kontarion"]</xpath>
+    <value>
+      <designationCategory IsNull="True" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Palintone"]</xpath>
+    <value>
+      <designationCategory IsNull="True" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Onager"]</xpath>
+    <value>
+      <designationCategory IsNull="True" />
+    </value>
+  </Operation>
+
+  <!-- Also strip research requirements so they don't clutter the tech tree. -->
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Kontarion"]/researchPrerequisites</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Palintone"]/researchPrerequisites</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="VFED_Turret_Onager"]/researchPrerequisites</xpath>
+  </Operation>
+
+</Patch>

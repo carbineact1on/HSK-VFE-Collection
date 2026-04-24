@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="PlantBase">
+		<defName>VFEI2_TendrilmossVines</defName>
+		<label>tendrilmoss vines</label>
+		<description>Twisted, nutrient-rich moss that grows cultivated by insectoids in clumps in hive areas. Moss takes a long time to grow, but is very frost-resistant. Significantly slows down movement speed, but acts as cover.</description>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Nutrition>0.5</Nutrition>
+		</statBases>
+		<fillPercent>0.2</fillPercent>
+		<graphicData>
+			<texPath>Things/Plant/Tendrillmoss</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>28</pathCost>
+		<ingestible/>
+		<plant>
+			<fertilityMin>0.05</fertilityMin>
+			<fertilitySensitivity>0</fertilitySensitivity>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestMinGrowth>0.99</harvestMinGrowth>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>VFEI2_Tendrilmoss</harvestedThingDef>
+			<harvestYield>1</harvestYield>
+			<sowMinSkill>7</sowMinSkill>
+			<harvestWork>300</harvestWork>
+			<topWindExposure>0.2</topWindExposure>
+			<growDays>4</growDays>
+			<visualSizeRange>1~2</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+</Defs>

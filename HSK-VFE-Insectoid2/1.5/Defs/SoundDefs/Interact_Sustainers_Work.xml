@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<SoundDef>
+		<defName>VFEI2_Interact_ConstructSlime</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<muteWhenPaused>True</muteWhenPaused>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Construct/InsectBuildA</clipPath>
+					</li>
+				</grains>
+				<volumeRange>12~50</volumeRange>
+				<sustainLoop>False</sustainLoop>
+				<sustainIntervalRange>0.7948722~0.7948722</sustainIntervalRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>VFEI2_Rumbling</defName>
+		<sustain>true</sustain>
+		<context>MapOnly</context>
+		<eventNames/>
+		<maxSimultaneous>1</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Abilities/BreacherCharge_Sustainer_01a</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>30</min>
+					<max>30</max>
+				</volumeRange>
+				<sustainAttack>2</sustainAttack>
+				<sustainRelease>2</sustainRelease>
+				<distRange>
+					<min>20</min>
+					<max>50</max>
+				</distRange>
+				<sustainLoop>true</sustainLoop>
+				<sustainLoopDurationRange>5~5</sustainLoopDurationRange>
+				<sustainIntervalRange>-2.5~-2.5</sustainIntervalRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

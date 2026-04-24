@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/comps</xpath>
+        <value>
+            <li Class="VFED.CompProperties_BoxRefuel">
+                <refuelWith>VFED_AmmoBox_Autocannon</refuelWith>
+              </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Turret_Sniper"]/comps</xpath>
+        <value>
+            <li Class="VFED.CompProperties_BoxRefuel">
+                <refuelWith>VFED_AmmoBox_UraniumSlug</refuelWith>
+              </li>
+        </value>
+    </Operation>
+    <!-- HSK-patch note: <success>Always</success> because Turret_RocketswarmLauncher
+         doesn't exist in HSK's vanilla turret roster. Harmless no-op when missing. -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="Turret_RocketswarmLauncher"]/comps</xpath>
+        <value>
+            <li Class="VFED.CompProperties_BoxRefuel">
+                <refuelWith>VFED_AmmoBox_Missile</refuelWith>
+              </li>
+        </value>
+    </Operation>
+</Patch>

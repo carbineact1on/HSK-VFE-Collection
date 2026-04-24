@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Chitin -->
+	<ThingDef ParentName="LeatherBase">
+		<defName>VFEI2_Chitin</defName>
+		<label>chitin</label>
+		<description>An extremely thick composition of rare minerals and biomass, commonly found in a form of insect exoskeletons.</description>
+		<graphicData>
+			<texPath>Things/Item/VFEI_Chitin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>3.2</MarketValue>
+			<Mass>0.05</Mass>
+			<StuffPower_Armor_Sharp>0.48</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.27</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.15</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>6</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(98,73,62)</color>
+			<commonality>0</commonality>
+			<statFactors>
+				<MaxHitPoints>1.5</MaxHitPoints>
+				<Flammability>0.5</Flammability>
+				<Beauty>0.8</Beauty>
+				<WorkToMake>1.2</WorkToMake>
+				<WorkToBuild>1.2</WorkToBuild>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+</Defs>

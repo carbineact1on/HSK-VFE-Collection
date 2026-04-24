@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<VFEI_ModNameForSettings>VFE - Insectoids 2</VFEI_ModNameForSettings>
+
+
+	<VFEI_InsectTerritoryScale>Infested area</VFEI_InsectTerritoryScale>
+	<VFEI_Infestation>Infestation</VFEI_Infestation>
+	<VFEI_InfestationTooltip>Whether this tile is under the effects of an insectoid infestation.
+
+Areas around insectoid hives are often teeming with insects, with various insect-built structures affecting the environment. Infestations are much more likely to occur, and travelling parties may find roaming insectoids.</VFEI_InfestationTooltip>
+	<VFEI_Present>Present</VFEI_Present>
+	<VFEI_SettleWarning>This tile is near an insectoid hive, so there will be an ever-present insectoid influence on it. Infestations will happen every {0} days. Large infestations are much more likely to happen, and may occur anywhere, not just in dark areas. Megaspiders, spelopedes and megascarabs are roaming free, and travelling caravans may have to fend off insectoid swarms.</VFEI_SettleWarning>
+
+	<VFEI_LarvaeTimeSpawn>{0} before next swarmling spawn.</VFEI_LarvaeTimeSpawn>
+	<VFEI_NoMoreSpawningAllowed>Queen is resting.</VFEI_NoMoreSpawningAllowed>
+
+	<VFEI2_RoyalInsectJelly>Royal insect jelly fullness:</VFEI2_RoyalInsectJelly>
+	<VFEI2_Chemfuel>Chemfuel fullness:</VFEI2_Chemfuel>
+	<VFEI2_Chitin>Shedding chitin in:</VFEI2_Chitin>
+	<VFEI_CocoonInsectSpawnIn>{0} before insect spawn.</VFEI_CocoonInsectSpawnIn>
+	<VFEI_CreatingCocoon>{0} to create cocoon</VFEI_CreatingCocoon>
+	<VFEI_CannotPlaceCloseToOtherCreeper>Cannot be placed close to other creeper.</VFEI_CannotPlaceCloseToOtherCreeper>
+	<VFEI_CannotPlaceCloseToOtherJellyFarm>Cannot be placed close to other jelly farm.</VFEI_CannotPlaceCloseToOtherJellyFarm>
+	<VFEI_Insectoids>Insectoids</VFEI_Insectoids>
+	<VFEI_ChooseInsectoidColor>Choose insectoid {0} color</VFEI_ChooseInsectoidColor>
+	<VFEI_DefenderDesc>Defender insectoids vigilantly protect their hive by attacking any hostile entities that come within a designated radius.</VFEI_DefenderDesc>
+	<VFEI_HunterDesc>Hunter insectoids proactively search for and hunt wildlife near their hive, bringing back and storing kills for communal consumption.</VFEI_HunterDesc>
+	<VFEI_WorkerDesc>Worker insectoids are tasked with constructing and maintaining insectoid-specific structures, as well as performing essential hauling and mining duties.</VFEI_WorkerDesc>
+	<VFEI_InsectoidWillBeSpawnedIn>{0} will be spawned in: {1}</VFEI_InsectoidWillBeSpawnedIn>
+	<VFEI_SpawningStoppedMaxCapacity>Spawning stopped: maximum amount reached.</VFEI_SpawningStoppedMaxCapacity>
+	<VFEI_AlreadyActivated>already activated</VFEI_AlreadyActivated>
+	<VFEI_OnCooldown>will be available in {0}</VFEI_OnCooldown>
+	<VFEI_OtherThumperIsActive>other thumper is active</VFEI_OtherThumperIsActive>
+	<VFEI_PherocoreCanBeUsedOnHive>{0} can only be used on an {1}.</VFEI_PherocoreCanBeUsedOnHive>
+	<VFEI_HiveCannotBeUpgradedMore>Cannot upgrade: reached maximum size of the {0}.</VFEI_HiveCannotBeUpgradedMore>
+	<VFEI_InfestationHasSpread>Quest failed: {0}</VFEI_InfestationHasSpread>
+	<VFEI_InfestationHasSpreadDesc>The insectoid hive has spread. The quest {0} has ended.</VFEI_InfestationHasSpreadDesc>
+	<VFEI_InsectSummonWarning>Activating the {0} will summon the following hostile insects:\n\n{PAWNS}\n\nAre you ready to fight?</VFEI_InsectSummonWarning>
+	<VFEI_LetterLabelInsectWaveSummoned>{0} summoned</VFEI_LetterLabelInsectWaveSummoned>
+	<VFEI_LetterInsectWaveSummoned>Attracted by your thumper vibrations, an insectoid leader from {0} will emerge from the ground soon. Be prepared.</VFEI_LetterInsectWaveSummoned>
+	<VFEI_LetterLabelInsectWaveArrived>{0} arrived</VFEI_LetterLabelInsectWaveArrived>
+	<VFEI_LetterInsectWaveArrived>An insectoid leader from {0} has come to eradicate you, along with escorts.\n\nThe assault group is composed of the following insects:\n\n{1}</VFEI_LetterInsectWaveArrived>
+	<VFEI_AlertInsectWaveIncoming>{0} incoming</VFEI_AlertInsectWaveIncoming>
+	<VFEI_AlertInsectWaveIncomingDesc>Alerted by your thumper, a hostile {0} with an army of insectoids are digging their way towards the surface. They will arrive in a few hours.</VFEI_AlertInsectWaveIncomingDesc>
+	<VFEI_HiveArea>Hive area</VFEI_HiveArea>
+	<VFEI_HiveAreaClear>Clear hive area</VFEI_HiveAreaClear>
+	<VFEI_HiveAreaClearDesc>Removes a hive area. Your insectoids will no longer work, look for prey and attack hostile targets here.</VFEI_HiveAreaClearDesc>
+	<VFEI_HiveAreaExpand>Hive area</VFEI_HiveAreaExpand>
+	<VFEI_HiveAreaExpandDesc>Create a hive area where your insectoid hives will work, look for prey and attack hostile targets. Your insectoids will not leave the hive area.</VFEI_HiveAreaExpandDesc>
+	<VFEI_HiveCloseProximityWarning>Constructing artificial hives in close proximity to each other will increase their maintenance need.</VFEI_HiveCloseProximityWarning>
+	<VFEI_MaintenanceLossSpeed>Maintenance loss speed: {0}</VFEI_MaintenanceLossSpeed>
+	<VFEI_MinHiveStabilityDistance>Nearby artificial hive distance penalty</VFEI_MinHiveStabilityDistance>
+	<VFEI_StabilityHiveMaintenancePenalty>Stability Hive maintenance penalty</VFEI_StabilityHiveMaintenancePenalty>
+	<VFEI_CannotUseRoofed>Caster is in a roofed area.</VFEI_CannotUseRoofed>
+	<VFEI_JellyFarmProductionAmount>Jelly farm production amount</VFEI_JellyFarmProductionAmount>
+	<VFEI_CreeperSpawnSpeed>Creeper spawn speed</VFEI_CreeperSpawnSpeed>
+	<VFEI_TendrilmossSpawnSpeed>Tendril farm spawn speed</VFEI_TendrilmossSpawnSpeed>
+	<VFEI_BaseArtificalInsectCount>Base artificial hive insect count</VFEI_BaseArtificalInsectCount>
+	<VFEI_TimeUntilThornsRegrow>Time until thorns regrow: {0}</VFEI_TimeUntilThornsRegrow>
+	<VFEI_MaintainedByHivenode>Maintained by hivenode</VFEI_MaintainedByHivenode>
+	<VFEI_NeedsToBeMaintainedIn>Due for maintenance in {0}</VFEI_NeedsToBeMaintainedIn>
+	<VFEI_DueForMaintenance>Due for maintenance. {0} until it starts deteriorating.</VFEI_DueForMaintenance>
+	<VFEI_CannotPlaceCloseToOtherBasicHive>Cannot be placed close to other artificial basic hive</VFEI_CannotPlaceCloseToOtherBasicHive>
+	<VFEI_NextInsectBurrowing>Next insectoid burrowing in: {0}</VFEI_NextInsectBurrowing>
+	<VFEI_BurrowWaves>{0} insectoid waves out of {1}</VFEI_BurrowWaves>
+	<VFEI_BurrowCollapsed>Insectoid burrow has become unstable and collapsed.</VFEI_BurrowCollapsed>
+	<VFEI_NotForPlayers>This Patriarch is under player control and therefore has no connection to a wild hive</VFEI_NotForPlayers>
+	<VFEI_BaseTimeBetweenHanHordeWaves>Base time between Han Horde-mode waves</VFEI_BaseTimeBetweenHanHordeWaves>
+	<VFEI_ResearchUnlockedForCompletingWave>{0} has been unlocked for completing the wave.</VFEI_ResearchUnlockedForCompletingWave>
+	<VFEI_CargoPodsSentForCompletingWave>Cargo pods have been sent for completing the wave.</VFEI_CargoPodsSentForCompletingWave>
+	<VFEI_WaveActivityOverlay>Activity: {0}.
+Wave size multiplier: {1}.
+Time before the wave: {2}.
+Chosen geneline: {3}.</VFEI_WaveActivityOverlay>
+	<VFEI_EnemiesComing>Enemies coming:</VFEI_EnemiesComing>
+	<VFEI_RequiresFloor>{0_label} needs {1} underneath.</VFEI_RequiresFloor>
+	<VFEI2_PatriarchNotTameable>Patriarch cannot be tamed</VFEI2_PatriarchNotTameable>
+
+</LanguageData>

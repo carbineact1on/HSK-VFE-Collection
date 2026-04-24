@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- HSK/CE patch: strip the Grappling Hook ability from Privateer Armor.
+
+     The ability teleports the wearer 20 cells through walls/solid rock which
+     interacts badly with Combat Extended's line-of-sight, range, and movement
+     systems (can break suppression, ignore CE's cover pathing, etc.).
+
+     Privateer Armor (VFEP_Apparel_Privateer) remains fully craftable and
+     functional — it just loses the shoulder-mounted grappling hook module.
+     Enemy pirates wearing Privateer Armor also lose grappling, preventing
+     raid AI from mis-using it against player defenses.
+
+     Gated inside Patches-CE/ via LoadFolders.xml so this only activates when
+     CE is loaded. Vanilla / non-CE installs keep the grappling hook intact. -->
+<Patch>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName="VFEP_Apparel_Privateer"]/comps/li[@Class="VFECore.Abilities.CompProperties_AbilitiesApparel"]</xpath>
+  </Operation>
+
+</Patch>

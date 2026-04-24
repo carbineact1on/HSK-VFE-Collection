@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThinkTreeDef>
+		<defName>VFEI_BurrowSpamming</defName>
+		<insertTag>Animal_PreMain</insertTag>
+		<insertPriority>100</insertPriority>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="VFEInsectoids.ThinkNode_Patriarch">
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHashIntervalTick">
+							<interval>2000</interval>
+							<subNodes>
+								<li Class="VFEInsectoids.JobGiver_AICastAbilityOnPosition">
+									<ability>VFEI2_CreateSmallBurrow</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHashIntervalTick">
+							<interval>3000</interval>
+							<subNodes>
+								<li Class="VFEInsectoids.JobGiver_AICastAbilityOnPosition">
+									<ability>VFEI2_CreateMediumBurrow</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHashIntervalTick">
+							<interval>4000</interval>
+							<subNodes>
+								<li Class="VFEInsectoids.JobGiver_AICastAbilityOnPosition">
+									<ability>VFEI2_CreateLargeBurrow</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+</Defs>

@@ -1,0 +1,21 @@
+# Build artifacts
+*/Source/obj/
+*/Source/bin/
+**/obj/
+**/bin/
+
+# IDE / editor
+*.user
+*.suo
+.vs/
+
+# Backups
+*.dll.bak
+*.xml.bak
+
+# OS cruft
+Thumbs.db
+.DS_Store
+
+# Steam publish marker (never commit — causes mod duplication)
+**/PublishedFileId.txt

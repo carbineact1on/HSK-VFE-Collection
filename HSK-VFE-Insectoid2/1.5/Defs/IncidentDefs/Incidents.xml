@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<IncidentDef>
+		<defName>VFEI_InfestedChunkCrash</defName>
+		<label>infested chunk crash</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_InfestedChunkCrash</workerClass>
+		<letterLabel>Infested chunk crash</letterLabel>
+		<letterText>A number of small chunks of an ancient ship has crashed nearby. \n\nThey seem to be infested with an organic mass. Bizarre insect chittering can be heard within the hull. \n\nDestroy them as soon as possible.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1.6</baseChance>
+		<minRefireDays>15</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>800</minThreatPoints>
+		<earliestDay>20</earliestDay>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>VFEI_InfestedPartCrash</defName>
+		<label>infested part crash</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_InfestedPartCrash</workerClass>
+		<letterLabel>Infested part crash</letterLabel>
+		<letterText>A large piece of an ancient ship has crashed nearby.\n\nIt seems to be infested with an organic mass. Bizarre insect chittering can be heard within the hull.\n\nDestroy it as soon as possible.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1.2</baseChance>
+		<minRefireDays>30</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>1000</minThreatPoints>
+		<earliestDay>30</earliestDay>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>VFEI_InfestedModuleCrash</defName>
+		<label>infested module crash</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_InfestedModuleCrash</workerClass>
+		<letterLabel>Infested module crash</letterLabel>
+		<letterText>A mysterious segment of a long destroyed spaceship has crashed nearby.\n\nIt seems to be completely covered in biomass and lumps of insectoid jelly. It is fairly certain that this old wreckage may contain ancient dangers.\n\nDestroy it as soon as possible.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0.8</baseChance>
+		<minRefireDays>60</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>1600</minThreatPoints>
+		<earliestDay>30</earliestDay>
+	</IncidentDef>
+
+	<RaidStrategyDef>
+		<defName>VFEI_InfestedMeteors</defName>
+		<workerClass>VFEInsectoids.RaidStrategyWorker_HiveRaid</workerClass>
+		<selectionWeightPerPointsCurve>
+			<points>
+				<li>(300, 0.5)</li>
+				<li>(700, 0.8)</li>
+				<li>(1400, 1.2)</li>
+				<li>(2800, 1.5)</li>
+				<li>(4000, 1.8)</li>
+			</points>
+		</selectionWeightPerPointsCurve>
+		<pointsFactorCurve>
+			<points>
+				<li>0, 1</li>
+			</points>
+		</pointsFactorCurve>
+		<arriveModes>
+			<li>VFEI_InfestedMeteors</li>
+		</arriveModes>
+		<letterLabelEnemy>Raid (meteors)</letterLabelEnemy>
+		<arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+	</RaidStrategyDef>
+
+	<PawnsArrivalModeDef>
+		<defName>VFEI_InfestedMeteors</defName>
+		<workerClass>VFEInsectoids.PawnsArrivalModeWorker_InfestedMeteorRaid</workerClass>
+		<selectionWeightCurve>
+			<points>
+				<li>(0, 0)</li>
+				<li>(400, 0.20)</li>
+				<li>(800, 0.45)</li>
+			</points>
+		</selectionWeightCurve>
+		<minTechLevel>Animal</minTechLevel>
+		<textEnemy>A shower of meteorites is striking the local area. It seems they are infested with hives belonging to {1}! They will attack immediately.</textEnemy>
+	</PawnsArrivalModeDef>
+
+	<IncidentDef>
+		<defName>VFEI_RoamingInsectoids</defName>
+		<label>roaming insectoids</label>
+		<category>ThreatBig</category>
+		<targetTags>
+			<li>Caravan</li>
+			<li>Map_TempIncident</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_Ambush_RoamingInsectoids</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<minRefireDays>0.3</minRefireDays>
+		<letterText>{0} has been ambushed by insectoids from {2}!</letterText>
+		<letterLabel>Roaming insectoids</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>VFEI_LargeInfestation</defName>
+		<label>large infestation</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_LargeInfestation</workerClass>
+		<letterLabel>Large infestation</letterLabel>
+		<letterText>A large swarm of giant insects is tunneling towards you! They will break through in a few seconds and plant hives, as well as other insectoid-built formations.\n\nThe hives will spawn more insects and more hives.\n\nIf you don't want the insects to infest the whole area, destroy the hives. But beware - the bugs will defend their home.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1</baseChance>
+		<minRefireDays>60</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>800</minThreatPoints>
+		<tale>Infestation</tale>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>VFEI_BurrowSiege</defName>
+		<label>burrow siege</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_BurrowSiege</workerClass>
+		<letterLabel>Burrow Siege</letterLabel>
+		<letterText>A swarm of rare royal insects is tunneling towards you! They will break through in a few seconds and create burrows, that will allow more and more insects to reach the surface. These burrows can only be destroyed using explosives, but they will also collapse after some time.\n\nThe burrows will send insectoids in decreasing intervals until they become too unstable.\n\nThe insects belong to the royal geneline and are significantly harder to kill than their standard counterparts.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1</baseChance>
+		<minRefireDays>60</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>1000</minThreatPoints>
+		<tale>Infestation</tale>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>VFEI_HordeWaveRaid</defName>
+		<label>horde wave raid</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>VFEInsectoids.IncidentWorker_HordeWaveRaid</workerClass>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0</baseChance>
+		<category>ThreatBig</category>
+		<tale>Raid</tale>
+	</IncidentDef>
+</Defs>

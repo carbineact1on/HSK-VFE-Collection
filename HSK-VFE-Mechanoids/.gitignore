@@ -1,0 +1,5 @@
+*.bak
+*.swp
+.vs/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>VFEI2_SmallBurrowSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>VFEInsectoids.BurrowSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+		<building>
+			<groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+			<groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>VFEI2_SmallBurrow</defName>
+		<label>small insect burrow</label>
+		<description>A small insectoid-made hole connecting to some unseen cave network deep under the surface. The walls are covered in insectoid goop and are too slippery to climb down. Insectoid chittering can be heard from the tunnels beneath. They will emerge regularly in decreasing intervals until the burrow collapses or is destroyed. Burrows can only be damaged by explosions.</description>
+		<thingClass>VFEInsectoids.Burrow</thingClass>
+		<fillPercent>0</fillPercent>
+		<category>Building</category>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>100</pathCost>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<building>
+			<isInert>true</isInert>
+			<isTargetable>true</isTargetable>
+			<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<destroyShakeAmount>0</destroyShakeAmount>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectBurrow">
+				<insectoidsToSpawn>
+					<li>
+						<pawn>VFEI2_RoyalMegascarab</pawn>
+						<weight>1</weight>
+					</li>
+				</insectoidsToSpawn>
+				<spawningStartingTimer>10000</spawningStartingTimer>
+				<spawningDelayMultiplier>0.8</spawningDelayMultiplier>
+				<maxWavesToSpawn>8</maxWavesToSpawn>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/InsectBurrowSmall</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>VFEI2_MediumBurrowSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>VFEInsectoids.BurrowSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+		<building>
+			<groundSpawnerSustainedEffecter>EmergencePointSustained3X3</groundSpawnerSustainedEffecter>
+			<groundSpawnerCompleteEffecter>EmergencePointComplete3X3</groundSpawnerCompleteEffecter>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>VFEI2_MediumBurrow</defName>
+		<label>insect burrow</label>
+		<description>A medium-sized insectoid-made hole connecting to some unseen cave network deep under the surface. The walls are covered in insectoid goop and are too slippery to climb down. Insectoid chittering can be heard from the tunnels beneath. They will emerge regularly in decreasing intervals until the burrow collapses or is destroyed. Burrows can only be damaged by explosions.</description>
+		<thingClass>VFEInsectoids.Burrow</thingClass>
+		<fillPercent>0</fillPercent>
+		<category>Building</category>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<pathCost>100</pathCost>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<building>
+			<isInert>true</isInert>
+			<isTargetable>true</isTargetable>
+			<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<destroyShakeAmount>0</destroyShakeAmount>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectBurrow">
+				<insectoidsToSpawn>
+					<li>
+						<pawn>VFEI2_RoyalSpelopede</pawn>
+						<weight>1</weight>
+					</li>
+				</insectoidsToSpawn>
+				<spawningStartingTimer>10000</spawningStartingTimer>
+				<spawningDelayMultiplier>0.85</spawningDelayMultiplier>
+				<maxWavesToSpawn>6</maxWavesToSpawn>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/InsectBurrow</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>VFEI2_LargeBurrowSpawner</defName>
+		<label>tunnel</label>
+		<thingClass>VFEInsectoids.BurrowSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+		<building>
+			<groundSpawnerSustainedEffecter>EmergencePointSustained8X8</groundSpawnerSustainedEffecter>
+			<groundSpawnerCompleteEffecter>EmergencePointComplete8X8</groundSpawnerCompleteEffecter>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>VFEI2_LargeBurrow</defName>
+		<label>large insect burrow</label>
+		<description>A massive insectoid-made hole connecting to some unseen cave network deep under the surface. The walls are covered in insectoid goop and are too slippery to climb down. Insectoid chittering can be heard from the tunnels beneath. They will emerge regularly in regular intervals until the burrow collapses or is destroyed. Burrows can only be damaged by explosions.</description>
+		<thingClass>VFEInsectoids.Burrow</thingClass>
+		<fillPercent>0</fillPercent>
+		<category>Building</category>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<pathCost>100</pathCost>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<building>
+			<isInert>true</isInert>
+			<isTargetable>true</isTargetable>
+			<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<destroyShakeAmount>0</destroyShakeAmount>
+		</building>
+		<comps>
+			<li Class="VFEInsectoids.CompProperties_InsectBurrow">
+				<insectoidsToSpawn>
+					<li>
+						<pawn>VFEI2_RoyalMegaspider</pawn>
+						<weight>2</weight>
+					</li>
+					<li>
+						<pawn>VFEI2_Queen</pawn>
+						<weight>1</weight>
+					</li>
+				</insectoidsToSpawn>
+				<spawningStartingTimer>10000</spawningStartingTimer>
+				<spawningDelayMultiplier>1.02</spawningDelayMultiplier>
+				<maxWavesToSpawn>4</maxWavesToSpawn>
+			</li>
+		</comps>
+		<graphicData>
+			<texPath>Things/Building/InsectBurrowLarge</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+	</ThingDef>
+</Defs>

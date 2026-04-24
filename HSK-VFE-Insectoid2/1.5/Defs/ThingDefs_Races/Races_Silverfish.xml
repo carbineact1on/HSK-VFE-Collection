@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Silverfish -->
+	<ThingDef ParentName="VFEI2_BaseInsect">
+		<defName>VFEI2_Silverfish</defName>
+		<label>silverfish</label>
+		<description>An incredibly rare and monstrously large insectoid of the Xanides geneline, the silverfish, a colossal bug from the mineral-rich planet of Xanides, is encased in a nearly impenetrable exoskeleton composed of rocky formations. Despite its slow movement, this giant insectoid is highly effective at tunneling through the planet's dense terrain, using its massive pincer claws to dig wide tunnels and dismantle defensive structures with ease. Although its rocky armor shields it from most attacks, strategically targeted shots can expose vulnerable spots beneath its hardened exterior. Upon death, it’s possible to extract a Xanides pherocore from its body.</description>
+		<statBases>
+			<MoveSpeed>1.6</MoveSpeed>
+			<Flammability>0.7</Flammability>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>1800</MarketValue>
+			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.2</ArmorRating_Heat>
+			<LeatherAmount>30</LeatherAmount>
+		</statBases>
+		<tools>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>VFEI2_TeramantisStun</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>2.8</cooldownTime>
+				<linkedBodyPartsGroup>VFEI2_ClawAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>VFEI2_TeramantisStun</li>
+				</capacities>
+				<armorPenetration>0.25</armorPenetration>
+				<power>20</power>
+				<cooldownTime>2.8</cooldownTime>
+				<linkedBodyPartsGroup>VFEI2_ClawAttackTool</linkedBodyPartsGroup>
+			</li>
+			
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<armorPenetration>0.08</armorPenetration>
+				<power>16</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_HediffAfterHealthLoss">
+				<healthPercent>80</healthPercent>
+				<tickInterval>60</tickInterval>
+				<hediff>VFEI2_ArmorDegradation</hediff>
+				<severity>1</severity>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<resourceDef>VFEI2_Chitin</resourceDef>
+				<gatheringIntervalDays>20</gatheringIntervalDays>
+				<resourceAmount>55</resourceAmount>
+				<customResourceString>VFEI2_Chitin</customResourceString>
+				<hideDisplayOnWildAnimals>true</hideDisplayOnWildAnimals>
+
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VFEI2_WideTunnels</initialAbility>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_TriggerAbilityOnDamage">
+				<ability>VFEI2_WideTunnels</ability>
+			</li>
+			
+		
+		</comps>
+		
+		<race>
+			<renderTree>VFEI2_Unarmored</renderTree>
+			<body>VFEI2_ClawedInsectoid</body>
+			<baseHungerRate>0.06</baseHungerRate>
+			<baseBodySize>5</baseBodySize>
+			<baseHealthScale>10</baseHealthScale>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>0.8</wildness>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<trainability>Advanced</trainability>
+			<lifeExpectancy>12</lifeExpectancy>
+			<leatherDef>VFEI2_Chitin</leatherDef>
+
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.05</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+					<soundDeath>Pawn_BigInsect_Death</soundDeath>
+					<soundCall>Pawn_BigInsect_Call</soundCall>
+					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<killedLeavings>
+			<VFEI2_PherocoreXanides>1</VFEI2_PherocoreXanides>
+		</killedLeavings>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+	<defName>VFEI2_Silverfish</defName>
+		<label>silverfish</label>
+		<race>VFEI2_Silverfish</race>
+		<combatPower>800</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<defaultFactionType>Insect</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<defendPointRadius>0</defendPointRadius>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Silverfish</texPath>
+					<color>(129, 129, 130)</color>
+				
+					<drawSize>3.6</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Dessicated_Silverfish</texPath>
+					<drawSize>3.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Silverfish</texPath>
+					<drawSize>4.0</drawSize>
+					<color>(129, 129, 130)</color>
+					
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Dessicated_Silverfish</texPath>
+					<drawSize>4.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Silverfish</texPath>
+					<drawSize>4.8</drawSize>
+					<color>(129, 129, 130)</color>
+				
+					<shadowData>
+						<volume>(0.5, 0.7, 0.43)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Silverfish/Dessicated_Silverfish</texPath>
+					<drawSize>4.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Megaspider"]/race/lifeStageAges/li[1]/minAge</xpath>
+		<value>
+			<minAge>0.015</minAge>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Megaspider"]/race/lifeStageAges/li[2]/minAge</xpath>
+		<value>
+			<minAge>0.1</minAge>
+		</value>
+	</Operation>
+</Patch>

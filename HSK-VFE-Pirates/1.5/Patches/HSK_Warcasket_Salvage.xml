@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: attach the warcasket weapon salvage recipe to HSK's
+    TableMachining spacer workbench.
+
+    Corpse salvage is NOT a separate bill. The MakeRecipeProducts Harmony
+    postfix piggybacks on HSK's existing CremateCorpse /
+    CremateCorpseCampfire recipes — cremating a warcasket corpse
+    automatically yields warcasket materials alongside the normal ashes.
+    No patch needed for corpses.
+-->
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="TableMachining"]/recipes</xpath>
+        <value>
+            <li>HSK_SalvageWarcasketWeapon</li>
+        </value>
+    </Operation>
+
+</Patch>

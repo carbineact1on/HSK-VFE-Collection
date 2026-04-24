@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<VFEInsectoids.InsectGenelineDef>
+		<defName>VFEI_Sorne</defName>
+		<hive>Hive</hive>
+		<spawnWeight>0.8</spawnWeight>
+		<boss>VFEI2_Empress</boss>
+		<waveIconPath>UI/WaveSurvivalUI/Wave_Sorne</waveIconPath>
+		<insects>
+			<Megascarab>10</Megascarab>
+			<Spelopede>7</Spelopede>
+			<Megaspider>3</Megaspider>
+			<VFEI2_Megapede>2</VFEI2_Megapede>
+			<VFEI2_Queen>1</VFEI2_Queen>
+			<VFEI2_Swarmling>1</VFEI2_Swarmling>
+		</insects>
+	</VFEInsectoids.InsectGenelineDef>
+
+	<VFEInsectoids.InsectGenelineDef>
+		<defName>VFEI_Nuchadus</defName>
+		<hive>VFEI2_NuchadusHive</hive>
+		<spawnWeight>0.05</spawnWeight>
+		<boss>VFEI2_Titantick</boss>
+		<waveIconPath>UI/WaveSurvivalUI/Wave_Nuchadus</waveIconPath>
+		<insects>
+			<VFEI2_Boomtick>10</VFEI2_Boomtick>
+			<VFEI2_Hellbeetle>6</VFEI2_Hellbeetle>
+			<VFEI2_Fuelmite>2</VFEI2_Fuelmite>
+		</insects>
+	</VFEInsectoids.InsectGenelineDef>
+
+	<VFEInsectoids.InsectGenelineDef>
+		<defName>VFEI_Chelis</defName>
+		<hive>VFEI2_ChelisHive</hive>
+		<spawnWeight>0.05</spawnWeight>
+		<boss>VFEI2_Teramantis</boss>
+		<waveIconPath>UI/WaveSurvivalUI/Wave_Chelis</waveIconPath>
+		<insects>
+			<VFEI2_Macrofly>10</VFEI2_Macrofly>
+			<VFEI2_Megawasp>6</VFEI2_Megawasp>
+			<VFEI2_Gigalocust>1</VFEI2_Gigalocust>
+		</insects>
+	</VFEInsectoids.InsectGenelineDef>
+
+	<VFEInsectoids.InsectGenelineDef>
+		<defName>VFEI_Kemia</defName>
+		<hive>VFEI2_KemianHive</hive>
+		<spawnWeight>0.05</spawnWeight>
+		<boss>VFEI2_Gigamite</boss>
+		<waveIconPath>UI/WaveSurvivalUI/Wave_Kemia</waveIconPath>
+		<insects>
+			<VFEI2_Megathrips>10</VFEI2_Megathrips>
+			<VFEI2_Venomite>5</VFEI2_Venomite>
+			<VFEI2_Acidspitter>1</VFEI2_Acidspitter>
+		</insects>
+	</VFEInsectoids.InsectGenelineDef>
+
+	<VFEInsectoids.InsectGenelineDef>
+		<defName>VFEI_Xanides</defName>
+		<hive>VFEI2_XanidesHive</hive>
+		<spawnWeight>0.05</spawnWeight>
+		<boss>VFEI2_Silverfish</boss>
+		<waveIconPath>UI/WaveSurvivalUI/Wave_Xanides</waveIconPath>
+		<insects>
+			<VFEI2_Durapod>12</VFEI2_Durapod>
+			<VFEI2_Tankroach>6</VFEI2_Tankroach>
+			<VFEI2_Ironclad>1</VFEI2_Ironclad>
+		</insects>
+	</VFEInsectoids.InsectGenelineDef>
+	
+</Defs>
