@@ -32,6 +32,7 @@ namespace HSKVFEPiratesCompat
                 UnpatchStripBlocker.Apply(harmony);
                 RestrictWarcasketWear.Apply(harmony);
                 ForceWarcasketDroppable.Apply(harmony);
+                UniversalRemoveWarcasket.Apply();
 
                 // Pick up any [HarmonyPatch]-attributed classes in this assembly
                 // (currently: MakeRecipeProducts_Patch for dynamic salvage yield).
