@@ -220,7 +220,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>14</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
 			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>15</count></li>
@@ -241,7 +241,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>14</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
 			<li><filter><categories><li>USLDHBar</li></categories></filter><count>25</count></li>
@@ -261,7 +261,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>14</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
 			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>20</count></li>
@@ -281,7 +281,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>14</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
 			<li><filter><categories><li>USLDHBar</li></categories></filter><count>30</count></li>
@@ -301,7 +301,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>14</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
 			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>5</count></li>

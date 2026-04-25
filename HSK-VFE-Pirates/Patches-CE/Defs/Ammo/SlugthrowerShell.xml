@@ -238,7 +238,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>6</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C1</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>7</count></li>
 			<li><filter><categories><li>HeavyBar</li></categories></filter><count>6</count></li>

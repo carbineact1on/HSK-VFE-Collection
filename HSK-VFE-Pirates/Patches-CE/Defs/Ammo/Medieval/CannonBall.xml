@@ -278,8 +278,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>5</Crafting></skillRequirements>
-		<researchPrerequisite>Gunpowder</researchPrerequisite>
-		<ingredients>
+			<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
 			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
 		</ingredients>
@@ -297,8 +296,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>5</Crafting></skillRequirements>
-		<researchPrerequisite>Gunpowder</researchPrerequisite>
-		<ingredients>
+			<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
 			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
 			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>4</count></li>
@@ -317,8 +315,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>5</Crafting></skillRequirements>
-		<researchPrerequisite>Gunpowder</researchPrerequisite>
-		<ingredients>
+			<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
 			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
 			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>5</count></li>
@@ -337,8 +334,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>5</Crafting></skillRequirements>
-		<researchPrerequisite>Gunpowder</researchPrerequisite>
-		<ingredients>
+			<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
 			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
 			<li><filter><categories><li>HeavyBar</li></categories></filter><count>8</count></li>

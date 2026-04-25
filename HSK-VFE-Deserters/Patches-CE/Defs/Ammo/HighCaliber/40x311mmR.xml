@@ -166,7 +166,7 @@
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
 		<skillRequirements><Crafting>12</Crafting></skillRequirements>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
 			<li><filter><categories><li>USLDHBar</li></categories></filter><count>20</count></li>
@@ -185,7 +185,7 @@
 		<jobString>Making 40x311mmR (AP-I) shells.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
 			<li><filter><categories><li>HeavyBar</li></categories></filter><count>20</count></li>
@@ -205,7 +205,7 @@
 		<jobString>Making 40x311mmR (AP-HE) shells.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
 			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
@@ -225,7 +225,7 @@
 		<jobString>Making 40x311mmR (Sabot) shells.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.8</workSkillLearnFactor>
-		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
 			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
 			<li><filter><categories><li>USLDHBar</li></categories></filter><count>20</count></li>
