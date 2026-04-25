@@ -18,7 +18,6 @@
 			<Ammo_10x18mmCharged_AP>Bullet_10x18mmCharged_AP</Ammo_10x18mmCharged_AP>
 			<Ammo_10x18mmCharged_Ion>Bullet_10x18mmCharged_Ion</Ammo_10x18mmCharged_Ion>
 		</ammoTypes>
-		<similarTo>AmmoSet_ChargedPistol</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->

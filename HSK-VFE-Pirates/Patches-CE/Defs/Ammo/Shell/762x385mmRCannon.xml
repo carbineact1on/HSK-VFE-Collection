@@ -20,7 +20,6 @@
 			<Ammo_762x385mmRCannonShell_APCR>Bullet_762x385mmRCannonShell_APCR</Ammo_762x385mmRCannonShell_APCR>
 			<Ammo_762x385mmRCannonShell_EMP>Bullet_762x385mmRCannonShell_EMP</Ammo_762x385mmRCannonShell_EMP>
 		</ammoTypes>
-		<similarTo>AmmoSet_HeavyCannon</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->

@@ -19,7 +19,6 @@
 			<Ammo_Slugthrower_Beanbag>Bullet_Slugthrower_Beanbag</Ammo_Slugthrower_Beanbag>
 			<Ammo_Slugthrower_ElectroSlug>Bullet_Slugthrower_ElectroSlug</Ammo_Slugthrower_ElectroSlug>
 		</ammoTypes>
-		<similarTo>AmmoSet_Shotgun</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->

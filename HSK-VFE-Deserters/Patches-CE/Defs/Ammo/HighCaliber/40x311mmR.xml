@@ -19,7 +19,6 @@
 			<Ammo_40x311mmR_HE>Bullet_40x311mmR_HE</Ammo_40x311mmR_HE>
 			<Ammo_40x311mmR_Sabot>Bullet_40x311mmR_Sabot</Ammo_40x311mmR_Sabot>
 		</ammoTypes>
-		<similarTo>AmmoSet_Autocannon</similarTo>
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->
