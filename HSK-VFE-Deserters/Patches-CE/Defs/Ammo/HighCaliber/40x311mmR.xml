@@ -163,21 +163,43 @@
 		<label>make 40x311mmR (AP) cartridge x50</label>
 		<description>Craft 50 40x311mmR (AP) cartridges.</description>
 		<jobString>Making 40x311mmR (AP) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>216</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>9</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_40x311mmR_AP>50</Ammo_40x311mmR_AP>
 		</products>
@@ -189,30 +211,43 @@
 		<label>make 40x311mmR (AP-I) cartridge x50</label>
 		<description>Craft 50 40x311mmR (AP-I) cartridges.</description>
 		<jobString>Making 40x311mmR (AP-I) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>216</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>23</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Prometheum</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>12</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_40x311mmR_Incendiary>50</Ammo_40x311mmR_Incendiary>
 		</products>
@@ -224,30 +259,43 @@
 		<label>make 40x311mmR (AP-HE) cartridge x50</label>
 		<description>Craft 50 40x311mmR (AP-HE) cartridges.</description>
 		<jobString>Making 40x311mmR (AP-HE) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>216</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>41</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>12</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_40x311mmR_HE>50</Ammo_40x311mmR_HE>
 		</products>
@@ -259,39 +307,43 @@
 		<label>make 40x311mmR (Sabot) cartridge x50</label>
 		<description>Craft 50 40x311mmR (Sabot) cartridges.</description>
 		<jobString>Making 40x311mmR (Sabot) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>126</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>26</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Chemfuel</li>
-					</thingDefs>
-				</filter>
-				<count>26</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Uranium</li>
-				<li>Chemfuel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>HeavyBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>9</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>HeavyBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_40x311mmR_Sabot>50</Ammo_40x311mmR_Sabot>
 		</products>

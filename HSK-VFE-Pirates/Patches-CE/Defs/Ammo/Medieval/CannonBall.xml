@@ -277,21 +277,32 @@
 		<jobString>Making round shot cannon balls.</jobString>
 		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
 		<workAmount>6600</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>66</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>5</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_CannonBall_Round>5</Ammo_CannonBall_Round>
 		</products>
@@ -303,30 +314,32 @@
 		<description>Craft 5 bursting cannon shells.</description>
 		<jobString>Making bursting cannon shells.</jobString>
 		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>66</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>4</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>5</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_CannonBall_Bursting>5</Ammo_CannonBall_Bursting>
 		</products>
@@ -339,30 +352,32 @@
 		<description>Craft 5 incendiary cannon shells.</description>
 		<jobString>Making incendiary cannon shells.</jobString>
 		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>66</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>2</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Prometheum</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>5</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_CannonBall_Incendiary>5</Ammo_CannonBall_Incendiary>
 		</products>
@@ -376,21 +391,32 @@
 		<jobString>Making grape shot cannon shells.</jobString>
 		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
 		<workAmount>6600</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>66</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>5</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>StoneChunks</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_CannonBall_Grape>5</Ammo_CannonBall_Grape>
 		</products>

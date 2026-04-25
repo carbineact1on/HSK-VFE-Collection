@@ -184,21 +184,43 @@
 		<label>make .338 Norma Magnum (FMJ) cartridge x200</label>
 		<description>Craft 200 .338 Norma Magnum (FMJ) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (FMJ) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>20</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>HeavyBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>45</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>HeavyBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_338Norma_FMJ>200</Ammo_338Norma_FMJ>
 		</products>
@@ -210,21 +232,43 @@
 		<label>make .338 Norma Magnum (AP) cartridge x200</label>
 		<description>Craft 200 .338 Norma Magnum (AP) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>20</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>45</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_338Norma_AP>200</Ammo_338Norma_AP>
 		</products>
@@ -236,30 +280,43 @@
 		<label>make .338 Norma Magnum (AP-I) cartridge x200</label>
 		<description>Craft 200 .338 Norma Magnum (AP-I) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP-I) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>20</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>2</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Prometheum</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_338Norma_Incendiary>200</Ammo_338Norma_Incendiary>
 		</products>
@@ -271,30 +328,43 @@
 		<label>make .338 Norma Magnum (AP-HE) cartridge x200</label>
 		<description>Craft 200 .338 Norma Magnum (AP-HE) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP-HE) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>20</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_338Norma_HE>200</Ammo_338Norma_HE>
 		</products>
@@ -306,39 +376,43 @@
 		<label>make .338 Norma Magnum (Sabot) cartridge x200</label>
 		<description>Craft 200 .338 Norma Magnum (Sabot) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (Sabot) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>12</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>3</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Chemfuel</li>
-					</thingDefs>
-				</filter>
-				<count>3</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Uranium</li>
-				<li>Chemfuel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>HeavyBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>45</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>HeavyBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_338Norma_Sabot>200</Ammo_338Norma_Sabot>
 		</products>

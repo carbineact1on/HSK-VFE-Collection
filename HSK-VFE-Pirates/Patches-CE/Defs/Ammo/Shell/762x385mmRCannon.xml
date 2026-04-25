@@ -223,39 +223,43 @@
 			<li>CE_Launchers</li>
 		</researchPrerequisites>
 		<workAmount>12600</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>90</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>6</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>2</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-				<li>ComponentIndustrial</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>12</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_762x385mmRCannonShell_HEAT>5</Ammo_762x385mmRCannonShell_HEAT>
 		</products>
@@ -267,21 +271,43 @@
 		<description>Craft 5 76.2x385mmR (AP) cannon shells.</description>
 		<jobString>Making 76.2x385mmR (AP) cannon shells.</jobString>
 		<workAmount>10800</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>90</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>9</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_762x385mmRCannonShell_AP>5</Ammo_762x385mmRCannonShell_AP>
 		</products>
@@ -293,39 +319,43 @@
 		<description>Craft 5 76.2x385mmR (HE) cannon shells.</description>
 		<jobString>Making 76.2x385mmR (HE) cannon shells.</jobString>
 		<workAmount>12200</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>90</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>2</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-				<li>ComponentIndustrial</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>12</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_762x385mmRCannonShell_HE>5</Ammo_762x385mmRCannonShell_HE>
 		</products>
@@ -342,30 +372,43 @@
 			<li>CE_AdvancedAmmo</li>
 		</researchPrerequisites>
 		<workAmount>11200</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>56</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>18</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Uranium</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>9</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_762x385mmRCannonShell_APCR>5</Ammo_762x385mmRCannonShell_APCR>
 		</products>
@@ -382,30 +425,43 @@
 			<li>MicroelectronicsBasics</li>
 		</researchPrerequisites>
 		<workAmount>13800</workAmount>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>90</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>ComponentIndustrial</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>HeavyBar</li>
+						</categories>
+					</filter>
+					<count>15</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>9</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>HeavyBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_762x385mmRCannonShell_EMP>5</Ammo_762x385mmRCannonShell_EMP>
 		</products>

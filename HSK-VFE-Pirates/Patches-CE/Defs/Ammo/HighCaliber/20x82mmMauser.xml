@@ -163,21 +163,43 @@
 		<label>make 20x82mm Mauser (AP) cartridge x200</label>
 		<description>Craft 200 20x82mm Mauser (AP) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>82</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>45</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_20x82mmMauser_AP>200</Ammo_20x82mmMauser_AP>
 		</products>
@@ -189,30 +211,43 @@
 		<label>make 20x82mm Mauser (AP-I) cartridge x200</label>
 		<description>Craft 200 20x82mm Mauser (AP-I) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP-I) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>82</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>11</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Prometheum</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_20x82mmMauser_Incendiary>200</Ammo_20x82mmMauser_Incendiary>
 		</products>
@@ -224,30 +259,43 @@
 		<label>make 20x82mm Mauser (AP-HE) cartridge x200</label>
 		<description>Craft 200 20x82mm Mauser (AP-HE) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP-HE) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>82</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>22</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>FSX</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>USLDHBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FSX</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>USLDHBar</li>
+				</categories>
+				<thingDefs>
+					<li>FSX</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_20x82mmMauser_HE>200</Ammo_20x82mmMauser_HE>
 		</products>
@@ -259,39 +307,43 @@
 		<label>make 20x82mm Mauser (Sabot) cartridge x200</label>
 		<description>Craft 200 20x82mm Mauser (Sabot) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (Sabot) cartridges.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>38</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>13</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Chemfuel</li>
-					</thingDefs>
-				</filter>
-				<count>13</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Chemfuel</li>
-				<li>Steel</li>
-				<li>Uranium</li>
-			</thingDefs>
-		</fixedIngredientFilter>
+					<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>SLDBar</li>
+							<li>USLDBar</li>
+						</categories>
+					</filter>
+					<count>250</count>
+				</li>
+				<li>
+					<filter>
+						<categories>
+							<li>HeavyBar</li>
+						</categories>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Powder</li>
+						</thingDefs>
+					</filter>
+					<count>45</count>
+				</li>
+			</ingredients>
+					<fixedIngredientFilter>
+				<categories>
+					<li>SLDBar</li>
+					<li>USLDBar</li>
+					<li>HeavyBar</li>
+				</categories>
+				<thingDefs>
+					<li>Powder</li>
+				</thingDefs>
+			</fixedIngredientFilter>
 		<products>
 			<Ammo_20x82mmMauser_Sabot>200</Ammo_20x82mmMauser_Sabot>
 		</products>
