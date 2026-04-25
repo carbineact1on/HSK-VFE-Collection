@@ -152,7 +152,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Steel</li>
+						<li>SteelBar</li>
 					</thingDefs>
 				</filter>
 				<count>16</count>
@@ -169,7 +169,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Plasteel</li>
-				<li>Steel</li>
+				<li>SteelBar</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -196,7 +196,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Steel</li>
+						<li>SteelBar</li>
 					</thingDefs>
 				</filter>
 				<count>16</count>
@@ -213,7 +213,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Plasteel</li>
-				<li>Steel</li>
+				<li>SteelBar</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -240,7 +240,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Steel</li>
+						<li>SteelBar</li>
 					</thingDefs>
 				</filter>
 				<count>16</count>
@@ -257,7 +257,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Plasteel</li>
-				<li>Steel</li>
+				<li>SteelBar</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
 		</fixedIngredientFilter>
