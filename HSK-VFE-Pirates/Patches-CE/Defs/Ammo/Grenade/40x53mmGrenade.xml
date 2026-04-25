@@ -215,7 +215,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SteelBar</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>76</count>
@@ -239,7 +239,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Steel</li>
 				<li>FSX</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
@@ -260,7 +260,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SteelBar</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>76</count>
@@ -284,7 +284,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Steel</li>
 				<li>FSX</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
@@ -304,7 +304,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SteelBar</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>76</count>
@@ -328,7 +328,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Steel</li>
 				<li>FSX</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
@@ -352,7 +352,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SteelBar</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>76</count>
@@ -368,7 +368,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Steel</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -387,7 +387,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SteelBar</li>
+						<li>Steel</li>
 					</thingDefs>
 				</filter>
 				<count>76</count>
@@ -411,7 +411,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Steel</li>
 				<li>Prometheum</li>
 				<li>ComponentIndustrial</li>
 			</thingDefs>
