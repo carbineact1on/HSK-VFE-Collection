@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<ThingCategoryDef>
@@ -160,194 +160,82 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_40x311mmR_AP</defName>
-		<label>make 40x311mmR (AP) cartridge x50</label>
-		<description>Craft 50 40x311mmR (AP) cartridges.</description>
-		<jobString>Making 40x311mmR (AP) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>9</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x311mmR_AP>50</Ammo_40x311mmR_AP>
-		</products>
-		<workAmount>25920</workAmount>
+		<label>make 40x311mmR (AP) shell x40</label>
+		<description>Craft 40 40x311mmR (AP) shells.</description>
+		<jobString>Making 40x311mmR (AP) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>12</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>20</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>12</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x311mmR_AP>40</Ammo_40x311mmR_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_40x311mmR_Incendiary</defName>
-		<label>make 40x311mmR (AP-I) cartridge x50</label>
-		<description>Craft 50 40x311mmR (AP-I) cartridges.</description>
-		<jobString>Making 40x311mmR (AP-I) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x311mmR_Incendiary>50</Ammo_40x311mmR_Incendiary>
-		</products>
-		<workAmount>30800</workAmount>
+		<label>make 40x311mmR (AP-I) shell x40</label>
+		<description>Craft 40 40x311mmR (AP-I) shells.</description>
+		<jobString>Making 40x311mmR (AP-I) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>20</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>12</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Prometheum</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x311mmR_Incendiary>40</Ammo_40x311mmR_Incendiary></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_40x311mmR_HE</defName>
-		<label>make 40x311mmR (AP-HE) cartridge x50</label>
-		<description>Craft 50 40x311mmR (AP-HE) cartridges.</description>
-		<jobString>Making 40x311mmR (AP-HE) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x311mmR_HE>50</Ammo_40x311mmR_HE>
-		</products>
-		<workAmount>38000</workAmount>
+		<label>make 40x311mmR (AP-HE) shell x40</label>
+		<description>Craft 40 40x311mmR (AP-HE) shells.</description>
+		<jobString>Making 40x311mmR (AP-HE) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>12</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x311mmR_HE>40</Ammo_40x311mmR_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_40x311mmR_Sabot</defName>
-		<label>make 40x311mmR (Sabot) cartridge x50</label>
-		<description>Craft 50 40x311mmR (Sabot) cartridges.</description>
-		<jobString>Making 40x311mmR (Sabot) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>9</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x311mmR_Sabot>50</Ammo_40x311mmR_Sabot>
-		</products>
-		<workAmount>28200</workAmount>
+		<label>make 40x311mmR (Sabot) shell x40</label>
+		<description>Craft 40 40x311mmR (Sabot) shells.</description>
+		<jobString>Making 40x311mmR (Sabot) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>60</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>20</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>12</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x311mmR_Sabot>40</Ammo_40x311mmR_Sabot></products>
 	</RecipeDef>
 
 </Defs>

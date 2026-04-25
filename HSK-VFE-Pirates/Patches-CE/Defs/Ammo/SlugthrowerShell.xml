@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<ThingCategoryDef>
@@ -175,125 +175,81 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_Slugthrower_Buck</defName>
-		<label>make Slugthrower (Buck) shell x100</label>
-		<description>Craft 100 Slugthrower (Buck) shells.</description>
-		<jobString>Making Slugthrower (Buck) shells.</jobString>
+		<label>make slugthrower (Buck) shell x40</label>
+		<description>Craft 40 slugthrower (Buck) shells.</description>
+		<jobString>Making slugthrower (Buck) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>3</Crafting></skillRequirements>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>7</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>7</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>6</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>2</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>SteelBar</li>
-			</thingDefs>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_Slugthrower_Buck>100</Ammo_Slugthrower_Buck>
-		</products>
-		<workAmount>3400</workAmount>
+		<products><Ammo_Slugthrower_Buck>40</Ammo_Slugthrower_Buck></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_Slugthrower_Slug</defName>
-		<label>make Slugthrower (Slug) shell x100</label>
-		<description>Craft 100 Slugthrower (Slug) shells.</description>
-		<jobString>Making Slugthrower (Slug) shells.</jobString>
+		<label>make slugthrower (Slug) shell x40</label>
+		<description>Craft 40 slugthrower (Slug) shells.</description>
+		<jobString>Making slugthrower (Slug) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>4</Crafting></skillRequirements>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>7</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>7</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>6</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>2</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>SteelBar</li>
-			</thingDefs>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_Slugthrower_Slug>100</Ammo_Slugthrower_Slug>
-		</products>
-		<workAmount>3200</workAmount>
+		<products><Ammo_Slugthrower_Slug>40</Ammo_Slugthrower_Slug></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_Slugthrower_Beanbag</defName>
-		<label>make Slugthrower (Beanbag) shell x100</label>
-		<description>Craft 100 Slugthrower (Beanbag) shells.</description>
-		<jobString>Making Slugthrower (Beanbag) shells.</jobString>
+		<label>make slugthrower (Beanbag) shell x40</label>
+		<description>Craft 40 slugthrower (Beanbag) shells.</description>
+		<jobString>Making slugthrower (Beanbag) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>3</Crafting></skillRequirements>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>9</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Cloth</li>
-					</thingDefs>
-				</filter>
-				<count>17</count>
-			</li>
+			<li><filter><thingDefs><li>Plastic</li></thingDefs></filter><count>4</count></li>
+			<li><filter><categories><li>BTextiles</li></categories></filter><count>3</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>2</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>SteelBar</li>
-				<li>Cloth</li>
-			</thingDefs>
+			<thingDefs><li>Plastic</li><li>Powder</li></thingDefs>
+			<categories><li>BTextiles</li></categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_Slugthrower_Beanbag>100</Ammo_Slugthrower_Beanbag>
-		</products>
-		<workAmount>5900</workAmount>
+		<products><Ammo_Slugthrower_Beanbag>40</Ammo_Slugthrower_Beanbag></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_Slugthrower_ElectroSlug</defName>
-		<label>make Slugthrower (EMP) shell x100</label>
-		<description>Craft 100 Slugthrower (EMP) shells.</description>
-		<jobString>Making Slugthrower (EMP) shells.</jobString>
-		<researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+		<label>make slugthrower (Electro-Slug) shell x40</label>
+		<description>Craft 40 slugthrower (Electro-Slug) shells.</description>
+		<jobString>Making slugthrower (Electro-Slug) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>6</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C1</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>12</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>7</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>6</count></li>
+			<li><filter><thingDefs><li>Hexcell</li></thingDefs></filter><count>2</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>2</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>SteelBar</li>
-				<li>ComponentIndustrial</li>
-			</thingDefs>
+			<thingDefs><li>Hexcell</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_Slugthrower_ElectroSlug>100</Ammo_Slugthrower_ElectroSlug>
-		</products>
-		<workAmount>11000</workAmount>
+		<products><Ammo_Slugthrower_ElectroSlug>40</Ammo_Slugthrower_ElectroSlug></products>
 	</RecipeDef>
 
 </Defs>

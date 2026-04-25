@@ -208,247 +208,149 @@
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_40x53mmGrenade_HE</defName>
-		<label>make 40x53mm HE grenades x100</label>
-		<description>Craft 100 40x53mm HE grenades.</description>
-		<jobString>Making 40x53mm HE grenades.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>100</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>30</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>24</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x53mmGrenade_HE>100</Ammo_40x53mmGrenade_HE>
-		</products>
-		<workAmount>12400</workAmount>
+		<label>make 40x53mm grenade (HE) x20</label>
+		<description>Craft 20 40x53mm grenade (HE) grenades.</description>
+		<jobString>Making 40x53mm grenade (HE) grenades.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>9</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x53mmGrenade_HE>20</Ammo_40x53mmGrenade_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_40x53mmGrenade_HE_TFuzed</defName>
-		<label>make 40x53mm HE Time-Fuzed grenades x100</label>
-		<description>Craft 100 40x53mm HE Time-Fuzed grenades.</description>
-		<jobString>Making 40x53mm HE Time-Fuzed grenades.</jobString>
-		<researchPrerequisite>CE_AdvancedLaunchers</researchPrerequisite>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>100</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>30</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>24</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x53mmGrenade_HE_TFuzed>100</Ammo_40x53mmGrenade_HE_TFuzed>
-		</products>
-		<workAmount>14200</workAmount>
+		<label>make 40x53mm grenade (HE_TFuzed) x20</label>
+		<description>Craft 20 40x53mm grenade (HE_TFuzed) grenades.</description>
+		<jobString>Making 40x53mm grenade (HE_TFuzed) grenades.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>9</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x53mmGrenade_HE_TFuzed>20</Ammo_40x53mmGrenade_HE_TFuzed></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_40x53mmGrenade_HEDP</defName>
-		<label>make 40x53mm HEDP grenades x100</label>
-		<description>Craft 100 40x53mm HEDP grenades.</description>
-		<jobString>Making 40x53mm HEDP grenades.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>100</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>30</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>24</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x53mmGrenade_HEDP>100</Ammo_40x53mmGrenade_HEDP>
-		</products>
-		<workAmount>11600</workAmount>
+		<label>make 40x53mm grenade (HEDP) x20</label>
+		<description>Craft 20 40x53mm grenade (HEDP) grenades.</description>
+		<jobString>Making 40x53mm grenade (HEDP) grenades.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>9</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>8</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				<li>USLDHBar</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x53mmGrenade_HEDP>20</Ammo_40x53mmGrenade_HEDP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_40x53mmGrenade_EMP</defName>
-		<label>make 40x53mm EMP grenades x100</label>
-		<description>Craft 100 40x53mm EMP grenades.</description>
-		<jobString>Making 40x53mm EMP grenades.</jobString>
-		<researchPrerequisites>
-			<li>MicroelectronicsBasics</li>
-			<li>CE_Launchers</li>
-		</researchPrerequisites>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>100</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>30</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>24</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x53mmGrenade_EMP>100</Ammo_40x53mmGrenade_EMP>
-		</products>
-		<workAmount>14200</workAmount>
+		<label>make 40x53mm grenade (EMP) x20</label>
+		<description>Craft 20 40x53mm grenade (EMP) grenades.</description>
+		<jobString>Making 40x53mm grenade (EMP) grenades.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>9</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>Hexcell</li></thingDefs></filter><count>3</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>Hexcell</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x53mmGrenade_EMP>20</Ammo_40x53mmGrenade_EMP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_40x53mmGrenade_Smoke</defName>
-		<label>make 40x53mm smoke grenades x100</label>
-		<description>Craft 100 40x53mm smoke grenades.</description>
-		<jobString>Making 40x53mm smoke grenades.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>100</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>30</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>24</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_40x53mmGrenade_Smoke>100</Ammo_40x53mmGrenade_Smoke>
-		</products>
-		<workAmount>10000</workAmount>
+		<label>make 40x53mm grenade (Smoke) x20</label>
+		<description>Craft 20 40x53mm grenade (Smoke) grenades.</description>
+		<jobString>Making 40x53mm grenade (Smoke) grenades.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>9</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>Chemfuel</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_40x53mmGrenade_Smoke>20</Ammo_40x53mmGrenade_Smoke></products>
 	</RecipeDef>
 
 </Defs>

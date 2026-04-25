@@ -137,167 +137,58 @@
 
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_8x50mmCharged</defName>
-		<label>make 8x50mm Charged cartridge x500</label>
-		<description>Craft 500 8x50mm Charged cartridges.</description>
+		<label>make 8x50mm Charged cartridge x80</label>
+		<description>Craft 80 8x50mm Charged cartridges.</description>
 		<jobString>Making 8x50mm Charged cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-						</categories>
-					</filter>
-					<count>96</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>60</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>MagneticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>BiosyntheticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-				</categories>
-				<thingDefs>
-					<li>MagneticMaterial</li>
-					<li>BiosyntheticMaterial</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_8x50mmCharged>500</Ammo_8x50mmCharged>
-		</products>
-		<workAmount>17800</workAmount>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>ChargedShot</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li></categories></filter><count>20</count></li>
+			<li><filter><categories><li>USLDBar</li></categories></filter><count>10</count></li>
+			<li><filter><thingDefs><li>MagneticMaterial</li></thingDefs></filter><count>2</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>MagneticMaterial</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_8x50mmCharged>80</Ammo_8x50mmCharged></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_8x50mmCharged_AP</defName>
-		<label>make 8x50mm Charged (Conc.) cartridge x500</label>
-		<description>Craft 500 8x50mm Charged (Conc.) cartridges.</description>
-		<jobString>Making 8x50mm Charged (Conc.) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-						</categories>
-					</filter>
-					<count>96</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>60</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>MagneticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>BiosyntheticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-				</categories>
-				<thingDefs>
-					<li>MagneticMaterial</li>
-					<li>BiosyntheticMaterial</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_8x50mmCharged_AP>500</Ammo_8x50mmCharged_AP>
-		</products>
-		<workAmount>17800</workAmount>
+		<label>make 8x50mm Charged (AP) cartridge x80</label>
+		<description>Craft 80 8x50mm Charged (AP) cartridges.</description>
+		<jobString>Making 8x50mm Charged (AP) cartridges.</jobString>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>ChargedShot</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li></categories></filter><count>16</count></li>
+			<li><filter><categories><li>USLDBar</li></categories></filter><count>16</count></li>
+			<li><filter><thingDefs><li>MagneticMaterial</li></thingDefs></filter><count>2</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>MagneticMaterial</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_8x50mmCharged_AP>80</Ammo_8x50mmCharged_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
 		<defName>MakeAmmo_8x50mmCharged_Ion</defName>
-		<label>make 8x50mm Charged (Ion) cartridge x500</label>
-		<description>Craft 500 8x50mm Charged (Ion) cartridges.</description>
+		<label>make 8x50mm Charged (Ion) cartridge x80</label>
+		<description>Craft 80 8x50mm Charged (Ion) cartridges.</description>
 		<jobString>Making 8x50mm Charged (Ion) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-						</categories>
-					</filter>
-					<count>96</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>60</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>MagneticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>BiosyntheticMaterial</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-				</categories>
-				<thingDefs>
-					<li>MagneticMaterial</li>
-					<li>BiosyntheticMaterial</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_8x50mmCharged_Ion>500</Ammo_8x50mmCharged_Ion>
-		</products>
-		<workAmount>17800</workAmount>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>ChargedShot</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li></categories></filter><count>20</count></li>
+			<li><filter><categories><li>USLDBar</li></categories></filter><count>6</count></li>
+			<li><filter><thingDefs><li>SyntheticAmmonia</li></thingDefs></filter><count>6</count></li>
+			<li><filter><thingDefs><li>MagneticMaterial</li></thingDefs></filter><count>2</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>MagneticMaterial</li><li>SyntheticAmmonia</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_8x50mmCharged_Ion>80</Ammo_8x50mmCharged_Ion></products>
 	</RecipeDef>
 
 </Defs>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<ThingCategoryDef>
@@ -272,154 +272,82 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_CannonBall_Round</defName>
-		<label>make round shot cannon balls x5</label>
-		<description>Craft 5 round shot cannon balls.</description>
-		<jobString>Making round shot cannon balls.</jobString>
-		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-		<workAmount>6600</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>StoneChunks</li>
-						</categories>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>5</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>StoneChunks</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_CannonBall_Round>5</Ammo_CannonBall_Round>
-		</products>
+		<label>make cannonball (round) cannonball x10</label>
+		<description>Craft 10 cannonball (round) cannonballs.</description>
+		<jobString>Making cannonball (round) cannonballs.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>5</Crafting></skillRequirements>
+		<researchPrerequisite>Gunpowder</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_CannonBall_Round>10</Ammo_CannonBall_Round></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_CannonBall_Bursting</defName>
-		<label>make bursting cannon shells x5</label>
-		<description>Craft 5 bursting cannon shells.</description>
-		<jobString>Making bursting cannon shells.</jobString>
-		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>StoneChunks</li>
-						</categories>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>5</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>StoneChunks</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_CannonBall_Bursting>5</Ammo_CannonBall_Bursting>
-		</products>
-		<workAmount>8200</workAmount>
+		<label>make cannonball (bursting) cannonball x10</label>
+		<description>Craft 10 cannonball (bursting) cannonballs.</description>
+		<jobString>Making cannonball (bursting) cannonballs.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>5</Crafting></skillRequirements>
+		<researchPrerequisite>Gunpowder</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>4</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li><li>FSX</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_CannonBall_Bursting>10</Ammo_CannonBall_Bursting></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_CannonBall_Incendiary</defName>
-		<label>make incendiary cannon shells x5</label>
-		<description>Craft 5 incendiary cannon shells.</description>
-		<jobString>Making incendiary cannon shells.</jobString>
-		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>StoneChunks</li>
-						</categories>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>5</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>StoneChunks</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_CannonBall_Incendiary>5</Ammo_CannonBall_Incendiary>
-		</products>
-		<workAmount>7400</workAmount>
+		<label>make cannonball (incendiary) cannonball x10</label>
+		<description>Craft 10 cannonball (incendiary) cannonballs.</description>
+		<jobString>Making cannonball (incendiary) cannonballs.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>5</Crafting></skillRequirements>
+		<researchPrerequisite>Gunpowder</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li><li>Prometheum</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_CannonBall_Incendiary>10</Ammo_CannonBall_Incendiary></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_CannonBall_Grape</defName>
-		<label>Make grape shot cannon shells x5</label>
-		<description>Craft 5 grape shot cannon shells.</description>
-		<jobString>Making grape shot cannon shells.</jobString>
-		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
-		<workAmount>6600</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>StoneChunks</li>
-						</categories>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>5</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>StoneChunks</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_CannonBall_Grape>5</Ammo_CannonBall_Grape>
-		</products>
+		<label>make cannonball (grape) cannonball x10</label>
+		<description>Craft 10 cannonball (grape) cannonballs.</description>
+		<jobString>Making cannonball (grape) cannonballs.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>5</Crafting></skillRequirements>
+		<researchPrerequisite>Gunpowder</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories></filter><count>30</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_CannonBall_Grape>10</Ammo_CannonBall_Grape></products>
 	</RecipeDef>
 
 </Defs>

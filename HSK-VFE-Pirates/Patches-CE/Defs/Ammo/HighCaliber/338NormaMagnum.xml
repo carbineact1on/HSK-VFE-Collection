@@ -181,242 +181,102 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_338Norma_FMJ</defName>
-		<label>make .338 Norma Magnum (FMJ) cartridge x200</label>
-		<description>Craft 200 .338 Norma Magnum (FMJ) cartridges.</description>
+		<label>make .338 Norma Magnum (FMJ) cartridge x60</label>
+		<description>Craft 60 .338 Norma Magnum (FMJ) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (FMJ) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_338Norma_FMJ>200</Ammo_338Norma_FMJ>
-		</products>
-		<workAmount>2000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>8</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>18</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>8</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_338Norma_FMJ>60</Ammo_338Norma_FMJ></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_338Norma_AP</defName>
-		<label>make .338 Norma Magnum (AP) cartridge x200</label>
-		<description>Craft 200 .338 Norma Magnum (AP) cartridges.</description>
+		<label>make .338 Norma Magnum (AP) cartridge x60</label>
+		<description>Craft 60 .338 Norma Magnum (AP) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_338Norma_AP>200</Ammo_338Norma_AP>
-		</products>
-		<workAmount>2400</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>8</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>18</count></li>
+			<li><filter><categories><li>USLDHBar</li><li>Ceramic</li></categories></filter><count>8</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li><li>Ceramic</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_338Norma_AP>60</Ammo_338Norma_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_338Norma_Incendiary</defName>
-		<label>make .338 Norma Magnum (AP-I) cartridge x200</label>
-		<description>Craft 200 .338 Norma Magnum (AP-I) cartridges.</description>
+		<label>make .338 Norma Magnum (AP-I) cartridge x60</label>
+		<description>Craft 60 .338 Norma Magnum (AP-I) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP-I) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_338Norma_Incendiary>200</Ammo_338Norma_Incendiary>
-		</products>
-		<workAmount>2800</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>18</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>8</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>7</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Prometheum</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_338Norma_Incendiary>60</Ammo_338Norma_Incendiary></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_338Norma_HE</defName>
-		<label>make .338 Norma Magnum (AP-HE) cartridge x200</label>
-		<description>Craft 200 .338 Norma Magnum (AP-HE) cartridges.</description>
+		<label>make .338 Norma Magnum (AP-HE) cartridge x60</label>
+		<description>Craft 60 .338 Norma Magnum (AP-HE) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (AP-HE) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_338Norma_HE>200</Ammo_338Norma_HE>
-		</products>
-		<workAmount>4000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>18</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>6</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>7</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_338Norma_HE>60</Ammo_338Norma_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_338Norma_Sabot</defName>
-		<label>make .338 Norma Magnum (Sabot) cartridge x200</label>
-		<description>Craft 200 .338 Norma Magnum (Sabot) cartridges.</description>
+		<label>make .338 Norma Magnum (Sabot) cartridge x60</label>
+		<description>Craft 60 .338 Norma Magnum (Sabot) cartridges.</description>
 		<jobString>Making .338 Norma Magnum (Sabot) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_338Norma_Sabot>200</Ammo_338Norma_Sabot>
-		</products>
-		<workAmount>3000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>18</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>8</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>5</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_338Norma_Sabot>60</Ammo_338Norma_Sabot></products>
 	</RecipeDef>
 
 </Defs>

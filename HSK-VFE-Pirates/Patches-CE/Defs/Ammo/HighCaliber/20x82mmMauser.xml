@@ -160,194 +160,82 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_20x82mmMauser_AP</defName>
-		<label>make 20x82mm Mauser (AP) cartridge x200</label>
-		<description>Craft 200 20x82mm Mauser (AP) cartridges.</description>
+		<label>make 20x82mm Mauser (AP) cartridge x60</label>
+		<description>Craft 60 20x82mm Mauser (AP) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x82mmMauser_AP>200</Ammo_20x82mmMauser_AP>
-		</products>
-		<workAmount>9840</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x82mmMauser_AP>60</Ammo_20x82mmMauser_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x82mmMauser_Incendiary</defName>
-		<label>make 20x82mm Mauser (AP-I) cartridge x200</label>
-		<description>Craft 200 20x82mm Mauser (AP-I) cartridges.</description>
+		<label>make 20x82mm Mauser (AP-I) cartridge x60</label>
+		<description>Craft 60 20x82mm Mauser (AP-I) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP-I) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x82mmMauser_Incendiary>200</Ammo_20x82mmMauser_Incendiary>
-		</products>
-		<workAmount>12600</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Prometheum</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x82mmMauser_Incendiary>60</Ammo_20x82mmMauser_Incendiary></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x82mmMauser_HE</defName>
-		<label>make 20x82mm Mauser (AP-HE) cartridge x200</label>
-		<description>Craft 200 20x82mm Mauser (AP-HE) cartridges.</description>
+		<label>make 20x82mm Mauser (AP-HE) cartridge x60</label>
+		<description>Craft 60 20x82mm Mauser (AP-HE) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (AP-HE) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x82mmMauser_HE>200</Ammo_20x82mmMauser_HE>
-		</products>
-		<workAmount>17000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>12</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x82mmMauser_HE>60</Ammo_20x82mmMauser_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x82mmMauser_Sabot</defName>
-		<label>make 20x82mm Mauser (Sabot) cartridge x200</label>
-		<description>Craft 200 20x82mm Mauser (Sabot) cartridges.</description>
+		<label>make 20x82mm Mauser (Sabot) cartridge x60</label>
+		<description>Craft 60 20x82mm Mauser (Sabot) cartridges.</description>
 		<jobString>Making 20x82mm Mauser (Sabot) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x82mmMauser_Sabot>200</Ammo_20x82mmMauser_Sabot>
-		</products>
-		<workAmount>11600</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x82mmMauser_Sabot>60</Ammo_20x82mmMauser_Sabot></products>
 	</RecipeDef>
 
 </Defs>

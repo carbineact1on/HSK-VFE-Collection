@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<!-- ==================== Ammo ========================== -->
@@ -33,37 +33,23 @@
 
 	<RecipeDef ParentName="ChargeAmmoRecipeBase" MayRequire="OskarPotocki.VFE.Vikings">
 		<defName>MakeAmmo_CryptoCannon</defName>
-		<label>make crypto cannon fuel x200</label>
-		<description>Craft 200 crypto cannon fuel.</description>
-		<jobString>Making crypto cannon fuel.</jobString>
+		<label>make crypto cannon shell x40</label>
+		<description>Craft 40 crypto cannon shells.</description>
+		<jobString>Making crypto cannon shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>ChargedShot</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Chemfuel</li>
-					</thingDefs>
-				</filter>
-				<count>15</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDBar</li></categories></filter><count>20</count></li>
+			<li><filter><thingDefs><li>MagneticMaterial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>Hexcell</li></thingDefs></filter><count>3</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Chemfuel</li>
-				<li>ComponentIndustrial</li>
-			</thingDefs>
+			<thingDefs><li>MagneticMaterial</li><li>Hexcell</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li></categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_CryptoCannon>200</Ammo_CryptoCannon>
-		</products>
-		<workAmount>8600</workAmount>
+		<products><Ammo_CryptoCannon>40</Ammo_CryptoCannon></products>
 	</RecipeDef>
 
 </Defs>

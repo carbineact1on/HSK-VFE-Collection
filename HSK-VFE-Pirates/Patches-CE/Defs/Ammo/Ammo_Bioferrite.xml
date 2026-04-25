@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<ThingCategoryDef>
@@ -180,189 +180,122 @@
 
 	<!-- ==================== Recipes ========================== -->
 
-	<RecipeDef ParentName="AmmoRecipeBase">
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_WarBolter_HE</defName>
-		<label>make WarBolter Rockets (HE) x200</label>
-		<description>Craft 200 WarBolter Rockets (HE).</description>
-		<jobString>Making WarBolter Rockets (HE).</jobString>
+		<label>make WarBolter rocket (HE) x20</label>
+		<description>Craft 20 WarBolter rocket (HE).</description>
+		<jobString>Making WarBolter rocket (HE).</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>31</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>18</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>4</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
-				<li>FSX</li>
+				<li>Powder</li>
 				<li>ComponentIndustrial</li>
+				<li>FSX</li>
 			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_WarBolter_HE>200</Ammo_WarBolter_HE>
-		</products>
-		<workAmount>36600</workAmount>
+		<products><Ammo_WarBolter_HE>20</Ammo_WarBolter_HE></products>
 	</RecipeDef>
-
-	<RecipeDef ParentName="AmmoRecipeBase">
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_WarBolter_Incendiary</defName>
-		<label>make WarBolter Rockets (Incendiary) x200</label>
-		<description>Craft 200 WarBolter Rockets (Incendiary).</description>
-		<jobString>Making WarBolter Rockets (Incendiary).</jobString>
+		<label>make WarBolter rocket (Incendiary) x20</label>
+		<description>Craft 20 WarBolter rocket (Incendiary).</description>
+		<jobString>Making WarBolter rocket (Incendiary).</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>31</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Prometheum</li>
-					</thingDefs>
-				</filter>
-				<count>12</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>6</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>10</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
 				<li>Prometheum</li>
-				<li>ComponentIndustrial</li>
 			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_WarBolter_Incendiary>200</Ammo_WarBolter_Incendiary>
-		</products>
-		<workAmount>19400</workAmount>
+		<products><Ammo_WarBolter_Incendiary>20</Ammo_WarBolter_Incendiary></products>
 	</RecipeDef>
-
-	<RecipeDef ParentName="AmmoRecipeBase">
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_WarBolter_Frag</defName>
-		<label>make WarBolter Rockets (Frag) x200</label>
-		<description>Craft 200 WarBolter Rockets (Frag).</description>
-		<jobString>Making WarBolter Rockets (Frag).</jobString>
+		<label>make WarBolter rocket (Frag) x20</label>
+		<description>Craft 20 WarBolter rocket (Frag).</description>
+		<jobString>Making WarBolter rocket (Frag).</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>31</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>15</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
-				<li>FSX</li>
+				<li>Powder</li>
 				<li>ComponentIndustrial</li>
+				
 			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				<li>HeavyBar</li>
+			</categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_WarBolter_Frag>200</Ammo_WarBolter_Frag>
-		</products>
-		<workAmount>21800</workAmount>
+		<products><Ammo_WarBolter_Frag>20</Ammo_WarBolter_Frag></products>
 	</RecipeDef>
-
-	<RecipeDef ParentName="AmmoRecipeBase">
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_WarBolter_HEAT</defName>
-		<label>make WarBolter Rockets (HEAT) x200</label>
-		<description>Craft 200 WarBolter Rockets (HEAT).</description>
-		<jobString>Making WarBolter Rockets (HEAT).</jobString>
+		<label>make WarBolter rocket (HEAT) x20</label>
+		<description>Craft 20 WarBolter rocket (HEAT).</description>
+		<jobString>Making WarBolter rocket (HEAT).</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
 		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SteelBar</li>
-					</thingDefs>
-				</filter>
-				<count>31</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>FSX</li>
-					</thingDefs>
-				</filter>
-				<count>6</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ComponentIndustrial</li>
-					</thingDefs>
-				</filter>
-				<count>6</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Uranium</li>
-					</thingDefs>
-				</filter>
-				<count>8</count>
-			</li>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>8</count></li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SteelBar</li>
-				<li>FSX</li>
+				<li>Powder</li>
 				<li>ComponentIndustrial</li>
-				<li>Uranium</li>
+				<li>FSX</li>
 			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				<li>USLDHBar</li>
+			</categories>
 		</fixedIngredientFilter>
-		<products>
-			<Ammo_WarBolter_HEAT>200</Ammo_WarBolter_HEAT>
-		</products>
-		<workAmount>20600</workAmount>
+		<products><Ammo_WarBolter_HEAT>20</Ammo_WarBolter_HEAT></products>
 	</RecipeDef>
 
 </Defs>

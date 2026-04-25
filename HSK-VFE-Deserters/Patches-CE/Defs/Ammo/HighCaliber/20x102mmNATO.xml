@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<ThingCategoryDef>
@@ -161,194 +161,82 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_20x102mmNATO_AP</defName>
-		<label>make 20x102mm NATO (AP) cartridge x200</label>
-		<description>Craft 200 20x102mm NATO (AP) cartridges.</description>
+		<label>make 20x102mm NATO (AP) cartridge x60</label>
+		<description>Craft 60 20x102mm NATO (AP) cartridges.</description>
 		<jobString>Making 20x102mm NATO (AP) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x102mmNATO_AP>200</Ammo_20x102mmNATO_AP>
-		</products>
-		<workAmount>12480</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x102mmNATO_AP>60</Ammo_20x102mmNATO_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x102mmNATO_Incendiary</defName>
-		<label>make 20x102mm NATO (AP-I) cartridge x200</label>
-		<description>Craft 200 20x102mm NATO (AP-I) cartridges.</description>
+		<label>make 20x102mm NATO (AP-I) cartridge x60</label>
+		<description>Craft 60 20x102mm NATO (AP-I) cartridges.</description>
 		<jobString>Making 20x102mm NATO (AP-I) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x102mmNATO_Incendiary>200</Ammo_20x102mmNATO_Incendiary>
-		</products>
-		<workAmount>14400</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>HeavyBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Prometheum</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Prometheum</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>HeavyBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x102mmNATO_Incendiary>60</Ammo_20x102mmNATO_Incendiary></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x102mmNATO_HE</defName>
-		<label>make 20x102mm NATO (AP-HE) cartridge x200</label>
-		<description>Craft 200 20x102mm NATO (AP-HE) cartridges.</description>
+		<label>make 20x102mm NATO (AP-HE) cartridge x60</label>
+		<description>Craft 60 20x102mm NATO (AP-HE) cartridges.</description>
 		<jobString>Making 20x102mm NATO (AP-HE) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>60</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x102mmNATO_HE>200</Ammo_20x102mmNATO_HE>
-		</products>
-		<workAmount>18000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>12</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x102mmNATO_HE>60</Ammo_20x102mmNATO_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_20x102mmNATO_Sabot</defName>
-		<label>make 20x102mm NATO (Sabot) cartridge x200</label>
-		<description>Craft 200 20x102mm NATO (Sabot) cartridges.</description>
+		<label>make 20x102mm NATO (Sabot) cartridge x60</label>
+		<description>Craft 60 20x102mm NATO (Sabot) cartridges.</description>
 		<jobString>Making 20x102mm NATO (Sabot) cartridges.</jobString>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>250</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>75</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>45</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_20x102mmNATO_Sabot>200</Ammo_20x102mmNATO_Sabot>
-		</products>
-		<workAmount>13600</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>15</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>8</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_20x102mmNATO_Sabot>60</Ammo_20x102mmNATO_Sabot></products>
 	</RecipeDef>
 
 </Defs>

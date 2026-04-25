@@ -101,68 +101,32 @@
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
 		<defName>MakeAmmo_50mmRocket_HE</defName>
-		<label>make 50mm (HE) rockets x10</label>
-		<description>Craft 10 50mm (HE) rockets.</description>
-		<jobString>Making 50mm (HE) rockets.</jobString>
-		<workAmount>11000</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>42</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>8</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Chemfuel</li>
-						</thingDefs>
-					</filter>
-					<count>32</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Napalm</li>
-						</thingDefs>
-					</filter>
-					<count>5</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Electronics</li>
-						</thingDefs>
-					</filter>
-					<count>1</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Chemfuel</li>
-					<li>Napalm</li>
-					<li>Electronics</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_50mmRocket_HE>10</Ammo_50mmRocket_HE>
-		</products>
+		<label>make 50mm rocket (HE) x20</label>
+		<description>Craft 20 50mm rocket (HE).</description>
+		<jobString>Making 50mm rocket (HE).</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>10</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C2</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>40</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>4</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Powder</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+			<categories>
+				<li>SLDBar</li>
+				<li>USLDBar</li>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<products><Ammo_50mmRocket_HE>20</Ammo_50mmRocket_HE></products>
 	</RecipeDef>
 
 </Defs>

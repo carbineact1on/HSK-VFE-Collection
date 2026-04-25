@@ -214,257 +214,105 @@
 
 	<RecipeDef ParentName="CannonAmmoRecipeBase">
 		<defName>MakeAmmo_762x385mmRCannonShell_HEAT</defName>
-		<label>make 76.2x385mmR (HEAT) cannon shells x5</label>
-		<description>Craft 5 76.2x385mmR (HEAT) cannon shells.</description>
-		<jobString>Making 76.2x385mmR (HEAT) cannon shells.</jobString>
-		<researchPrerequisite Inherit="False" />
-		<researchPrerequisites>
-			<li>CE_TurretHeavyWeapons</li>
-			<li>CE_Launchers</li>
-		</researchPrerequisites>
-		<workAmount>12600</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_762x385mmRCannonShell_HEAT>5</Ammo_762x385mmRCannonShell_HEAT>
-		</products>
+		<label>make 7.62x385mmR cannon (HEAT) shell x10</label>
+		<description>Craft 10 7.62x385mmR cannon (HEAT) shells.</description>
+		<jobString>Making 7.62x385mmR cannon (HEAT) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>14</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>15</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>20</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_762x385mmRCannonShell_HEAT>10</Ammo_762x385mmRCannonShell_HEAT></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="CannonAmmoRecipeBase">
 		<defName>MakeAmmo_762x385mmRCannonShell_AP</defName>
-		<label>make 76.2x385mmR (AP) cannon shells x5</label>
-		<description>Craft 5 76.2x385mmR (AP) cannon shells.</description>
-		<jobString>Making 76.2x385mmR (AP) cannon shells.</jobString>
-		<workAmount>10800</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>9</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_762x385mmRCannonShell_AP>5</Ammo_762x385mmRCannonShell_AP>
-		</products>
+		<label>make 7.62x385mmR cannon (AP) shell x10</label>
+		<description>Craft 10 7.62x385mmR cannon (AP) shells.</description>
+		<jobString>Making 7.62x385mmR cannon (AP) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>14</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>25</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_762x385mmRCannonShell_AP>10</Ammo_762x385mmRCannonShell_AP></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="CannonAmmoRecipeBase">
 		<defName>MakeAmmo_762x385mmRCannonShell_HE</defName>
-		<label>make 76.2x385mmR (HE) cannon shells x5</label>
-		<description>Craft 5 76.2x385mmR (HE) cannon shells.</description>
-		<jobString>Making 76.2x385mmR (HE) cannon shells.</jobString>
-		<workAmount>12200</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>FSX</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>FSX</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_762x385mmRCannonShell_HE>5</Ammo_762x385mmRCannonShell_HE>
-		</products>
+		<label>make 7.62x385mmR cannon (HE) shell x10</label>
+		<description>Craft 10 7.62x385mmR cannon (HE) shells.</description>
+		<jobString>Making 7.62x385mmR cannon (HE) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>14</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
+			<li><filter><thingDefs><li>FSX</li></thingDefs></filter><count>20</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>FSX</li><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_762x385mmRCannonShell_HE>10</Ammo_762x385mmRCannonShell_HE></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="CannonAmmoRecipeBase">
 		<defName>MakeAmmo_762x385mmRCannonShell_APCR</defName>
-		<label>make 76.2x385mmR (APCR) cannon shells x5</label>
-		<description>Craft 5 76.2x385mmR (APCR) cannon shells.</description>
-		<jobString>Making 76.2x385mmR (APCR) cannon shells.</jobString>
-		<researchPrerequisite Inherit="False" />
-		<researchPrerequisites>
-			<li>CE_TurretHeavyWeapons</li>
-			<li>CE_AdvancedAmmo</li>
-		</researchPrerequisites>
-		<workAmount>11200</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>USLDHBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>9</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>USLDHBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_762x385mmRCannonShell_APCR>5</Ammo_762x385mmRCannonShell_APCR>
-		</products>
+		<label>make 7.62x385mmR cannon (APCR) shell x10</label>
+		<description>Craft 10 7.62x385mmR cannon (APCR) shells.</description>
+		<jobString>Making 7.62x385mmR cannon (APCR) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>14</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
+			<li><filter><categories><li>USLDHBar</li></categories></filter><count>30</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_762x385mmRCannonShell_APCR>10</Ammo_762x385mmRCannonShell_APCR></products>
 	</RecipeDef>
-
 	<RecipeDef ParentName="CannonAmmoRecipeBase">
 		<defName>MakeAmmo_762x385mmRCannonShell_EMP</defName>
-		<label>make 76.2x385mmR (EMP) cannon shells x5</label>
-		<description>Craft 5 76.2x385mmR (EMP) cannon shells.</description>
-		<jobString>Making 76.2x385mmR (EMP) cannon shells.</jobString>
-		<researchPrerequisite Inherit="False" />
-		<researchPrerequisites>
-			<li>CE_TurretHeavyWeapons</li>
-			<li>MicroelectronicsBasics</li>
-		</researchPrerequisites>
-		<workAmount>13800</workAmount>
-					<ingredients>
-				<li>
-					<filter>
-						<categories>
-							<li>SLDBar</li>
-							<li>USLDBar</li>
-						</categories>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<categories>
-							<li>HeavyBar</li>
-						</categories>
-					</filter>
-					<count>15</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Powder</li>
-						</thingDefs>
-					</filter>
-					<count>9</count>
-				</li>
-			</ingredients>
-					<fixedIngredientFilter>
-				<categories>
-					<li>SLDBar</li>
-					<li>USLDBar</li>
-					<li>HeavyBar</li>
-				</categories>
-				<thingDefs>
-					<li>Powder</li>
-				</thingDefs>
-			</fixedIngredientFilter>
-		<products>
-			<Ammo_762x385mmRCannonShell_EMP>5</Ammo_762x385mmRCannonShell_EMP>
-		</products>
+		<label>make 7.62x385mmR cannon (EMP) shell x10</label>
+		<description>Craft 10 7.62x385mmR cannon (EMP) shells.</description>
+		<jobString>Making 7.62x385mmR cannon (EMP) shells.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.8</workSkillLearnFactor>
+		<skillRequirements><Crafting>14</Crafting></skillRequirements>
+		<researchPrerequisite>Range_C3</researchPrerequisite>
+		<ingredients>
+			<li><filter><categories><li>SLDBar</li><li>USLDBar</li></categories></filter><count>80</count></li>
+			<li><filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter><count>5</count></li>
+			<li><filter><thingDefs><li>Hexcell</li></thingDefs></filter><count>3</count></li>
+			<li><filter><thingDefs><li>Powder</li></thingDefs></filter><count>10</count></li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs><li>Powder</li><li>ComponentIndustrial</li><li>Hexcell</li></thingDefs>
+			<categories><li>SLDBar</li><li>USLDBar</li><li>USLDHBar</li></categories>
+		</fixedIngredientFilter>
+		<products><Ammo_762x385mmRCannonShell_EMP>10</Ammo_762x385mmRCannonShell_EMP></products>
 	</RecipeDef>
 
 </Defs>
