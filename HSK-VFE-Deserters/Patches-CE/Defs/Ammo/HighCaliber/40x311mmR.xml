@@ -23,7 +23,7 @@
 
 	<!-- ==================== Ammo ========================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x311mmRBase" ParentName="MediumAmmoBase" Abstract="True">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="HSKVFED_Ammo40x311mmRBase" ParentName="MediumAmmoBase" Abstract="True">
 		<description>Large caliber cartridge used by autocannons.</description>
 		<statBases>
 			<Mass>2.15</Mass>
@@ -39,7 +39,7 @@
 		<stackLimit>100</stackLimit>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x311mmRBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HSKVFED_Ammo40x311mmRBase">
 		<defName>Ammo_40x311mmR_AP</defName>
 		<label>40x311mmR (AP)</label>
 		<graphicData>
@@ -50,7 +50,7 @@
 		<cookOffProjectile>Bullet_40x311mmR_AP</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x311mmRBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HSKVFED_Ammo40x311mmRBase">
 		<defName>Ammo_40x311mmR_Incendiary</defName>
 		<label>40x311mmR (AP-I)</label>
 		<graphicData>
@@ -61,7 +61,7 @@
 		<cookOffProjectile>Bullet_40x311mmR_Incendiary</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x311mmRBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HSKVFED_Ammo40x311mmRBase">
 		<defName>Ammo_40x311mmR_HE</defName>
 		<label>40x311mmR (AP-HE)</label>
 		<graphicData>
@@ -72,7 +72,7 @@
 		<cookOffProjectile>Bullet_40x311mmR_HE</cookOffProjectile>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x311mmRBase">
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HSKVFED_Ammo40x311mmRBase">
 		<defName>Ammo_40x311mmR_Sabot</defName>
 		<label>40x311mmR (Sabot)</label>
 		<graphicData>
