@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: gate VFE Pirates Junker raids behind a minimum raid-points
+    threshold so they don't appear in early-game / low-wealth / tribal
+    scenarios.
+
+    Why?
+    The Junker faction is industrial-tier (warcasket pirates with guns and
+    SMGs), but its weakest pawn — VFEP_Scrapper — has a combat power of
+    only 65. That means at 25k wealth on day 4 of a Neolithic Norbal start,
+    the storyteller's raid budget (~200-400 points) is enough to fit
+    3-5 scrappers and the Junker faction qualifies as a raid source.
+    Result: tribal stone-age colony gets raided by industrial pirates with
+    shotguns and SMGs.
+
+    Fix: every <pawnGroupMaker> for Junkers gets <minTotalPoints>800</minTotalPoints>.
+    Below 800 raid points (~50k+ wealth, well past early game), the
+    storyteller can't pick any Junker group and falls back to a more
+    appropriate faction (tribal raiders, basic mercenaries, etc.). At
+    higher wealth the pirates kick in normally.
+
+    Mercenaries (VFEP_Mercenaries, the other faction in this file) are
+    NOT gated — they're a milder mid-tier faction without warcasket and
+    don't feel out-of-place in early-game raids.
+
+    800 was picked as a midpoint between vanilla "low" raid (~200-400)
+    and "moderate" raid (~600-1000). Tune up if pirates still feel too
+    early, down if they never appear.
+-->
+<Patch>
+
+    <!-- Junker faction: 4 pawnGroupMakers, each gets minTotalPoints. -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="VFEP_Junkers"]/pawnGroupMakers/li[1]</xpath>
+        <value>
+            <minTotalPoints>800</minTotalPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="VFEP_Junkers"]/pawnGroupMakers/li[2]</xpath>
+        <value>
+            <minTotalPoints>800</minTotalPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="VFEP_Junkers"]/pawnGroupMakers/li[3]</xpath>
+        <value>
+            <minTotalPoints>800</minTotalPoints>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="VFEP_Junkers"]/pawnGroupMakers/li[4]</xpath>
+        <value>
+            <minTotalPoints>800</minTotalPoints>
+        </value>
+    </Operation>
+
+</Patch>
