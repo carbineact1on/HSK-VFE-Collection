@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: gate VFE Mechanoids raids by replacing the
+    raidCommonalityFromPointsCurve on VFE_Mechanoid so they don't
+    appear in early-game / low-wealth / tribal scenarios.
+
+    Why?
+    Like the Junker pirates issue, low-tier VFE mechs (basic
+    Lancer/Scyther variants) have low enough combatPower that the
+    storyteller can squeeze them into a 200-400 point early raid
+    budget. Result: tribal stone-age colonies getting hit by mech
+    raids on day 4.
+
+    Note: previous attempt used <minTotalPoints> on each
+    pawnGroupMaker. That field doesn't exist on PawnGroupMakerMech
+    — RimWorld silently ignored it (XML errors in log) and the patch
+    was a no-op. The correct mechanism is raidCommonalityFromPointsCurve
+    on the FactionDef itself: when commonality reaches 0, the
+    storyteller can't pick the faction for a raid.
+
+    Mechs are intended as a late-game threat (need charge tech / EMP
+    to fight back), so the threshold is higher than the 800 used for
+    Junker pirates — 1500 raid points (~80k+ wealth, charge tech
+    researched, plasteel armor available).
+
+    VFE Mechanoid's default curve is:
+        (300,  0)
+        (700,  1)
+        (1400, 2)
+        (2800, 2.5)
+        (4000, 2.8)
+
+    Replacement curve gates at 1500:
+        (0, 0)         — no raids at any low budget
+        (1499, 0)      — still 0 right up to the threshold
+        (1500, 0.001)  — barely above 0 at the threshold (sharp step)
+        (2800, 2.5)    — VFE's normal late-game weight
+        (4000, 2.8)    — VFE's normal end-game weight
+
+    The (1499, 0) → (1500, 0.001) step is intentional — it produces an
+    effectively step-function gate while keeping the curve interpolated.
+-->
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="VFE_Mechanoid"]/raidCommonalityFromPointsCurve</xpath>
+        <value>
+            <raidCommonalityFromPointsCurve>
+                <points>
+                    <li>(0, 0)</li>
+                    <li>(1499, 0)</li>
+                    <li>(1500, 0.001)</li>
+                    <li>(2800, 2.5)</li>
+                    <li>(4000, 2.8)</li>
+                </points>
+            </raidCommonalityFromPointsCurve>
+        </value>
+    </Operation>
+
+</Patch>

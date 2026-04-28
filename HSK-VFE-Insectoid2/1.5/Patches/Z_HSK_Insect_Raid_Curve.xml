@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: gate VFE Insectoids 2 raids on the vanilla Insect
+    faction by replacing the raidCommonalityFromPointsCurve so they
+    don't appear in early-game / low-wealth / tribal scenarios.
+
+    Why?
+    Same problem as the Junker pirates: Megascarabs (combatPower ~30)
+    are cheap enough that the storyteller can pack a few into a
+    200-400 point early raid budget against a tribal start. Result:
+    day-4 Norbal colony gets swarmed by hive insects.
+
+    Note: previous attempt used <minTotalPoints> on each
+    pawnGroupMaker. That field doesn't exist on PawnGroupMaker —
+    RimWorld silently ignored it (XML errors in log) and the patch
+    was a no-op. The correct mechanism is raidCommonalityFromPointsCurve
+    on the FactionDef itself: when commonality reaches 0, the
+    storyteller can't pick the faction for a raid.
+
+    VFE I2's InsectFactionPatch.xml replaces the vanilla Insect curve
+    with a soft-gate curve (300, 0) → (700, 1). That only down-weights
+    — there's no hard eligibility floor, so a single Megascarab can
+    still sneak into a 200-400 point early raid budget (the curve
+    crossing 0 between 300 and 700 still allows non-zero commonality
+    at 400+).
+
+    Replacement curve gates at 800:
+        (0, 0)        — no raids at any low budget
+        (799, 0)      — still 0 right up to the threshold
+        (800, 0.001)  — barely above 0 at the threshold (sharp step)
+        (1400, 1.8)   — VFE's normal mid-game weight
+        (2800, 2.2)   — VFE's normal late-game weight
+        (4000, 2.6)   — VFE's normal end-game weight
+
+    Infestation events are unaffected — bugs still spawn from hives in
+    your colony as normal, that's a separate IncidentDef.
+
+    LOAD ORDER NOTE: this file is named Z_HSK_* on purpose. Patches in
+    the same mod's Patches/ folder run in alphabetical order. VFE I2's
+    own InsectFactionPatch.xml replaces this curve too, so our patch
+    must run AFTER it (Z > I) to win.
+-->
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/raidCommonalityFromPointsCurve</xpath>
+        <value>
+            <raidCommonalityFromPointsCurve>
+                <points>
+                    <li>(0, 0)</li>
+                    <li>(799, 0)</li>
+                    <li>(800, 0.001)</li>
+                    <li>(1400, 1.8)</li>
+                    <li>(2800, 2.2)</li>
+                    <li>(4000, 2.6)</li>
+                </points>
+            </raidCommonalityFromPointsCurve>
+        </value>
+    </Operation>
+
+</Patch>
