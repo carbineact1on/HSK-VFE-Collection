@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: gate VFE Mechanoids raids behind a minimum raid-points
+    threshold so they don't appear in early-game / low-wealth / tribal
+    scenarios.
+
+    Why?
+    Like the Junker pirates issue, low-tier VFE mechs (basic Lancer/Scyther
+    variants) have low enough combatPower that the storyteller can squeeze
+    them into a 200-400 point early raid budget. Result: tribal stone-age
+    colonies getting hit by mech raids on day 4.
+
+    Fix: every Combat pawnGroupMaker on VFE_Mechanoid gets
+    <minTotalPoints>1500</minTotalPoints>. Below 1500 raid points
+    (~80k+ wealth, mid-late game with charge tech researched) the
+    storyteller can't pick a VFE Mechanoid combat group and falls back
+    to vanilla mechs or other factions. At higher wealth they kick in
+    normally.
+
+    Settlement pawnGroupMakers are NOT gated — they govern base
+    composition, not raid eligibility.
+
+    Targets all 7 combat pawnGroupMakers (4 basic + 3 advanced) via
+    kindDef="Combat" xpath selector.
+
+    1500 is higher than the 800 threshold we use for Junker pirates
+    because mechs are intended as a late-game threat — at 800 pts the
+    storyteller could already fit a centipede or 5-6 lancers, which
+    is brutal for a player without charge weapons or EMP. 1500 keeps
+    mechs out until the player has the tech to fight back.
+    Tune up if mechs still feel too early, down if they never appear.
+-->
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName="VFE_Mechanoid"]/pawnGroupMakers/li[kindDef="Combat"]</xpath>
+        <value>
+            <minTotalPoints>1500</minTotalPoints>
+        </value>
+    </Operation>
+
+</Patch>
