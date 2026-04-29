@@ -2,16 +2,17 @@
 
 HSK/CE-patched conversions of **Vanilla Factions Expanded** sub-mods by Oskar Potocki et al., tuned for the [Hardcore SK modpack](https://github.com/skyarkhangel/Hardcore-SK) and bundled with the community CE compatibility patches.
 
-This single repository contains **four separate mods**, each in its own subfolder. The HSK launcher (and RimWorld's mod manager) scan for `About/About.xml` files, so each subfolder is picked up as an independent mod.
+This single repository contains **five separate mods**, each in its own subfolder. The HSK launcher (and RimWorld's mod manager) scan for `About/About.xml` files, so each subfolder is picked up as an independent mod.
 
 ## Included mods
 
 | Folder | Upstream | Status | Notes |
 |---|---|---|---|
-| [`HSK-VFE-Pirates/`](./HSK-VFE-Pirates) | [VFE - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948) | Stable | Warcasket loot + cremator salvage loop, Uranium→DepletedUranium swap, CE patches |
-| [`HSK-VFE-Insectoid2/`](./HSK-VFE-Insectoid2) | [VFE - Insectoids 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3309003431) | Stable | Geological Landforms compat fix, HSK material tuning, CE patches |
-| [`HSK-VFE-Mechanoids/`](./HSK-VFE-Mechanoids) | [VFE - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599) | Stable | HSK architect integration, 21 overlap-with-HSK buildings disabled, CE patches |
+| [`HSK-VFE-Pirates/`](./HSK-VFE-Pirates) | [VFE - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948) | Stable | Warcasket loot + cremator salvage loop, Uranium→DepletedUranium swap, Junker raid gating (800 pts), CE patches |
+| [`HSK-VFE-Insectoid2/`](./HSK-VFE-Insectoid2) | [VFE - Insectoids 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3309003431) | Stable | Geological Landforms compat fix, HSK material tuning, Insect raid gating (800 pts), CE patches |
+| [`HSK-VFE-Mechanoids/`](./HSK-VFE-Mechanoids) | [VFE - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599) | Stable | HSK architect integration, 21 overlap-with-HSK buildings disabled, Mech raid gating (1500 pts), CE patches |
 | [`HSK-VFE-Deserters/`](./HSK-VFE-Deserters) | [VFE - Deserters](https://steamcommunity.com/sharedfiles/filedetails/?id=3025493377) | Stable | Imperial turrets hidden from architect, 4 missing CE ammo calibers bundled, CE patches |
+| [`HSK-VFE-Ancients/`](./HSK-VFE-Ancients) | [VFE - Ancients](https://steamcommunity.com/sharedfiles/filedetails/?id=2654846754) | Stable | Steel→SteelBar + Uranium→DepletedUranium HSK-native swaps, gene-tailoring HSK biotech parts, mending stations hidden (HSK has its own), CE turret + soldier patches |
 
 ## Requirements
 
