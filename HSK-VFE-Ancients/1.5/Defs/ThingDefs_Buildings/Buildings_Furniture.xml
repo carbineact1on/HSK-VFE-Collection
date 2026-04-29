@@ -150,7 +150,7 @@
     <size>(1,2)</size>
     <costList>
       <SteelBar>16</SteelBar>
-      <Uranium>2</Uranium>
+      <DepletedUranium>2</DepletedUranium>
       <ComponentIndustrial>2</ComponentIndustrial>
       <ComponentSpacer>1</ComponentSpacer>
     </costList>

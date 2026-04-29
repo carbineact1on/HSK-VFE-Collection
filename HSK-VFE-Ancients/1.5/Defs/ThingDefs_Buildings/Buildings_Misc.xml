@@ -96,12 +96,12 @@
     <interactionCellOffset>(1,0,0)</interactionCellOffset>
     <costList>
       <SteelBar>36</SteelBar>
-      <Uranium>5</Uranium>
+      <DepletedUranium>5</DepletedUranium>
     </costList>
     <killedLeavings>
       <ChunkSlagSteel>1</ChunkSlagSteel>
       <SteelBar>5</SteelBar>
-      <Uranium>3</Uranium>
+      <DepletedUranium>3</DepletedUranium>
     </killedLeavings>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
