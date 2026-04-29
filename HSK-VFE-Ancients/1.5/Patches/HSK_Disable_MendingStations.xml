@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    HSK patch: hide VFEA_ElectricMendingStation and VFEA_FueledMendingStation
+    from the architect/build menu.
+
+    Why?
+    Core_SK already provides a HSK-tuned mending workbench
+    (HSK's MendingBench / MendingTable). Having the VFE Ancients mending
+    stations show up in the architect menu would give players two parallel
+    mending systems with overlapping recipes — confusing and redundant.
+
+    What's preserved:
+    - The ThingDef itself still exists (so it can spawn pre-built inside
+      VFE Ancients vault layouts, where the player encounters it as
+      ancient-tech loot they can salvage or use in-place)
+    - The associated RecipeDef (Recipes_Mending.xml) and WorkGiverDef
+      remain functional, so any vault-spawned mending station still works
+    - The research prerequisite (VFEA_Mending) still loads, in case
+      something else references it
+
+    What's hidden:
+    - Player cannot construct a new VFEA mending station from the
+      Production architect tab. Use HSK's Mending Workbench instead.
+
+    Implemented as PatchOperationRemove on <designationCategory> rather
+    than removing the whole def — preserves existing vault content but
+    cleans up the architect menu.
+-->
+<Patch>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="VFEA_ElectricMendingStation"]/designationCategory</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="VFEA_FueledMendingStation"]/designationCategory</xpath>
+    </Operation>
+
+</Patch>
