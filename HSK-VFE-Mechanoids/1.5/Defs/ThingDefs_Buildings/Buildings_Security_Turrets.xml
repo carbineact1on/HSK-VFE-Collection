@@ -39,6 +39,11 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>200</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>3.9</explosiveRadius>
@@ -178,6 +183,11 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>250</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>3.9</explosiveRadius>
@@ -314,6 +324,11 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>280</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>5.9</explosiveRadius>
@@ -473,6 +488,11 @@
 			<texPath>Things/Buildings/Security/TurretAutoMortar_Base</texPath>
 		</graphicData>
 		<comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>200</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>3.9</explosiveRadius>
