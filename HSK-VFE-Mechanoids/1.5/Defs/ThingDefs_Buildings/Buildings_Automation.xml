@@ -320,7 +320,7 @@
 		<costList>
 			<SteelBar>70</SteelBar>
 			<ComponentSpacer>8</ComponentSpacer>
-			<Gold>120</Gold>
+			<GoldBar>120</GoldBar>
 			<ComponentUltra>4</ComponentUltra>
 		</costList>
 		<placeWorkers>
@@ -983,7 +983,7 @@
 		<costList>
 			<Plasteel>400</Plasteel>
 			<ComponentSpacer>8</ComponentSpacer>
-			<Uranium>50</Uranium>
+			<DepletedUranium>50</DepletedUranium>
 			<ComponentUltra>4</ComponentUltra>
 		</costList>
 		<building>
@@ -1093,7 +1093,7 @@
 		<costList>
 			<SteelBar>100</SteelBar>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<Silver>300</Silver>
+			<SilverBar>300</SilverBar>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<building>

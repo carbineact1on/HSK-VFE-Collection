@@ -107,7 +107,7 @@
 		</building>
 		<costList>
 			<SteelBar>24</SteelBar>
-			<Uranium>15</Uranium>
+			<DepletedUranium>15</DepletedUranium>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
