@@ -744,6 +744,96 @@
 					</value>
 				</li>
 
+				<!-- ============================================================ -->
+				<!--  CE ammo trio for player-controlled advanced mechs           -->
+				<!--  Same as enemy AdvancedMechanoid base. Lets colonists        -->
+				<!--  re-arm them at the colony from haulable ammo stockpiles.    -->
+				<!-- ============================================================ -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedTermite_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedCentipede_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedInquisitor_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedKnight_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedLancer_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedPikeman_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_AdvancedScyther_PlayerControlled"]/comps</xpath>
+					<value>
+						<li><compClass>CombatExtended.CompPawnGizmo</compClass></li>
+						<li><compClass>CombatExtended.CompAmmoGiver</compClass></li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
 			</operations>
 		</match>
 	</Operation>

@@ -331,6 +331,62 @@
 					</value>
 				</li>
 
+				<!-- ============================================================ -->
+				<!--  CE ammo trio for player-controlled mechs                    -->
+				<!--  Adds magazine (CompProperties_MechAmmo), take-ammo gizmo    -->
+				<!--  (CompAmmoGiver), and gizmo bar (CompPawnGizmo). Now         -->
+				<!--  colonists auto-resupply the mech from haulable ammo         -->
+				<!--  stockpiles - matches the enemy-base CE ammo setup.          -->
+				<!-- ============================================================ -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_Termite_PlayerControlled"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CombatExtended.CompPawnGizmo</compClass>
+						</li>
+						<li>
+							<compClass>CombatExtended.CompAmmoGiver</compClass>
+						</li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_Inquisitor_PlayerControlled"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CombatExtended.CompPawnGizmo</compClass>
+						</li>
+						<li>
+							<compClass>CombatExtended.CompAmmoGiver</compClass>
+						</li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFE_Mech_Knight_PlayerControlled"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CombatExtended.CompPawnGizmo</compClass>
+						</li>
+						<li>
+							<compClass>CombatExtended.CompAmmoGiver</compClass>
+						</li>
+						<li Class="CombatExtended.CompProperties_MechAmmo">
+							<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+							<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+						</li>
+					</value>
+				</li>
+
 			</operations>
 		</match>
 	</Operation>
