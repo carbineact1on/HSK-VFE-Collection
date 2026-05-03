@@ -11,8 +11,8 @@
 		<letterLabel>Infested chunk crash</letterLabel>
 		<letterText>A number of small chunks of an ancient ship has crashed nearby. \n\nThey seem to be infested with an organic mass. Bizarre insect chittering can be heard within the hull. \n\nDestroy them as soon as possible.</letterText>
 		<letterDef>ThreatBig</letterDef>
-		<baseChance>1.6</baseChance>
-		<minRefireDays>15</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>25</minRefireDays>
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<minThreatPoints>800</minThreatPoints>
@@ -29,8 +29,8 @@
 		<letterLabel>Infested part crash</letterLabel>
 		<letterText>A large piece of an ancient ship has crashed nearby.\n\nIt seems to be infested with an organic mass. Bizarre insect chittering can be heard within the hull.\n\nDestroy it as soon as possible.</letterText>
 		<letterDef>ThreatBig</letterDef>
-		<baseChance>1.2</baseChance>
-		<minRefireDays>30</minRefireDays>
+		<baseChance>0.7</baseChance>
+		<minRefireDays>40</minRefireDays>
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<minThreatPoints>1000</minThreatPoints>
@@ -47,8 +47,8 @@
 		<letterLabel>Infested module crash</letterLabel>
 		<letterText>A mysterious segment of a long destroyed spaceship has crashed nearby.\n\nIt seems to be completely covered in biomass and lumps of insectoid jelly. It is fairly certain that this old wreckage may contain ancient dangers.\n\nDestroy it as soon as possible.</letterText>
 		<letterDef>ThreatBig</letterDef>
-		<baseChance>0.8</baseChance>
-		<minRefireDays>60</minRefireDays>
+		<baseChance>0.5</baseChance>
+		<minRefireDays>80</minRefireDays>
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<minThreatPoints>1600</minThreatPoints>
