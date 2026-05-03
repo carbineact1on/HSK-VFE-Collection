@@ -15,7 +15,7 @@
 		<defName>AmmoSet_SalvagedLaserEradicatorCE</defName>
 		<label>laser charge</label>
 		<ammoTypes>
-			<Ammo_LaserChargePack>Bullet_Laser_SalvagedLaserEradicatorCE</Ammo_LaserChargePack>
+			<Ammo_ChargedLaser>Bullet_Laser_SalvagedLaserEradicatorCE</Ammo_ChargedLaser>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 
