@@ -214,7 +214,7 @@
 			<recoilAmount>1.3</recoilAmount>
 			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>Bullet_80x256mmFuel_Incendiary</defaultProjectile>
+			<defaultProjectile>Bullet_80x256mmFuel_Thermobaric</defaultProjectile>
 			<warmupTime>8.6</warmupTime>
 			<range>86</range>
 			<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
