@@ -58,15 +58,11 @@
 		<tickerType>Never</tickerType>
 		<rotatable>true</rotatable>
 		<neverMultiSelect>true</neverMultiSelect>
-		<designationCategory>VFE_Factory</designationCategory>
 		<surfaceType>Item</surfaceType>
 		<!--<placeWorkers>
 			<li>PlaceWorker_NextToHopperAccepter</li>
 		</placeWorkers>-->
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites>
-			<li>VFE_FactoryBasics</li>
-		</researchPrerequisites>
 
 		<uiIconScale>0.85</uiIconScale>
    		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -132,7 +128,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -185,9 +180,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ElectronicsFabricationFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -257,7 +249,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,5)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -303,9 +294,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ElectronicsFabricationFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -375,7 +363,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -421,9 +408,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ElectronicsFabricationFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -491,7 +475,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,4)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -533,9 +516,6 @@
 			</li>
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MunitionsandArmamentsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -603,7 +583,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,7)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -646,9 +625,6 @@
 			</li>
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MunitionsandArmamentsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -718,7 +694,6 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<size>(7,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -769,9 +744,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MunitionsandArmamentsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -838,7 +810,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -883,9 +854,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_WearablesandTextilesFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -954,7 +922,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(5,5)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -999,9 +966,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_WearablesandTextilesFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1072,7 +1036,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(6,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1117,9 +1080,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_WearablesandTextilesFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1186,7 +1146,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,7)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1231,9 +1190,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ProvisionsPackagingFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1302,7 +1258,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1355,9 +1310,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ProvisionsPackagingFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1426,7 +1378,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,7)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1470,9 +1421,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MedicinalCompoundingFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1543,7 +1491,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1589,9 +1536,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MedicinalCompoundingFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1660,7 +1604,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,7)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1704,9 +1647,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MedicinalCompoundingFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1796,8 +1736,6 @@
 
 			<li Class="CompProperties_Breakdownable" />
 		</comps>
-
-		<designationCategory>VFE_Factory</designationCategory>
 		<placeWorkers>
 			<li>VFEMech.PlaceWorker_OnFactoryFloorAndPath</li>
 		</placeWorkers>
@@ -1812,9 +1750,6 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MasonryandMetallicsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1882,7 +1817,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(3,5)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -1926,9 +1860,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MasonryandMetallicsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -1997,7 +1928,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,5)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -2051,9 +1981,6 @@
 
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_MasonryandMetallicsFactory</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
@@ -2122,7 +2049,6 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<size>(7,6)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -2168,9 +2094,6 @@
 			</li>
 
 		</comps>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_FactoryBasics</li>
-		</researchPrerequisites>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<modExtensions>
 			<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
@@ -2229,7 +2152,6 @@
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 		<tickerType>Normal</tickerType>
 		<size>(3,3)</size>
-		<designationCategory>VFE_Factory</designationCategory>
 		<pathCost>100</pathCost>
 		<surfaceType>Item</surfaceType>
 		<passability>PassThroughOnly</passability>
@@ -2245,9 +2167,6 @@
 			<li Class="CompProperties_Flickable" />
 		</comps>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<researchPrerequisites Inherit='False'>
-			<li>VFE_ElectronicsFabricationFactory</li>
-		</researchPrerequisites>
    		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 

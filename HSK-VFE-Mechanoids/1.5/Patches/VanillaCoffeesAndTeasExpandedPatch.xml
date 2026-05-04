@@ -74,7 +74,6 @@
 							</statBases>
 							<tickerType>Rare</tickerType>
 							<size>(3,6)</size>
-							<designationCategory>VFE_Factory</designationCategory>
 							<passability>PassThroughOnly</passability>
 							<pathCost>70</pathCost>
 							<hasInteractionCell>True</hasInteractionCell>
@@ -120,9 +119,6 @@
 								</li>
 
 							</comps>
-							<researchPrerequisites Inherit='False'>
-								<li>VFE_IndustrialRoasting</li>
-							</researchPrerequisites>
 							<minifiedDef>MinifiedThing</minifiedDef>
 							<modExtensions>
 								<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">

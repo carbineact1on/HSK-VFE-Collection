@@ -66,7 +66,6 @@
 							</statBases>
 							<tickerType>Rare</tickerType>
 							<size>(5,4)</size>
-							<designationCategory>VFE_Factory</designationCategory>
 							<passability>PassThroughOnly</passability>
 							<pathCost>70</pathCost>
 							<hasInteractionCell>True</hasInteractionCell>
@@ -104,9 +103,6 @@
 									</inputSlots>
 								</li>
 							</comps>
-							<researchPrerequisites Inherit='False'>
-								<li>VFE_ProvisionsPackagingFactory</li>
-							</researchPrerequisites>
 							<minifiedDef>MinifiedThing</minifiedDef>
 							<modExtensions>
 								<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
@@ -237,7 +233,6 @@
 							</statBases>
 							<tickerType>Rare</tickerType>
 							<size>(3,6)</size>
-							<designationCategory>VFE_Factory</designationCategory>
 							<passability>PassThroughOnly</passability>
 							<pathCost>70</pathCost>
 							<hasInteractionCell>True</hasInteractionCell>
@@ -276,9 +271,6 @@
 									</inputSlots>
 								</li>
 							</comps>
-							<researchPrerequisites Inherit='False'>
-								<li>VFE_CheeseMaking</li>
-							</researchPrerequisites>
 							<minifiedDef>MinifiedThing</minifiedDef>
 							<modExtensions>
 								<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
@@ -376,7 +368,6 @@
 							</statBases>
 							<tickerType>Rare</tickerType>
 							<size>(5,4)</size>
-							<designationCategory>VFE_Factory</designationCategory>
 							<passability>PassThroughOnly</passability>
 							<pathCost>70</pathCost>
 							<hasInteractionCell>True</hasInteractionCell>
@@ -414,9 +405,6 @@
 									</inputSlots>
 								</li>
 							</comps>
-							<researchPrerequisites Inherit='False'>
-								<li>VFE_IndustrialSoups</li>
-							</researchPrerequisites>
 							<minifiedDef>MinifiedThing</minifiedDef>
 							<modExtensions>
 								<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">

@@ -36,7 +36,6 @@
 							<blockLight>true</blockLight>
 							<canOverlapZones>false</canOverlapZones>
 							<hasInteractionCell>True</hasInteractionCell>
-							<designationCategory>VFE_Factory</designationCategory>
 							<interactionCellOffset>(0,0,2)</interactionCellOffset>
 							<statBases>
 								<MaxHitPoints>400</MaxHitPoints>
@@ -85,9 +84,6 @@
 							<placeWorkers Inherit="False">
 								<li>VanillaFurnitureExpanded.PlaceWorker_OnWater</li>
 							</placeWorkers>
-							<researchPrerequisites>
-								<li>VFE_ProvisionsPackagingFactory</li>
-							</researchPrerequisites>
 							<category>Building</category>
 							<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 							<selectable>true</selectable>
