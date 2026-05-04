@@ -126,7 +126,7 @@
   <costList>
     <Plasteel>45</Plasteel>
     <ComponentSpacer>3</ComponentSpacer>
-    <Uranium>45</Uranium>
+    <DepletedUranium>45</DepletedUranium>
   </costList>
   <comps>
     <li Class="CompProperties_Transporter">
