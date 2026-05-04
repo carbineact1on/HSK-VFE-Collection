@@ -633,7 +633,8 @@
 		<researchPrerequisites>
 			<li>VFE_AutomatedDefensiveMeasures</li>
 		</researchPrerequisites>
-	</ThingDef>
+        <designationCategory>Security</designationCategory>
+    </ThingDef>
 
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>VFE_Gun_AutoTesla</defName>
