@@ -20,7 +20,6 @@
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1.0</fillPercent>
-    <designationCategory>Misc</designationCategory>
     <canOverlapZones>false</canOverlapZones>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <building>
