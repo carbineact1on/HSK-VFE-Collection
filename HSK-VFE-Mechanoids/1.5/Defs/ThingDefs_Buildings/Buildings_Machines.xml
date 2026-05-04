@@ -64,10 +64,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_BasicDroneAssembly</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -134,10 +131,7 @@
 		<hoursToRecharge>6</hoursToRecharge>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_BasicDroneAssembly</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -204,10 +198,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_BasicDroneAssembly</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -275,10 +266,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_AutomatedDefensiveMeasures</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -345,10 +333,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_AutomatedDefensiveMeasures</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -432,10 +417,7 @@
 		</blackListTurretGuns>
 	  </li>
     </comps>
-        <researchPrerequisites>
-      <li>VFE_AutomatedDefensiveMeasures</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -647,10 +629,7 @@
 				<hoursToRecharge>12</hoursToRecharge>
 			</li>
 		</comps>
-        <researchPrerequisites>
-			<li>VFE_AdvancedDroneAssembly</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -802,10 +781,7 @@
 				<hoursToRecharge>12</hoursToRecharge>
 			</li>
 		</comps>
-        <researchPrerequisites>
-			<li>VFE_AdvancedDroneAssembly</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	</ThingDef>
 	-->
 
@@ -875,10 +851,7 @@
 				<showSetArea>false</showSetArea>
 			</li>
 		</comps>
-        <researchPrerequisites>
-			<li>VFE_AdvancedDroneAssembly</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -945,10 +918,7 @@
 				<hoursToRecharge>24</hoursToRecharge>
 			</li>
 		</comps>
-        <researchPrerequisites>
-			<li>VFE_BasicDroneAssembly</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1017,9 +987,6 @@
 				<hoursToRecharge>24</hoursToRecharge>
 			</li>
 		</comps>
-        <researchPrerequisites>
-			<li>VFE_AutomatedDefensiveMeasures</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 	</ThingDef>
 </Defs>

@@ -39,10 +39,7 @@
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <researchPrerequisites>
-      <li>VFE_AutomatedDefensiveMeasures</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <uiIconScale>0.9</uiIconScale>
   </ThingDef>
 
