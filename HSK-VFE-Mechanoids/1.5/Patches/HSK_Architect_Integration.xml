@@ -33,26 +33,6 @@
     <xpath>Defs/ThingDef[defName="VFE_Mechanoids_Autosower"]/designationCategory</xpath>
     <value><designationCategory>Misc</designationCategory></value>
   </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_AutostriderBase"]/designationCategory</xpath>
-    <value><designationCategory>Misc</designationCategory></value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_CombatBase"]/designationCategory</xpath>
-    <value><designationCategory>Misc</designationCategory></value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_PyroBase"]/designationCategory</xpath>
-    <value><designationCategory>Misc</designationCategory></value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_RaiderBase"]/designationCategory</xpath>
-    <value><designationCategory>Misc</designationCategory></value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFE_Mechanoids_RiotBase"]/designationCategory</xpath>
-    <value><designationCategory>Misc</designationCategory></value>
-  </Operation>
   <!-- VFE_Mechanoids_TurretBase disabled (see HSK_Disable_Overlap.xml).
        HSK has its own turret roster; mobile turret platform redundant. -->
 
