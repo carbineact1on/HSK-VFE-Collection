@@ -65,7 +65,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_AutohaulerBase</defName>
@@ -132,7 +135,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_AutominerBase</defName>
@@ -199,7 +205,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_CombatBase</defName>
@@ -267,7 +276,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_RiotBase</defName>
@@ -334,7 +346,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_TurretBase</defName>
@@ -418,7 +433,10 @@
 	  </li>
     </comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-  </ThingDef>
+  
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_Autosower</defName>
@@ -630,7 +648,10 @@
 			</li>
 		</comps>
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-	</ThingDef>
+	
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
@@ -782,7 +803,10 @@
 			</li>
 		</comps>
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-	</ThingDef>
+	
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 	-->
 
 	<ThingDef ParentName="BuildingBase">
@@ -852,7 +876,10 @@
 			</li>
 		</comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-	</ThingDef>
+	
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>VFE_Mechanoids_AutobroadcasterBase</defName>
@@ -919,7 +946,10 @@
 			</li>
 		</comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-	</ThingDef>
+	
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>VFE_Mechanoids_PyroBase</defName>
@@ -988,5 +1018,8 @@
 			</li>
 		</comps>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-	</ThingDef>
+	
+        <designationCategory>VFE_Factory</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 </Defs>

@@ -41,7 +41,10 @@
     </placeWorkers>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <uiIconScale>0.9</uiIconScale>
-  </ThingDef>
+  
+        <designationCategory>Misc</designationCategory>
+        <menuHidden>true</menuHidden>
+    </ThingDef>
 
   <ThingDef ParentName="SkyfallerBase">
     <defName>VFEM_MissileLeaving</defName>
