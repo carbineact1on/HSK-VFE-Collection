@@ -43,12 +43,17 @@
 		<castEdgeShadows>true</castEdgeShadows>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>4000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0.3</Flammability>
 		</statBases>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
 		<costList>
-			<SteelBar>3</SteelBar>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Mechanism>1</Mechanism>
 		</costList>
 		<tickerType>Never</tickerType>
 		<rotatable>true</rotatable>
@@ -88,9 +93,15 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>90</SteelBar>
 			<ComponentIndustrial>10</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
 			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<building>
@@ -115,7 +126,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -182,7 +193,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 
@@ -206,11 +217,17 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>120</costStuffCount>
 		<costList>
-			<SteelBar>110</SteelBar>
-			<Plasteel>120</Plasteel>
-			<ComponentIndustrial>16</ComponentIndustrial>
-			<ComponentUltra>2</ComponentUltra>
+			<ComponentIndustrial>14</ComponentIndustrial>
+			<Mechanism>5</Mechanism>
+			<Microchips>5</Microchips>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Plasteel>100</Plasteel>
+			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<building>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
@@ -234,7 +251,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -294,7 +311,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -317,11 +334,17 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>70</SteelBar>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Mechanism>6</Mechanism>
+			<Microchips>6</Microchips>
 			<ComponentSpacer>8</ComponentSpacer>
-			<GoldBar>120</GoldBar>
-			<ComponentUltra>4</ComponentUltra>
+			<GoldBar>80</GoldBar>
+			<ComponentUltra>5</ComponentUltra>
 		</costList>
 		<placeWorkers>
 			<li>VFEMech.PlaceWorker_OnFactoryFloorAndPath</li>
@@ -346,7 +369,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>16000</WorkToBuild>
 			<MaxHitPoints>450</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -406,7 +429,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -429,11 +452,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>90</costStuffCount>
 		<costList>
-			<SteelBar>80</SteelBar>
 			<ComponentIndustrial>6</ComponentIndustrial>
-			<Chemfuel>500</Chemfuel>
-			<ComponentUltra>1</ComponentUltra>
+			<Mechanism>4</Mechanism>
+			<Microchips>2</Microchips>
+			<Chemfuel>300</Chemfuel>
+			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<placeWorkers>
 			<li>VFEMech.PlaceWorker_OnFactoryFloorAndPath</li>
@@ -457,7 +485,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>13000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -513,7 +541,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -536,10 +564,15 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>80</SteelBar>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Mechanism>4</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>3</ComponentSpacer>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<placeWorkers>
@@ -564,7 +597,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -621,7 +654,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 
 
@@ -645,11 +678,17 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>70</SteelBar>
-			<Plasteel>250</Plasteel>
-			<ComponentSpacer>3</ComponentSpacer>
-			<ComponentUltra>3</ComponentUltra>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Mechanism>6</Mechanism>
+			<Microchips>4</Microchips>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>200</Plasteel>
+			<ComponentUltra>4</ComponentUltra>
 		</costList>
 		<building>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
@@ -673,7 +712,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>16000</WorkToBuild>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -738,7 +777,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
 		<defName>VFEM_WearablesAndTextileFactory_TextileRecycler</defName>
@@ -760,9 +799,14 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
 		<costList>
-			<SteelBar>80</SteelBar>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>2</Microchips>
 			<Plasteel>30</Plasteel>
 			<ComponentUltra>1</ComponentUltra>
 		</costList>
@@ -788,7 +832,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -847,7 +891,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -870,10 +914,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
 		<costList>
-			<SteelBar>70</SteelBar>
-			<ComponentSpacer>2</ComponentSpacer>
 			<ComponentIndustrial>8</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
+			<SyntheticFibers>30</SyntheticFibers>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<building>
@@ -898,7 +948,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>13000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -957,7 +1007,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -980,11 +1030,19 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>120</costStuffCount>
 		<costList>
-			<Plasteel>400</Plasteel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<Mechanism>6</Mechanism>
+			<Microchips>6</Microchips>
+			<BioMicrochips>4</BioMicrochips>
 			<ComponentSpacer>8</ComponentSpacer>
-			<DepletedUranium>50</DepletedUranium>
-			<ComponentUltra>4</ComponentUltra>
+			<Plasteel>250</Plasteel>
+			<SyntheticFibers>80</SyntheticFibers>
+			<ComponentUltra>6</ComponentUltra>
 		</costList>
 		<building>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
@@ -1008,7 +1066,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1067,7 +1125,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1090,10 +1148,14 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>100</SteelBar>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<SilverBar>300</SilverBar>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>2</Microchips>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<building>
@@ -1118,7 +1180,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<MaxHitPoints>325</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1177,7 +1239,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1200,11 +1262,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
 		<costList>
-			<SteelBar>70</SteelBar>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>2</Microchips>
 			<Chemfuel>200</Chemfuel>
-			<ComponentUltra>3</ComponentUltra>
+			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<building>
 			<isMealSource>true</isMealSource>
@@ -1229,7 +1296,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1296,7 +1363,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1319,10 +1386,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>90</SteelBar>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<Neutroamine>100</Neutroamine>
+			<Mechanism>4</Mechanism>
+			<Microchips>4</Microchips>
+			<BioMicrochips>2</BioMicrochips>
+			<Neutroamine>80</Neutroamine>
 			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<building>
@@ -1347,7 +1420,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1405,7 +1478,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1428,11 +1501,18 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>80</SteelBar>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>4</Microchips>
+			<BioMicrochips>4</BioMicrochips>
 			<ComponentSpacer>4</ComponentSpacer>
-			<Neutroamine>300</Neutroamine>
-			<ComponentUltra>1</ComponentUltra>
+			<Neutroamine>200</Neutroamine>
+			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<placeWorkers>
 			<li>VFEMech.PlaceWorker_OnFactoryFloorAndPath</li>
@@ -1517,7 +1597,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1540,10 +1620,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>90</costStuffCount>
 		<costList>
-			<Plasteel>300</Plasteel>
-			<ComponentSpacer>5</ComponentSpacer>
-			<SteelBar>70</SteelBar>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Plasteel>80</Plasteel>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<building>
@@ -1568,7 +1654,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>13000</WorkToBuild>
 			<MaxHitPoints>325</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1626,7 +1712,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1660,16 +1746,21 @@
 		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
 		<statBases>
 			<MaxHitPoints>400</MaxHitPoints>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
 			<Mass>100</Mass>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<size>(3,3)</size>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>90</SteelBar>
-			<ComponentIndustrial>7</ComponentIndustrial>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>2</Microchips>
 			<Plasteel>50</Plasteel>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
@@ -1729,7 +1820,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1752,9 +1843,14 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>110</costStuffCount>
 		<costList>
-			<SteelBar>130</SteelBar>
 			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>2</Microchips>
 			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentUltra>1</ComponentUltra>
 		</costList>
@@ -1780,7 +1876,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1838,7 +1934,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1861,11 +1957,17 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
 		<costList>
-			<SteelBar>140</SteelBar>
-			<Plasteel>300</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<Mechanism>8</Mechanism>
+			<Microchips>5</Microchips>
 			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentUltra>5</ComponentUltra>
+			<Plasteel>250</Plasteel>
+			<ComponentUltra>6</ComponentUltra>
 		</costList>
 		<building>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
@@ -1889,7 +1991,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -1957,7 +2059,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -1980,11 +2082,17 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>130</costStuffCount>
 		<costList>
-			<SteelBar>115</SteelBar>
-			<ComponentSpacer>1</ComponentSpacer>
-			<Plasteel>300</Plasteel>
-			<ComponentUltra>2</ComponentUltra>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Mechanism>5</Mechanism>
+			<Microchips>4</Microchips>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Plasteel>150</Plasteel>
+			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<building>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
@@ -2008,7 +2116,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -2069,7 +2177,7 @@
 				<showBlueprintInGhostMode>true</showBlueprintInGhostMode>
 			</li>
 		</modExtensions>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 	
 	<ThingDef ParentName="BuildingBase">
@@ -2092,11 +2200,16 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>90</SteelBar>
-			<Plasteel>35</Plasteel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>3</Microchips>
 			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>40</Plasteel>
 			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
@@ -2106,7 +2219,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<Mass>100</Mass>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>13000</WorkToBuild>
 			<MaxHitPoints>350</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -2135,7 +2248,7 @@
 		<researchPrerequisites Inherit='False'>
 			<li>VFE_ElectronicsFabricationFactory</li>
 		</researchPrerequisites>
-   		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+   		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 </Defs>
