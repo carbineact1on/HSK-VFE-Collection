@@ -64,8 +64,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_BasicDroneAssembly</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -135,8 +134,7 @@
 		<hoursToRecharge>6</hoursToRecharge>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_BasicDroneAssembly</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -206,8 +204,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_BasicDroneAssembly</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -278,8 +275,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_AutomatedDefensiveMeasures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -349,8 +345,7 @@
 		<hoursToRecharge>24</hoursToRecharge>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_AutomatedDefensiveMeasures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -437,8 +432,7 @@
 		</blackListTurretGuns>
 	  </li>
     </comps>
-    <designationCategory>VFE_Factory</designationCategory>
-    <researchPrerequisites>
+        <researchPrerequisites>
       <li>VFE_AutomatedDefensiveMeasures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -461,12 +455,19 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <costList>
-      <Plasteel>20</Plasteel>
-      <ComponentSpacer>4</ComponentSpacer>
-	  <ComponentIndustrial>4</ComponentIndustrial>
-      <ComponentUltra>1</ComponentUltra>
-    </costList>
+    <stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Mechanism>3</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentUltra>2</ComponentUltra>
+			<Plasteel>50</Plasteel>
+			<SyntheticFibers>25</SyntheticFibers>
+		</costList>
     <building>
       <buildingTags>
         <li>Production</li>
@@ -483,7 +484,7 @@
     <useHitPoints>True</useHitPoints>
     <statBases>
       <Mass>10</Mass>
-      <WorkToBuild>800</WorkToBuild>
+      <WorkToBuild>8000</WorkToBuild>
       <MaxHitPoints>350</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -506,7 +507,8 @@
 	<drawerType>RealtimeOnly</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 	<drawOffscreen>true</drawOffscreen>
-  </ThingDef>
+  	<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
+	</ThingDef>
   
   <ThingDef ParentName="BuildingBase">
     <defName>VFE_Mechanoids_Autoharvester</defName>
@@ -525,12 +527,18 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <costList>
-      <Plasteel>10</Plasteel>
-      <ComponentSpacer>6</ComponentSpacer>
-	  <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentUltra>1</ComponentUltra>
-    </costList>
+    <stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Mechanism>3</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentUltra>2</ComponentUltra>
+			<Plasteel>50</Plasteel>
+		</costList>
     <building>
       <buildingTags>
         <li>Production</li>
@@ -546,7 +554,7 @@
     <useHitPoints>True</useHitPoints>
     <statBases>
       <Mass>10</Mass>
-      <WorkToBuild>800</WorkToBuild>
+      <WorkToBuild>8000</WorkToBuild>
       <MaxHitPoints>350</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -569,7 +577,8 @@
 	<drawerType>RealtimeOnly</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
 	<drawOffscreen>true</drawOffscreen>
-  </ThingDef>
+  	<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
+	</ThingDef>
   
 
 	<ThingDef ParentName="BuildingBase">
@@ -638,8 +647,7 @@
 				<hoursToRecharge>12</hoursToRecharge>
 			</li>
 		</comps>
-		<designationCategory>VFE_Factory</designationCategory>
-		<researchPrerequisites>
+        <researchPrerequisites>
 			<li>VFE_AdvancedDroneAssembly</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -675,7 +683,7 @@
 			<li>BuildingsProduction</li>
 		</thingCategories>
 		<statBases>
-			<WorkToBuild>1000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>6</Mass>
 			<Flammability>0.5</Flammability>
@@ -690,11 +698,19 @@
 			<ai_chillDestination>false</ai_chillDestination>
 			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
 		</building>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>9</SteelBar>
-			<Plasteel>30</Plasteel>
-			<ComponentUltra>1</ComponentUltra>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Mechanism>3</Mechanism>
+			<Microchips>4</Microchips>
+			<BioMicrochips>3</BioMicrochips>
+			<ComponentUltra>3</ComponentUltra>
+			<Plasteel>80</Plasteel>
+			<MedicineHerbal>20</MedicineHerbal>
 		</costList>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<comps>
@@ -786,8 +802,7 @@
 				<hoursToRecharge>12</hoursToRecharge>
 			</li>
 		</comps>
-		<designationCategory>VFE_Factory</designationCategory>
-		<researchPrerequisites>
+        <researchPrerequisites>
 			<li>VFE_AdvancedDroneAssembly</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -860,8 +875,7 @@
 				<showSetArea>false</showSetArea>
 			</li>
 		</comps>
-		<designationCategory>VFE_Factory</designationCategory>
-		<researchPrerequisites>
+        <researchPrerequisites>
 			<li>VFE_AdvancedDroneAssembly</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -931,8 +945,7 @@
 				<hoursToRecharge>24</hoursToRecharge>
 			</li>
 		</comps>
-		<designationCategory>VFE_Factory</designationCategory>
-		<researchPrerequisites>
+        <researchPrerequisites>
 			<li>VFE_BasicDroneAssembly</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
@@ -1004,8 +1017,7 @@
 				<hoursToRecharge>24</hoursToRecharge>
 			</li>
 		</comps>
-		<designationCategory>VFE_Factory</designationCategory>
-		<researchPrerequisites>
+        <researchPrerequisites>
 			<li>VFE_AutomatedDefensiveMeasures</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
