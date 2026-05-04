@@ -41,9 +41,6 @@
     </placeWorkers>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <uiIconScale>0.9</uiIconScale>
-  
-        <designationCategory>Misc</designationCategory>
-        <menuHidden>true</menuHidden>
     </ThingDef>
 
   <ThingDef ParentName="SkyfallerBase">
