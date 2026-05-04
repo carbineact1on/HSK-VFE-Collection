@@ -32,7 +32,7 @@
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<WorkToBuild>2600</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<Mass>14</Mass>
 			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
@@ -80,18 +80,20 @@
 		<fillPercent>0.4</fillPercent>
 		<hasTooltip>true</hasTooltip>
 		<stuffCategories>
-			<li>Metallic</li>
+			<li>RuggedMetallic</li>
 		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>80</costStuffCount>
 		<costList>
-			<ComponentUltra>1</ComponentUltra>
-			<Plasteel>40</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-					<Mechanism>3</Mechanism>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>4</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>70</Plasteel>
+			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<building>
 			<combatPower>70</combatPower>
 			<!-- same as a scavenger -->
@@ -176,7 +178,7 @@
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<WorkToBuild>2600</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<Mass>14</Mass>
 			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
@@ -222,18 +224,20 @@
 		<fillPercent>0.4</fillPercent>
 		<hasTooltip>true</hasTooltip>
 		<stuffCategories>
-			<li>Metallic</li>
+			<li>RuggedMetallic</li>
 		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>80</costStuffCount>
 		<costList>
-			<ComponentUltra>1</ComponentUltra>
-			<Plasteel>40</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-					<Mechanism>3</Mechanism>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>5</Microchips>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Plasteel>60</Plasteel>
+			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 		<building>
 			<combatPower>70</combatPower>
 			<!-- same as a scavenger -->
@@ -317,7 +321,7 @@
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<WorkToBuild>2600</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<Mass>14</Mass>
 			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
@@ -363,18 +367,21 @@
 		<fillPercent>0.4</fillPercent>
 		<hasTooltip>true</hasTooltip>
 		<stuffCategories>
-			<li>Metallic</li>
+			<li>RuggedMetallic</li>
 		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>90</costStuffCount>
 		<costList>
-			<ComponentUltra>1</ComponentUltra>
-			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-					<Mechanism>3</Mechanism>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>70</Plasteel>
+			<Chemfuel>50</Chemfuel>
+			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<building>
 			<combatPower>70</combatPower>
 			<!-- same as a scavenger -->
@@ -526,17 +533,19 @@
 		</comps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<stuffCategories>
-			<li>Metallic</li>
+			<li>RuggedMetallic</li>
 		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>70</costStuffCount>
 		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>2</Microchips>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Plasteel>40</Plasteel>
 			<ComponentUltra>1</ComponentUltra>
-			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-					<Mechanism>2</Mechanism>
 		</costList>
 		<designationCategory>Security</designationCategory>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 		<building>
 			<combatPower>70</combatPower>
 			<!-- same as a scavenger -->
@@ -617,14 +626,16 @@
 		</comps>
 		<passability>PassThroughOnly</passability>
 		<stuffCategories>
-			<li>Metallic</li>
+			<li>RuggedMetallic</li>
 		</stuffCategories>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>90</costStuffCount>
 		<costList>
-			<ComponentUltra>1</ComponentUltra>
-			<Plasteel>50</Plasteel>
-			<SteelBar>20</SteelBar>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>5</Microchips>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>80</Plasteel>
+			<ComponentUltra>3</ComponentUltra>
 		</costList>
 		<building>
 			<turretGunDef>VFE_Gun_AutoTesla</turretGunDef>
@@ -634,7 +645,8 @@
 			<li>VFE_AutomatedDefensiveMeasures</li>
 		</researchPrerequisites>
         <designationCategory>Security</designationCategory>
-    </ThingDef>
+    	<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+	</ThingDef>
 
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>VFE_Gun_AutoTesla</defName>

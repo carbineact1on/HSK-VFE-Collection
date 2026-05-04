@@ -23,7 +23,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
-      <WorkToBuild>3800</WorkToBuild>
+      <WorkToBuild>15000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-20</Beauty>
 	  <Mass>28</Mass>
@@ -38,12 +38,20 @@
 			<soundAmbient>VFE_Supercomputer_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
 		</building>
-    <costList>
-      <Plasteel>20</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentUltra>2</ComponentUltra>
-    </costList>
+    <stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Mechanism>4</Mechanism>
+			<Microchips>8</Microchips>
+			<BioMicrochips>4</BioMicrochips>
+			<ComponentUltra>5</ComponentUltra>
+			<Plasteel>100</Plasteel>
+			<GoldBar>30</GoldBar>
+		</costList>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -67,7 +75,7 @@
     <researchPrerequisites>
       <li>VFE_BasicDroneAssembly</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
   </ThingDef>
 
 </Defs>

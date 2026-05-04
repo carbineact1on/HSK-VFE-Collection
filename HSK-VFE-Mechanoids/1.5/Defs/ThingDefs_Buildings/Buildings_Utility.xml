@@ -18,7 +18,7 @@
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Mass>10</Mass>
-			<WorkToBuild>750</WorkToBuild>
+			<WorkToBuild>10000</WorkToBuild>
 			<Flammability>0.6</Flammability>
 		</statBases>
 		<size>(1,1)</size>
@@ -36,15 +36,22 @@
 				<basePowerConsumption>50</basePowerConsumption>
 			</li>-->
 		</comps>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>60</costStuffCount>
 		<costList>
-			<SteelBar>5</SteelBar>
-			<ComponentSpacer>1</ComponentSpacer>
-			<ComponentIndustrial>15</ComponentIndustrial>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>2</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentUltra>1</ComponentUltra>
 		</costList>
 		<designationCategory>VFE_Factory</designationCategory>
 		<researchPrerequisites>
 			<li>VFE_MechanoidStructures</li>
 		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 	</ThingDef>
 	
 	<ThingDef ParentName="BuildingBase">
@@ -71,7 +78,7 @@
 		<fillPercent>0.5</fillPercent>
 		<canOverlapZones>false</canOverlapZones>
 		<statBases>
-			<WorkToBuild>8000</WorkToBuild>
+			<WorkToBuild>14000</WorkToBuild>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 		</statBases>
@@ -105,18 +112,25 @@
 		<building>
 			<isPlayerEjectable>true</isPlayerEjectable>
 		</building>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>24</SteelBar>
-			<DepletedUranium>15</DepletedUranium>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Mechanism>4</Mechanism>
+			<Microchips>4</Microchips>
+			<BioMicrochips>4</BioMicrochips>
+			<ComponentSpacer>3</ComponentSpacer>
+			<DepletedUranium>30</DepletedUranium>
+			<ComponentUltra>2</ComponentUltra>
 		</costList>
 		<inspectorTabs>
 			<li>ITab_ContentsCasket</li>
 		</inspectorTabs>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<designationHotKey>Misc2</designationHotKey>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -130,7 +144,7 @@
 		<pathCost>0</pathCost>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
-			<WorkToBuild>500</WorkToBuild>
+			<WorkToBuild>6000</WorkToBuild>
 			<Flammability>0.5</Flammability>
 			<Beauty>0.5</Beauty>
 			<Mass>4</Mass>
@@ -158,8 +172,14 @@
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
 		</graphicData>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
 		<costList>
-			<SteelBar>10</SteelBar>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Mechanism>1</Mechanism>
+			<Microchips>1</Microchips>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps>
@@ -174,6 +194,7 @@
 		<researchPrerequisites>
 			<li>VFE_MechanoidStructures</li>
 		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	</ThingDef>
 	
 	<ThingDef ParentName="BuildingBase">
@@ -193,7 +214,7 @@
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<Mass>4</Mass>
-			<WorkToBuild>500</WorkToBuild>
+			<WorkToBuild>11000</WorkToBuild>
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<size>(1,1)</size>
@@ -202,11 +223,17 @@
 			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
 			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
 		</building>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>60</costStuffCount>
 		<costList>
-			<SteelBar>5</SteelBar>
-			<ComponentSpacer>1</ComponentSpacer>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<Neutroamine>20</Neutroamine>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Mechanism>3</Mechanism>
+			<Microchips>3</Microchips>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Neutroamine>30</Neutroamine>
+			<ComponentUltra>1</ComponentUltra>
 		</costList>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
@@ -221,6 +248,7 @@
 		<comps>
 			<li Class="VFEMech.CompProperties_PreventDeteoriratingAndSpolining"></li>
 		</comps>
+		<constructionSkillPrerequisite>11</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -235,7 +263,7 @@
 		<uiIconScale>0.8</uiIconScale>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
-			<WorkToBuild>1000</WorkToBuild>
+			<WorkToBuild>12000</WorkToBuild>
 			<Flammability>0.5</Flammability>
 			<Beauty>1</Beauty>
 			<Mass>20</Mass>
@@ -261,10 +289,17 @@
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
 		</graphicData>
+		<stuffCategories>
+			<li>RuggedMetallic</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
 		<costList>
-			<SteelBar>10</SteelBar>
-			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>5</ComponentIndustrial>
+			<Mechanism>2</Mechanism>
+			<Microchips>3</Microchips>
+			<BioMicrochips>2</BioMicrochips>
+			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentUltra>1</ComponentUltra>
 		</costList>
 		<tickerType>Normal</tickerType>
 		<comps>
@@ -276,5 +311,6 @@
 		<researchPrerequisites>
 			<li>VFE_MechanoidStructures</li>
 		</researchPrerequisites>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 </Defs>

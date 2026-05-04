@@ -90,7 +90,7 @@
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 			<Plasteel>60</Plasteel>
-			<Uranium>60</Uranium>
+			<DepletedUranium>60</DepletedUranium>
 		</killedLeavings>
 	</ThingDef>
 
@@ -143,7 +143,7 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 			<Plasteel>20</Plasteel>
-			<Uranium>10</Uranium>
+			<DepletedUranium>10</DepletedUranium>
 		</killedLeavings>
 	</ThingDef>
 
@@ -335,7 +335,7 @@
 		<killedLeavings>
 			<ChunkSlagSteel>5</ChunkSlagSteel>
 			<SteelBar>20</SteelBar>
-			<Uranium>65</Uranium>
+			<DepletedUranium>65</DepletedUranium>
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</killedLeavings>
@@ -498,7 +498,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<SteelBar>24</SteelBar>
 			<Gold>20</Gold>
-			<Uranium>40</Uranium>
+			<DepletedUranium>40</DepletedUranium>
 		</killedLeavings>
 	</ThingDef>
 
@@ -1820,7 +1820,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<SteelBar>24</SteelBar>
 			<Gold>20</Gold>
-			<Uranium>40</Uranium>
+			<DepletedUranium>40</DepletedUranium>
 		</killedLeavings>
 	</ThingDef>
 	
