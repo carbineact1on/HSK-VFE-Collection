@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Make all warcasket weapon boxes loot-only (uncraftable) and remove
+    the warcasket weaponry research nodes from the tech tree.
+
+    All 12 VFEP_Box_* warcasket weapons inherit designationCategory from
+    abstract parent VFEP_WarcasketWeaponBoxBase - stripping it there
+    cascades to every child (Autorifle, UraniumSlugRifle, Slugthrower,
+    Minigun, GrenadeLauncher, HeavyFlamer, CombatKnife, Broadsword,
+    ChargeLance, HandheldCannon, ChargeBlaster, GravityHammer).
+
+    Boxes still:
+      - Spawn from raid drops + quest rewards (thingSetMakerTags Warcasket)
+      - Generate in trader stock (tradeability Sellable, tradeTags
+        VFEP_WarcasketWeaponBox)
+      - Function normally when found (warcaskets can equip them)
+
+    Research removed:
+      - VFEP_WarcasketWeaponry (industrial-tier weapons)
+      - VFEP_SpacerWarcasketWeaponry (spacer-tier, prereq Weaponry)
+    Both nodes become orphaned once boxes are uncraftable - removing them
+    cleans up the tech tree. The Warcasket Foundry (VFEP_Warcaskets
+    research) remains craftable so warcasket armor sets still work.
+-->
+<Patch>
+    <!-- Strip designationCategory from abstract parent (cascades to all 12 weapon boxes) -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="VFEP_WarcasketWeaponBoxBase"]/designationCategory</xpath>
+    </Operation>
+
+    <!-- Remove orphaned research projects -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="VFEP_WarcasketWeaponry" or defName="VFEP_SpacerWarcasketWeaponry"]</xpath>
+    </Operation>
+</Patch>

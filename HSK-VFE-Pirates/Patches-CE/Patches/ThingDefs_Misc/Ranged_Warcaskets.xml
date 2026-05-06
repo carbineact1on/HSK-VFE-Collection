@@ -31,8 +31,13 @@
 		<xpath>Defs/ThingDef[defName="Gun_ChargeLance"]/weaponTags/li[contains(.,"VFEP_Captain")]</xpath>
 	</Operation>
 
-	<!-- === Research === -->
+	<!-- === Research ===
+	     HSK: <success>Always</success> because MakeWarcasketWeaponryLootOnly.xml
+	     removes VFEP_WarcasketWeaponry entirely (all weapon boxes are loot-only,
+	     research orphaned). When the research is present (e.g. patch reverted),
+	     this still rewires the prereq from MultibarrelWeapons to PrecisionRifling. -->
 	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
 		<xpath>Defs/ResearchProjectDef[defName="VFEP_WarcasketWeaponry"]/prerequisites/li[text()="MultibarrelWeapons"]</xpath>
 		<value>
 			<li>PrecisionRifling</li>

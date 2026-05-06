@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Remove 3 orphaned VFE-Deserters research projects from the tech tree.
+
+    All gated content has already been disabled via earlier HSK patches:
+      - VFED_ImperialDefenses → 3 megaturrets (HSK_Disable_Turrets.xml)
+        + ammo boxes (Buildings_Special.xml designationCategory IsNull)
+      - VFED_ImperialWarSolutions → no remaining references in this mod
+        (would have gated imperial mortar shells but no recipes use it)
+      - VFED_RemoteDemolition → remote IED traps (Buildings_Security.xml
+        designationCategory IsNull, "HSK has equivalent IEDs")
+
+    Removing the research nodes cleans up dead entries in the research
+    window. Revert this patch if any of those buildings are re-enabled.
+-->
+<Patch>
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="VFED_ImperialDefenses" or defName="VFED_ImperialWarSolutions" or defName="VFED_RemoteDemolition"]</xpath>
+    </Operation>
+</Patch>
