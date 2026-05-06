@@ -71,7 +71,7 @@
     </comps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <designationCategory>Misc</designationCategory>
-    <constructEffect>ConstructMetal</constructEffect>
+    <!-- HSK: removed <constructEffect> - madeFromStuff (stuffCategories) overrides it with stuff's animation (Player.log warning). -->
     <researchPrerequisites>
       <li>VFE_BasicDroneAssembly</li>
     </researchPrerequisites>
