@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Remove the 7 VFE Mechanoids factory research project defs.
+
+    All factory buildings + addon buildings (Cannery, Cheese press,
+    Coffee roaster, Aquaponics basin, Fish Trapper, etc.) are disabled
+    via earlier work, leaving these research nodes orphaned with no
+    unlocks. Removing them entirely cleans up the tech tree.
+
+    If factory buildings are ever re-enabled, this patch must be reverted
+    so the research gates work again.
+-->
+<Patch>
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="VFE_FactoryBasics" or defName="VFE_ElectronicsFabricationFactory" or defName="VFE_MasonryandMetallicsFactory" or defName="VFE_MunitionsandArmamentsFactory" or defName="VFE_WearablesandTextilesFactory" or defName="VFE_ProvisionsPackagingFactory" or defName="VFE_MedicinalCompoundingFactory"]</xpath>
+    </Operation>
+</Patch>
