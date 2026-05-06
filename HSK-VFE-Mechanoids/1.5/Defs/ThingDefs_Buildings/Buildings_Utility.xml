@@ -30,11 +30,14 @@
 				<heightRange>1~1</heightRange>
 				<width>5</width>
 			</li>
-			<!--<li Class="CompProperties_Power">
+			<!-- HSK: requires power. Reinforcer continuously infuses walls with
+			     mechanites - 150W reflects active spacer-tier device. -->
+			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>50</basePowerConsumption>
-			</li>-->
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<stuffCategories>
 			<li>RuggedMetallic</li>
@@ -316,6 +319,14 @@
 				<effectiveRadius>8</effectiveRadius>
 				<tickRate>120</tickRate>
 			</li>
+			<!-- HSK: requires power. 8-radius active emitter that ticks every
+			     2s - 200W reflects bio-spacer-tier draw. -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<researchPrerequisites>
 			<li>VFE_MechanoidStructures</li>
