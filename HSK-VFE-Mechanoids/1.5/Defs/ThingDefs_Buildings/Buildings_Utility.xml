@@ -183,6 +183,15 @@
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps>
+			<!-- HSK: requires power. Lamp is meant for "expansive factories" so it
+			     gets a chunky 200W draw (vanilla standing lamp = 75W; this has 16
+			     radius vs standing lamp's ~5, plus holds roof for 8 tiles). -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>200</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>16</glowRadius>
 				<glowColor>(75,181,213,0)</glowColor>
@@ -196,7 +205,7 @@
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>VFE_MechanoidLiquidFreezer</defName>
 		<label>liquid freezer</label>
