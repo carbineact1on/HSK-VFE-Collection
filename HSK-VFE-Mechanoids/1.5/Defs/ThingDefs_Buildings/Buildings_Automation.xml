@@ -62,7 +62,7 @@
 		<!--<placeWorkers>
 			<li>PlaceWorker_NextToHopperAccepter</li>
 		</placeWorkers>-->
-		<constructEffect>ConstructMetal</constructEffect>
+		<!-- HSK: removed <constructEffect> - madeFromStuff (stuffCategories) overrides it with stuff's animation (Player.log warning). -->
 
 		<uiIconScale>0.85</uiIconScale>
    		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
