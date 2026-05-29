@@ -104,7 +104,10 @@
 		<label>megapede</label>
 		<race>VFEI2_Megapede</race>
 
-		<combatPower>300</combatPower>
+		<!-- HSK: raid-cost 300 -> 700. Identical tankiness to the Royal Megaspider
+		     (Sharp 10 / Blunt 25 / 1530 dur) but was still costed at 300; same
+		     under-costing fix. -->
+		<combatPower>700</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>

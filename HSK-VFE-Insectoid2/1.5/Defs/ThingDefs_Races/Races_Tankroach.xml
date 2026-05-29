@@ -114,7 +114,9 @@
 		<defName>VFEI2_Tankroach</defName>
 		<label>tankroach</label>
 		<race>VFEI2_Tankroach</race>
-		<combatPower>300</combatPower>
+		<!-- HSK: raid-cost 300 -> 800. Armor ABOVE a Centipede (Sharp 23 / Blunt 50
+		     vs 20 / 45) plus 1530 durability, yet costed at only 300. -->
+		<combatPower>800</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>

@@ -105,7 +105,15 @@
 		<defName>VFEI2_RoyalMegaspider</defName>
 		<label>royal megaspider</label>
 		<race>VFEI2_RoyalMegaspider</race>
-		<combatPower>300</combatPower>
+		<!-- HSK: raid-cost bump 300 -> 700. The royal megaspider is a mini-boss
+		     (Sharp 10 / Blunt 25 / 1530 armor durability) but was costed barely
+		     above the far-softer Royal Spelopede (150), so insect raids could
+		     afford several at low points - e.g. one showing up on a ~1400-point
+		     TRIBAL raid, where its power-armor-tier blunt shrugs off primitive
+		     weapons. At 700 it reads as a high-tier threat: fewer spawn per
+		     budget and it stays out of small early/tribal raids.
+		     (User report: Vladimir Lash 2026-05.) -->
+		<combatPower>700</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>

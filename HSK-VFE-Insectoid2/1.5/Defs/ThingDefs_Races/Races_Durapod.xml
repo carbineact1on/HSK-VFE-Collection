@@ -87,7 +87,11 @@
 		<defName>VFEI2_Durapod</defName>
 		<label>durapod</label>
 		<race>VFEI2_Durapod</race>
-		<combatPower>75</combatPower>
+		<!-- HSK: raid-cost 75 -> 250. Durapod has Centipede-tier armor
+		     (Sharp 20 / Blunt 40) but was costed like the soft Macrofly/Megascarab
+		     (75), so swarms of near-unkillable-to-primitive-weapons bugs could
+		     appear in tiny early/tribal raids. -->
+		<combatPower>250</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>
