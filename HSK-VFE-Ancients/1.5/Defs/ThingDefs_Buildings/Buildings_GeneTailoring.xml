@@ -70,8 +70,9 @@
           <disallowedThingDefs>
             <li>InsectJelly</li>
             <li>MealLavish</li>
-            <li>MealLavish_Veg</li>
-            <li>MealLavish_Meat</li>
+            <!-- HSK: MealLavish_Veg / MealLavish_Meat removed - those defs don't
+                 exist in HSK (vanilla only has MealLavish), so they threw
+                 "Could not resolve cross-reference ... (wanter=disallowedThingDefs)". -->
           </disallowedThingDefs>
         </filter>
       </defaultStorageSettings>

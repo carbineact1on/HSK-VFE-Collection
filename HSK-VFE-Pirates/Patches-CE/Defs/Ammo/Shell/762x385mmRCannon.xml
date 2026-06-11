@@ -149,6 +149,13 @@
 	<ThingDef ParentName="Base762x385mmRCannonShell">
 		<defName>Bullet_762x385mmRCannonShell_AP</defName>
 		<label>76.2x385mmR cannon shell (AP)</label>
+		<!-- HSK: AP/APCR lacked their own graphicData and inherited the base's
+		     shader-only graphicData (no texPath/graphicClass) -> "graphicClass is
+		     null / texPath is null or empty" config errors. CE ships these textures. -->
+		<graphicData>
+			<texPath>Things/Projectile/Cannon/AP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>220</damageAmountBase>
@@ -185,6 +192,10 @@
 	<ThingDef ParentName="Base762x385mmRCannonShell">
 		<defName>Bullet_762x385mmRCannonShell_APCR</defName>
 		<label>76.2x385mmR cannon shell (APCR)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Cannon/APCR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>210</damageAmountBase>
