@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Remove the 7 VFE Mechanoids factory research project defs.
+    Remove the 6 specialized VFE Mechanoids factory research project defs.
 
     All factory buildings + addon buildings (Cannery, Cheese press,
     Coffee roaster, Aquaponics basin, Fish Trapper, etc.) are disabled
-    via earlier work, leaving these research nodes orphaned with no
-    unlocks. Removing them entirely cleans up the tech tree.
+    via earlier work, leaving these research nodes orphaned with no unlocks.
+
+    NOTE: VFE_FactoryBasics is deliberately KEPT (not removed). It is woven into
+    HSK's research-tree integration plus several cross-mod compat patches
+    (Coffee/Cooking/VFE-Medieval/Fishing) and is referenced by floors + a power
+    building, so removing it orphaned ~6 researchPrerequisites/prerequisites
+    references and spammed "Could not resolve cross-reference to VFE_FactoryBasics"
+    at load. It now sits as a harmless orphan node (the factory buildings it would
+    gate are disabled, so it unlocks nothing). (Reported via load-log, 2026-06.)
 
     If factory buildings are ever re-enabled, this patch must be reverted
     so the research gates work again.
 -->
 <Patch>
     <Operation Class="PatchOperationRemove">
-        <xpath>Defs/ResearchProjectDef[defName="VFE_FactoryBasics" or defName="VFE_ElectronicsFabricationFactory" or defName="VFE_MasonryandMetallicsFactory" or defName="VFE_MunitionsandArmamentsFactory" or defName="VFE_WearablesandTextilesFactory" or defName="VFE_ProvisionsPackagingFactory" or defName="VFE_MedicinalCompoundingFactory"]</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="VFE_ElectronicsFabricationFactory" or defName="VFE_MasonryandMetallicsFactory" or defName="VFE_MunitionsandArmamentsFactory" or defName="VFE_WearablesandTextilesFactory" or defName="VFE_ProvisionsPackagingFactory" or defName="VFE_MedicinalCompoundingFactory"]</xpath>
     </Operation>
 </Patch>
