@@ -3,6 +3,16 @@
   <v1.5>
     <li>/</li>
     <li>1.5</li>
+    <!-- Alpha Animals Black Hive crossover (Black Empress geneline).
+         AA gates its own copy of this content on the ORIGINAL VFEI2 packageId
+         (OskarPotocki.VFE.Insectoid2), which this fork doesn't match - but the
+         bundled VFEInsectoids.dll detects AA by packageId (sarg.alphaanimals)
+         and activates its Black Hive code paths regardless, throwing
+         "Failed to find VFEI2_PherocoreBlack / VFEI2_BlackEmpressSpawn /
+         AA_BlackCreep" when the defs are missing. So we bundle AA's compat
+         defs ourselves, gated on AA. Textures/translations load from AA's
+         unconditional Common/ + TexturesByVersions/ folders. -->
+    <li IfModActive="sarg.alphaanimals">1.5/Mods/AlphaAnimals</li>
     <li IfModActive="CETeam.CombatExtended">Patches-CE</li>
   </v1.5>
 </loadFolders>
