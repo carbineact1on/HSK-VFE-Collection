@@ -14,6 +14,27 @@
     window. Revert this patch if any of those buildings are re-enabled.
 -->
 <Patch>
+    <!-- Strip the now-dangling research gates BEFORE removing the research defs.
+         The disabled buildings (megaturrets, ammo boxes, IED traps) still carry
+         researchPrerequisites pointing at the removed research - via abstract
+         bases this cascaded into 13 "Could not resolve cross-reference ...
+         (wanter=researchPrerequisites)" load errors. The buildings are
+         architect-hidden anyway, so they need no research gate.
+         success=Always: some entries may not exist depending on submods.
+         (Load-log report, 2026-06.) -->
+    <Operation Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFED_ImperialDefenses"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFED_RemoteDemolition"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFED_ImperialWarSolutions"]</xpath>
+    </Operation>
+
     <Operation Class="PatchOperationRemove">
         <xpath>Defs/ResearchProjectDef[defName="VFED_ImperialDefenses" or defName="VFED_ImperialWarSolutions" or defName="VFED_RemoteDemolition"]</xpath>
     </Operation>
