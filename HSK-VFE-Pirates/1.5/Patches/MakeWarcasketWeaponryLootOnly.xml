@@ -28,6 +28,22 @@
         <xpath>Defs/ThingDef[@Name="VFEP_WarcasketWeaponBoxBase"]/designationCategory</xpath>
     </Operation>
 
+    <!-- Strip the now-dangling research gates from everything that referenced the
+         removed research BEFORE removing the research defs. The weapon-box base
+         (VFEP_WarcasketWeaponBoxBase) carries researchPrerequisites=VFEP_WarcasketWeaponry,
+         which cascades to all 12 boxes; the two spacer weapon-crate buildings carry
+         VFEP_SpacerWarcasketWeaponry; the conditional VWE submod weapons carry both.
+         Without this cleanup, removing the research below orphaned 12 + 2 references
+         and spammed "Could not resolve cross-reference ... (wanter=researchPrerequisites)"
+         at load. The weapon boxes are loot-only now, so they need no research gate.
+         (Reported via load-log, 2026-06.) -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFEP_WarcasketWeaponry"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFEP_SpacerWarcasketWeaponry"]</xpath>
+    </Operation>
+
     <!-- Remove orphaned research projects -->
     <Operation Class="PatchOperationRemove">
         <xpath>Defs/ResearchProjectDef[defName="VFEP_WarcasketWeaponry" or defName="VFEP_SpacerWarcasketWeaponry"]</xpath>
