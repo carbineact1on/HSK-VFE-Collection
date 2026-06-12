@@ -101,8 +101,12 @@
 								</li>
 							</comps>
 							<minifiedDef>MinifiedThing</minifiedDef>
+							<!-- HSK: was VFE_ProvisionsPackagingFactory, but RemoveFactoryResearch.xml
+							     deletes that node -> dangling cross-ref + permanently unbuildable
+							     Liquor Mixer for VBE users. Retargeted to VFE_FactoryBasics, which
+							     we deliberately KEEP in the tree. -->
 							<researchPrerequisites Inherit='False'>
-								<li>VFE_ProvisionsPackagingFactory</li>
+								<li>VFE_FactoryBasics</li>
 							</researchPrerequisites>
 							<modExtensions>
 								<li Class="VanillaFurnitureExpanded.ShowBlueprintExtension">
