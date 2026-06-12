@@ -52,14 +52,6 @@
 		</value>
 	</Operation>
 
-	<!-- === combatPower Patches ===
-	     User report (JekCool 2026-05-16): warcasket-wearing pawns spawn at 4000 raid
-	     points and curb-stomp colonies that have no answer for them. He suggested
-	     8000-10000 raid threshold. Bumped warcasket-tier combatPower so each pawn
-	     costs more of the raid budget - at the new values, a 4000-point raid can
-	     spawn at most 4-5 Majors (single warcasket squad), while meaningful warcasket
-	     presence requires 8000+ points and a full warcasket raid needs 12-15k. Added
-	     General_Melee bump (previously only Major+General were patched). -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="VFEP_Major"]/combatPower</xpath>
 		<value>

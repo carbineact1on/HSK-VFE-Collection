@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- HSK patch: integrate VFE Pirates research into HSK's armor progression.
-     Adds HSK prereqs to the VFE entry-level research projects so players must
-     have progressed through HSK's armor tech tree before unlocking warcaskets.
-
-     VFE Pirates internal chain (unchanged):
-       VFEP_Warcaskets -> VFEP_AdvancedWarcaskets -> VFEP_SpecialisedWarcaskets
-                       -> VFEP_SpacerWarcaskets (end of chain)
-
-     HSK armor chain (reference):
-       PlateArmor (B1) -> Armor_B2 -> Armor_C1 -> FlakArmor (C2)
-                       -> Armor_D1 -> ReconArmor (E1) -> PoweredArmor (E2)
-                       -> Armor_E3 -> CataphractArmor
-
-     Gate mapping:
-       VFEP_Warcaskets        (Industrial entry) prereq += FlakArmor (Armor_C2)
-       VFEP_SpacerWarcaskets  (Spacer pinnacle)  prereq += PoweredArmor (Armor_E2)
-
-     Result: player needs HSK FlakArmor before starting the warcasket tree, and
-     HSK PoweredArmor before unlocking the spacer-tier endgame warcaskets. -->
+<!-- HSK patch: integrate VFE Pirates research into HSK's armor progression -->
 <Patch>
 
   <!-- Add FlakArmor as additional prerequisite to the entry-level Warcaskets research. -->

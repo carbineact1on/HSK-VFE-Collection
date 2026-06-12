@@ -141,10 +141,7 @@
 		</match>
 	</Operation>
 
-	<!-- Remove Charge Lance from available contraband.
-	     HSK-patch note: <success>Always</success> because in HSK's Deserters
-	     setup the contraband extension is never added to Gun_ChargeLance in
-	     the first place (different load order / def replacement). -->
+<!-- Remove Charge Lance from available contraband -->
 
 	<Operation Class="PatchOperationRemove">
 		<success>Always</success>

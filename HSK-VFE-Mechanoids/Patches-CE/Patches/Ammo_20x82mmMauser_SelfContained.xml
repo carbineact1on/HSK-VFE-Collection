@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Self-contained 20x82mm Mauser ammo for the VFE Raider machine's gun
-    (VFE_Gun_RaiderMechanoidGun -> AmmoSet_20x82mmMauser in Weapons_Mech.xml).
-
-    These defs normally ship in HSK-VFE-Pirates (Patches-CE/Defs/Ammo/
-    HighCaliber/20x82mmMauser.xml, warcasket 20mm Mauser). Users running
-    HSK-VFE-Mechanoids WITHOUT HSK-VFE-Pirates got dangling AmmoSet/ammo
-    cross-references - same failure mode as the 164x284mmDemo thump-cannon
-    ammo. Defs copied verbatim from HSK-VFE-Pirates (full HSK recipes
-    included).
-
-    Guarded with PatchOperationTest + Invert (the .408 CheyTac self-contained
-    ammo pattern): if AmmoSet_20x82mmMauser already exists (HSK-VFE-Pirates
-    active), the sequence aborts and adds nothing - no duplicate defs.
--->
+<!-- Self-contained 20x82mm Mauser ammo for the VFE Raider machine's gun -->
 <Patch>
     <Operation Class="PatchOperationSequence">
         <success>Always</success>

@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- HSK patch: relocate VFE Mechanoids buildings from the custom "VFE_Factory" tab
-     into HSK's native architect tabs (Misc / Security / Production / Power) and
-     add them to the appropriate ArchitectSense.DesignationSubCategoryDef groupings
-     for a clean, HSK-integrated menu layout (matches the RH2 conversion pattern).
-
-     All 20+ kept buildings fit into existing HSK subcategories by function:
-     - Mech charging stations -> Robots
-     - Auto-turrets -> Sentry Turrets / Mortars
-     - Missile launcher -> Rocket Launchers
-     - Supercomputer -> Computers
-     - Indoctrination Pod, Mechanite LF Reinforcer, Blight Repeller -> Facilities
-     - Factory infrastructure (Hopper, Versatile Assembler) -> Hightech
-     - Textile Recycler -> Sewing
-     - Conduit Pylon -> Power Conduit -->
+<!-- HSK patch: relocate VFE Mechanoids buildings from the custom "VFE_Factory" tab -->
 <Patch>
 
   <!-- ============================================================ -->

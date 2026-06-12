@@ -22,20 +22,13 @@
 		</value>
 	</Operation>
 
-	<!-- === Remove the added weapon tag from the Charge Lance ===
-	     HSK-patch note: <success>Always</success> because HSK's Gun_ChargeLance
-	     may not have the VFEP_Captain weaponTag (different load order / VFE Empire
-	     may not be adding it in HSK context). Patch no-ops silently when missing. -->
+<!-- === Remove the added weapon tag from the Charge Lance === -->
 	<Operation Class="PatchOperationRemove">
 		<success>Always</success>
 		<xpath>Defs/ThingDef[defName="Gun_ChargeLance"]/weaponTags/li[contains(.,"VFEP_Captain")]</xpath>
 	</Operation>
 
-	<!-- === Research ===
-	     HSK: <success>Always</success> because MakeWarcasketWeaponryLootOnly.xml
-	     removes VFEP_WarcasketWeaponry entirely (all weapon boxes are loot-only,
-	     research orphaned). When the research is present (e.g. patch reverted),
-	     this still rewires the prereq from MultibarrelWeapons to PrecisionRifling. -->
+<!-- === Research === -->
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
 		<xpath>Defs/ResearchProjectDef[defName="VFEP_WarcasketWeaponry"]/prerequisites/li[text()="MultibarrelWeapons"]</xpath>

@@ -294,25 +294,7 @@
 						
 						<!--WAAAAAAY too much money!-->
 						
-						<!--<ItemProcessor.CombinationDef>
-							<defName>VFEM_AquaponicsBasin_Goldfish</defName>
-							<building>VFEM_AquaponicsBasin</building>
-							<items>
-								<li>PlantFoodRaw</li>
-							</items>	
-							<amount>
-								<li>20</li>
-							</amount>
-							<result>VCEF_RawGoldfish</result>	
-							<yield>60</yield>
-							<resultUsesSpecialIcon>true</resultUsesSpecialIcon>
-							<resultSpecialIcon>Things/Item/Resource/VCEF_Goldfish/VCEF_Goldfish_b</resultSpecialIcon>
-							<outputLimitControlled>true</outputLimitControlled>
-							<maxTotalOutput>500</maxTotalOutput>
-							<isCategoryRecipe>true</isCategoryRecipe>
-							<useQualityIncreasing>false</useQualityIncreasing>
-							<singleTimeIfNotQualityIncreasing>0.1</singleTimeIfNotQualityIncreasing>
-						</ItemProcessor.CombinationDef>-->
+<!-- ItemProcessor.CombinationDef> -->
 						<ItemProcessor.CombinationDef>
 							<defName>VFEM_AquaponicsBasin_Guppy</defName>
 							<building>VFEM_AquaponicsBasin</building>

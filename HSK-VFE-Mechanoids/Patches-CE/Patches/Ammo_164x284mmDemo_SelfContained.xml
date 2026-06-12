@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Self-contained 164x284mm Demolition Shell ammo for the VFE-Mechanoids
-    "advanced thump cannon" (mech weapon).
-
-    Our Weapons_Mech.xml CE patch binds that gun to AmmoSet_164x284mmDemo /
-    Bullet_164x284mmDemo, and CombinationDefs.xml lets the Versatile Assembler
-    produce Ammo_164x284mmDemo. But those defs originally only existed in the
-    Pacas Patches Compilation's CONDITIONAL Mods/2_AlphaMechs/ folder, which
-    loads only when the Alpha Mechs mod is active. Without Alpha Mechs the defs
-    never load and every reference dangles:
-      "Could not resolve cross-reference: No CombatExtended.AmmoSetDef named
-       AmmoSet_164x284mmDemo ..." / "...No ThingDef named Bullet_164x284mmDemo..."
-    (Load-log report, 2026-06.)
-
-    Defs copied from Pacas Mods/2_AlphaMechs/1.5/Defs/Ammo/Advanced/
-    164x284mmDemoShell.xml, unchanged. ThermobaricFuel ammoClass and the
-    AmmoAdvanced category both survive HSK Core_SK (verified - NOT in its
-    AmmoCategoryDef removal list, unlike RailgunSabot/Plasma/NanobotsMT).
-
-    Guarded with PatchOperationTest + Invert (the .408 CheyTac self-contained
-    ammo pattern): if AmmoSet_164x284mmDemo already exists in the combined XML
-    (player runs Alpha Mechs + Pacas), the sequence aborts and we add nothing,
-    avoiding duplicate defs. success=Always suppresses the "failed" report on
-    that intentional abort.
--->
+<!-- Self-contained 164x284mm Demolition Shell ammo for the VFE-Mechanoids -->
 <Patch>
     <Operation Class="PatchOperationSequence">
         <success>Always</success>

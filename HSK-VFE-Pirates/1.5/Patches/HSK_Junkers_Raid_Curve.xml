@@ -1,40 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--
-    HSK patch: gate VFE Pirates Junker raids by adding a
-    raidCommonalityFromPointsCurve so they don't appear in early-game /
-    low-wealth / tribal scenarios.
-
-    Why?
-    Junker faction is industrial-tier (warcasket pirates with guns and
-    SMGs), but its weakest pawn — VFEP_Scrapper — has combatPower 65.
-    That means at ~25k wealth on day 4 of a Neolithic Norbal start,
-    the storyteller's raid budget (~200-400 points) is enough to fit
-    3-5 scrappers and the Junker faction qualifies as a raid source.
-    Result: tribal stone-age colony gets raided by industrial pirates
-    with shotguns and SMGs.
-
-    Note: previous attempt used <minTotalPoints> on each pawnGroupMaker.
-    That field doesn't exist on PawnGroupMaker — RimWorld silently
-    ignored it (XML errors in log) and the patch was a no-op. The
-    correct mechanism is raidCommonalityFromPointsCurve on the
-    FactionDef itself: when commonality reaches 0, the storyteller
-    can't pick the faction for a raid.
-
-    The Junker FactionDef in VFE Pirates has NO raidCommonalityFromPointsCurve
-    by default (the factions in Factions_Misc.xml inherit FactionBase
-    which doesn't define one), so this patch ADDS the field.
-
-    Curve:
-        (0, 0)        — no raids at any low budget
-        (799, 0)      — still 0 right up to the threshold
-        (800, 0.001)  — barely above 0 at the threshold (sharp step)
-        (1500, 1)     — full normal weight at mid-game
-        (3000, 1.5)   — slightly higher weight at late game
-
-    The (799, 0) → (800, 0.001) step is intentional — it produces an
-    effectively step-function gate while keeping the curve interpolated
-    (RimWorld curves require monotonic-x).
--->
+<!-- HSK patch: gate VFE Pirates Junker raids by adding a -->
 <Patch>
 
     <Operation Class="PatchOperationAdd">

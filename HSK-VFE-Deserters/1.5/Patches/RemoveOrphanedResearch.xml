@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Remove 3 orphaned VFE-Deserters research projects from the tech tree.
-
-    All gated content has already been disabled via earlier HSK patches:
-      - VFED_ImperialDefenses → 3 megaturrets (HSK_Disable_Turrets.xml)
-        + ammo boxes (Buildings_Special.xml designationCategory IsNull)
-      - VFED_ImperialWarSolutions → no remaining references in this mod
-        (would have gated imperial mortar shells but no recipes use it)
-      - VFED_RemoteDemolition → remote IED traps (Buildings_Security.xml
-        designationCategory IsNull, "HSK has equivalent IEDs")
-
-    Removing the research nodes cleans up dead entries in the research
-    window. Revert this patch if any of those buildings are re-enabled.
--->
+<!-- Remove 3 orphaned VFE-Deserters research projects from the tech tree -->
 <Patch>
-    <!-- Strip the now-dangling research gates BEFORE removing the research defs.
-         The disabled buildings (megaturrets, ammo boxes, IED traps) still carry
-         researchPrerequisites pointing at the removed research - via abstract
-         bases this cascaded into 13 "Could not resolve cross-reference ...
-         (wanter=researchPrerequisites)" load errors. The buildings are
-         architect-hidden anyway, so they need no research gate.
-         success=Always: some entries may not exist depending on submods.
-         (Load-log report, 2026-06.) -->
+<!-- Strip the now-dangling research gates BEFORE removing the research defs -->
     <Operation Class="PatchOperationRemove">
         <success>Always</success>
         <xpath>Defs/ThingDef/researchPrerequisites/li[text()="VFED_ImperialDefenses"]</xpath>

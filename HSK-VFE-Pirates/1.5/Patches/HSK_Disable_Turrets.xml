@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- HSK patch: hide 2 VFE-Pirates player-buildable turrets from the architect menu.
-     HSK has rich artillery coverage (vanilla mortars, HSK's own cannon line,
-     Rimmu-Nation/RH2 weapons) — these VFE-Pirates turrets are redundant.
-
-     Enemy AI / faction base generation still uses them because we only strip the
-     architect category — the ThingDefs themselves still exist. Pirate bases still
-     spawn these turrets for raids, preserving the enemy-facing gameplay.
-
-     NOTE: Both turrets inherit designationCategory from abstract parents
-     (BaseArtilleryBuilding / VFEP_BaseCannonBuilding), so PatchOperationRemove
-     on the child's own /designationCategory fails (no node to remove). We use
-     PatchOperationAdd with IsNull="True" to inject an override that nulls the
-     inherited field at the child level.
-
-     VFEP_ShipChunkGauntletTurret is NOT listed — it's already enemy-only event
-     content (ship debris skyfaller with claimable=false), never buildable. -->
+<!-- HSK patch: hide 2 VFE-Pirates player-buildable turrets from the architect menu -->
 <Patch>
 
   <!-- Null out inherited designationCategory for Cannon -->

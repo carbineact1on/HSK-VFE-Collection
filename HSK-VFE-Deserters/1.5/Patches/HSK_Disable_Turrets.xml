@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- HSK patch: explicitly hide the 3 VFE-Deserters Imperial turrets from the
-     player architect menu. Enemy raids + quest generation still use them.
-
-     VFED_ImperialTurretBase abstract parent already has
-     <designationCategory IsNull="True" /> but RimWorld's inheritance resolution
-     for IsNull on abstract parents apparently doesn't propagate reliably —
-     these turrets were showing up in Security architect tab despite the
-     parent being nulled. Force explicit null on each child def. -->
+<!-- HSK patch: explicitly hide the 3 VFE-Deserters Imperial turrets from the -->
 <Patch>
 
   <Operation Class="PatchOperationAdd">

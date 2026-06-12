@@ -127,11 +127,7 @@
 				<startWickHitPointsPercent>0.25</startWickHitPointsPercent>
 			</li>
 			<li Class="CombatExtended.CompProperties_Fragments">
-				<!-- HSK: Fragment_Bomblet is REMOVED by Core_SK
-				     (Patches/CombatExtended/Ammo/Projectiles_Fragments.xml), so the
-				     original <Fragment_Bomblet>6</Fragment_Bomblet> threw "No ThingDef
-				     named Fragment_Bomblet (6x null)" at load. Mapped the 6 bomblets to
-				     surviving HSK fragment defs with comparable total payload. -->
+<!-- HSK: Fragment_Bomblet is REMOVED by Core_SK -->
 				<fragments>
 					<Fragment_Large>6</Fragment_Large>
 					<Fragment_Small>12</Fragment_Small>
