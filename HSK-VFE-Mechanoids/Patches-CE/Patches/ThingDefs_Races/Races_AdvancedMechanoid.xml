@@ -20,6 +20,7 @@
 			<li>
 				<compClass>CombatExtended.CompAmmoGiver</compClass>
 			</li>
+			<li Class="CombatExtended.CompProperties_Inventory" />
 			<li Class="CombatExtended.CompProperties_MechAmmo">
 				<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
 				<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
