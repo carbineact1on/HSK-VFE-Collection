@@ -17,11 +17,9 @@
 		<canMakeRandomly>false</canMakeRandomly>
 		<raidCommonalityFromPointsCurve>
 			<points>
-				<li>(300,  0)</li>
-				<li>(700,  1)</li>
-				<li>(1400, 2)</li>
-				<li>(2800, 2.5)</li>
-				<li>(4000, 2.8)</li>
+				<li>(0, 0)</li>
+				<li>(1500, 0)</li>
+				<li>(3000, 1)</li>
 			</points>
 		</raidCommonalityFromPointsCurve>
 		<raidLootMaker>VFE_MechanoidRaidLootMaker</raidLootMaker>
