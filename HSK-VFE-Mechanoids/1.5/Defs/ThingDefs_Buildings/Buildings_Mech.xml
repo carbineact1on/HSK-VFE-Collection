@@ -39,6 +39,18 @@
 				<multiplier>0</multiplier>
 			</li>
 		</damageMultipliers>
+		<!-- HSK: ship hull transmits power (like a conduit). Our grid-power
+		     turret change (96ecc7e) left enemy mech-ship turrets with no power
+		     net -> dead clusters (Vladimir Lash report 2026-06). The hull web
+		     carries the Reactor's output to every turret touching the ship.
+		     Children's comps merge with this; the Reactor overrides with
+		     Inherit="False" to swap in its CompPowerPlant instead. -->
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPower</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<!-- Engines -->
@@ -321,7 +333,16 @@
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
 		</building>
-		<comps>
+		<!-- HSK: the Reactor now actually GENERATES power (it never had a power
+		     comp - the "huge power output" was flavor text; upstream turrets ran
+		     on component fuel, so ships needed no grid). With our turrets on grid
+		     power, the Reactor is the ship's vanometric power plant. Vanometric
+		     cell pattern: CompPowerPlant + negative consumption + transmits.
+		     -6000W covers a full ship's turret load (~2-4kW). Capturable like any
+		     cluster building - balanced by the 18.9-radius explosion on damage.
+		     Inherit="False": replaces the hull base's plain CompPower transmitter
+		     so the def doesn't end up with two power comps. -->
+		<comps Inherit="False">
 			<li Class="CompProperties_Explosive">
 				<wickTicks>1520</wickTicks>
 				<explosiveRadius>18.9</explosiveRadius>
@@ -329,6 +350,12 @@
 				<explodeOnKilled>true</explodeOnKilled>
 				<startWickHitPointsPercent>0.4</startWickHitPointsPercent>
 				<extraInspectStringKey>ExplosionOnDamageWarning</extraInspectStringKey>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerPlant</compClass>
+				<basePowerConsumption>-6000</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
