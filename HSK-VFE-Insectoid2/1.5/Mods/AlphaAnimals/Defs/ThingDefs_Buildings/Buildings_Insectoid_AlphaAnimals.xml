@@ -206,7 +206,7 @@
 			<li>VFEI2_ExoticHivetech</li>
 		</researchPrerequisites>
 	</ThingDef>
-	<ThingDef ParentName="VFEI2_BuildingInsectoidBase" Name="VFEI2_InsectoidCocoon">
+	<ThingDef ParentName="VFEI2_BuildingInsectoidBase">
 		<defName>VFEI2_BlackInsectoidCocoon</defName>
 		<label>black insectoid cocoon</label>
 		<description>These jelly cocoons keep black swarmlings safe from fire, extreme temperatures, and other threats while they undergo a metamorphosis process. After some time has passed, the cocoon will burst, releasing a fully grown insectoid.</description>
