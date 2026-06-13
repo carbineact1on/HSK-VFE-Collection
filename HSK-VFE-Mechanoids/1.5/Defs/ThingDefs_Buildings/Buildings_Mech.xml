@@ -42,7 +42,7 @@
 		<!-- hull pieces transmit power (ship-wide net for the Reactor) -->
 		<comps>
 			<li Class="CompProperties_Power">
-				<compClass>CompPower</compClass>
+				<compClass>CompPowerTransmitter</compClass>
 				<transmitsPower>true</transmitsPower>
 			</li>
 		</comps>
