@@ -3,7 +3,7 @@
 
   <ThoughtDef>
     <defName>VFEA_OutsideHomeArea</defName>
-    <validWhileDespawned>true</validWhileDespawned>
+    <validWhileDespawned>false</validWhileDespawned>
     <stackLimit>1</stackLimit>
     <workerClass>VFEAncients.ThoughtWorker_OutsideParanoid</workerClass>
     <stages>
