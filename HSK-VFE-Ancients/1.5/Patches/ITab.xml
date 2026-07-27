@@ -1,4 +1,22 @@
 <Patch>
+    <!-- HSK: re-register the VFE Ancients Powers inspect tab.
+         HISTORY: the original op below targeted vanilla ThingDef[@Name="BasePawn"] only.
+         In HSK that is a dead branch for humans: Core_SK defines its own chain
+         SK_Human -> BaseHumanlikePawn -> SK_BasePawn (Base_Race.xml) which never
+         inherits vanilla BasePawn, so the Powers tab was NEVER registered on HSK
+         pawns (EnTaroTassadar report 2026-07: powers work, tab absent).
+         FIX: insert into SK_BasePawn's live inspectorTabs list, positioned before
+         ITab_Pawn_Character so it renders inside the visible tab row (appending
+         would put it leftmost, first to clip when the pane runs out of width).
+         The tab is only visible on pawns that actually have powers. -->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef[@Name="SK_BasePawn"]/inspectorTabs/li[text()="ITab_Pawn_Character"]</xpath>
+        <value>
+            <li>VFEAncients.ITab_Pawn_Powers</li>
+        </value>
+    </Operation>
+
+    <!-- Coverage for races parented on the VANILLA BasePawn chain (some HAR/mod races). -->
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
         <nomatch Class="PatchOperationAdd">
