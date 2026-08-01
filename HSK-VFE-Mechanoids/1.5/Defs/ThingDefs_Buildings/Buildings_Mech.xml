@@ -762,7 +762,7 @@
 		<stealable>false</stealable>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>10</Mass>
 			<ShootingAccuracyTurret>0.92</ShootingAccuracyTurret>
@@ -781,6 +781,7 @@
                 <basePowerConsumption>300</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
+			<li Class="HSKMechShipPower.CompProperties_ShipPowerReceiver" />
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>3.9</explosiveRadius>
@@ -868,7 +869,7 @@
 		<stealable>false</stealable>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>10</Mass>
 			<ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
@@ -887,6 +888,7 @@
                 <basePowerConsumption>350</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
+			<li Class="HSKMechShipPower.CompProperties_ShipPowerReceiver" />
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<explosiveRadius>3.9</explosiveRadius>
@@ -1237,6 +1239,7 @@
                 <basePowerConsumption>250</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
+			<li Class="HSKMechShipPower.CompProperties_ShipPowerReceiver" />
       <li Class="CompProperties_CanBeDormant" />
       <li Class="CompProperties_WakeUpDormant">
         <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
@@ -1351,6 +1354,7 @@
                 <basePowerConsumption>300</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
+			<li Class="HSKMechShipPower.CompProperties_ShipPowerReceiver" />
       <li Class="CompProperties_CanBeDormant" />
       <li Class="CompProperties_WakeUpDormant">
         <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
@@ -1490,6 +1494,7 @@
                 <basePowerConsumption>500</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
+			<li Class="HSKMechShipPower.CompProperties_ShipPowerReceiver" />
 			<li Class="CompProperties_Explosive">
 				<wickTicks>320</wickTicks>
 				<explosiveRadius>7.9</explosiveRadius>

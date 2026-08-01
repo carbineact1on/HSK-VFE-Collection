@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <HSK_ShipPower_Connected>Powered by ship reactor</HSK_ShipPower_Connected>
+  <HSK_ShipPower_NoReactor>No reactor in range</HSK_ShipPower_NoReactor>
+</LanguageData>
