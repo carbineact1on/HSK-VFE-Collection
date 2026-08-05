@@ -93,7 +93,7 @@
 		<defName>VFEI2_Queen</defName>
 		<label>insectoid queen</label>
 		<race>VFEI2_Queen</race>
-		<combatPower>450</combatPower>
+		<combatPower>1100</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>

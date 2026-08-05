@@ -78,7 +78,7 @@
 		<defName>VFEI2_RoyalSpelopede</defName>
 		<label>royal spelopede</label>
 		<race>VFEI2_RoyalSpelopede</race>
-		<combatPower>150</combatPower>
+		<combatPower>300</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>

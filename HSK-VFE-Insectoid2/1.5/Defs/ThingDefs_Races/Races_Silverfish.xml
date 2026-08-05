@@ -123,7 +123,7 @@
 	<defName>VFEI2_Silverfish</defName>
 		<label>silverfish</label>
 		<race>VFEI2_Silverfish</race>
-		<combatPower>800</combatPower>
+		<combatPower>1100</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
 		<defaultFactionType>Insect</defaultFactionType>
